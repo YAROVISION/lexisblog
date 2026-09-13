@@ -582,26 +582,72 @@ h1, h2, h3, h4, h5, h6 {
   background-color: var(--bg-secondary);
 }
 
-.marquee-title {
-  text-align: center;
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: var(--text-muted);
-  margin-bottom: 1.75rem;
-  font-weight: 600;
+/* Vyshyvanka marquee overrides */
+.vysh-marquee-section {
+  padding: 1.5rem 0;
+  background: var(--bg-secondary);
 }
 
+/* Fade edges */
+.vysh-fade-left,
+.vysh-fade-right {
+  position: absolute;
+  top: 0;
+  width: 120px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+.vysh-fade-left {
+  left: 0;
+  background: linear-gradient(to right, var(--bg-secondary) 0%, transparent 100%);
+}
+.vysh-fade-right {
+  right: 0;
+  background: linear-gradient(to left, var(--bg-secondary) 0%, transparent 100%);
+}
+
+/* Track */
 .marquee-track {
   display: flex;
   width: max-content;
   animation: marqueeScroll 28s linear infinite;
 }
-
 .marquee-track:hover {
   animation-play-state: paused;
 }
 
+/* Vyshyvanka track overrides */
+.vysh-track {
+  align-items: center;
+  animation-duration: 36s;
+}
+
+/* SVG ornament elements */
+.vysh-ornament {
+  width: 80px;
+  height: 60px;
+  flex-shrink: 0;
+  display: block;
+  filter: drop-shadow(0 0 4px rgba(200, 16, 46, 0.45));
+  transition: filter 0.3s ease;
+}
+.vysh-ornament:hover {
+  filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.7));
+  animation-play-state: paused;
+}
+
+/* Separator SVGs */
+.vysh-sep {
+  width: 60px;
+  height: 20px;
+  flex-shrink: 0;
+  display: block;
+  margin: 0 0.5rem;
+  opacity: 0.8;
+}
+
+/* Legacy marquee items (kept for other pages) */
 .marquee-item {
   display: flex;
   align-items: center;
@@ -635,6 +681,7 @@ h1, h2, h3, h4, h5, h6 {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
+
 
 /* --- Bento Grid Section --- */
 .bento-section {
