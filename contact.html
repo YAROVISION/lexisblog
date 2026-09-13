@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="uk" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Контакти | Lexis</title>
+  <meta name="description" content="Зв'яжіться з командою платформи Lexis">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/theme.js"></script>
+</head>
+<body>
+  <div class="noise-overlay" aria-hidden="true"></div>
+
+  <!-- Navbar -->
+  <header class="navbar-wrapper">
+    <nav class="navbar">
+      <a href="index.html" class="nav-brand" aria-label="Lexis Головна">
+        <svg viewBox="0 0 480 160" xmlns="http://www.w3.org/2000/svg">
+          <text x="0" y="100" font-family="'Palatino Linotype', Palatino, serif" font-size="58" font-weight="700" fill="currentColor">LEXIS</text>
+        </svg>
+      </a>
+
+      <ul class="nav-menu">
+        <li><a href="features.html" class="nav-link">Словники</a></li>
+        <li><a href="logoskop.html" class="nav-link">Логоскоп</a></li>
+        <li><a href="sources.html" class="nav-link">Джерела</a></li>
+        <li><a href="blog.html" class="nav-link">Блог</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" aria-label="Перемикач теми">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+          </svg>
+          <svg class="icon-moon" style="display:none;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+        <button class="nav-mobile-toggle" aria-label="Відкрити меню">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <div class="nav-mobile-menu">
+      <a href="features.html" class="nav-link">Словники</a>
+      <a href="logoskop.html" class="nav-link">Логоскоп</a>
+      <a href="sources.html" class="nav-link">Джерела</a>
+      <a href="blog.html" class="nav-link">Блог</a>
+    </div>
+  </header>
+
+  <main class="container-narrow" style="padding-top: 8.5rem; padding-bottom: 5rem;">
+    <div style="margin-bottom: 3rem; text-align: center;">
+      <h1 style="font-size: clamp(2.2rem, 4vw, 3rem); margin-bottom: 1rem;">Контакти</h1>
+      <p style="color: var(--text-secondary); font-size: 1.1rem; max-width: 680px; margin: 0 auto;">
+        Залиште повідомлення або надішліть текст, щодо якого необхідно провести логічний аналіз. Ми з радістю допоможемо розібратися у складних конструкціях.
+      </p>
+    </div>
+
+    <div class="bento-card">
+      <form id="contact-form">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem;">
+          <div class="form-group">
+            <label for="c-name">Ім'я</label>
+            <input type="text" id="c-name" class="form-control" placeholder="Ваше ім'я" required>
+          </div>
+          <div class="form-group">
+            <label for="c-email">Електронна пошта</label>
+            <input type="email" id="c-email" class="form-control" placeholder="you@example.com" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="c-subject">Тема листа</label>
+          <input type="text" id="c-subject" class="form-control" placeholder="Про що ваше звернення" required>
+        </div>
+
+        <div class="form-group">
+          <label for="c-message">Повідомлення</label>
+          <textarea id="c-message" class="form-control" placeholder="Ваше повідомлення або фрагмент тексту..." required></textarea>
+        </div>
+
+        <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; margin-top: 1.5rem;">
+          <button type="submit" class="btn btn-primary btn-lg">Надіслати повідомлення</button>
+          <div id="contact-status" style="font-size: 0.9rem;"></div>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom" style="border: none; padding-top: 0;">
+        <p>&copy; 2026 Lexis, Inc. Всі права захищено.</p>
+        <div class="footer-social">
+          <a href="index.html">Головна</a>
+          <a href="sources.html">Джерела</a>
+          <a href="docs.html">Документація</a>
+          <a href="blog.html">Блог</a>
+          <a href="privacy.html">Конфіденційність</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

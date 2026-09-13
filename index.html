@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="uk" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lexis — Логіка української мови</title>
+  <meta name="description" content="Платформа логічної узгодженості та структурованого семантичного аналізу української мови">
+  
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/theme.js"></script>
+</head>
+<body>
+  <div class="noise-overlay" aria-hidden="true"></div>
+
+  <!-- Navbar -->
+  <header class="navbar-wrapper">
+    <nav class="navbar">
+      <a href="index.html" class="nav-brand" aria-label="Lexis Головна">
+        <svg viewBox="0 0 480 160" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#1A6BFF"/>
+              <stop offset="100%" stop-color="#00C2A8"/>
+            </linearGradient>
+            <linearGradient id="nodeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#1A6BFF"/>
+              <stop offset="100%" stop-color="#00C2A8"/>
+            </linearGradient>
+            <filter id="glow">
+              <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+              <feMerge>
+                <feMergeNode in="coloredBlur"/>
+                <feMergeNode in="SourceGraphic"/>
+              </feMerge>
+            </filter>
+          </defs>
+          <g filter="url(#glow)" opacity="0.7">
+            <line x1="62" y1="80" x2="38" y2="56" stroke="url(#accentGrad)" stroke-width="1.5"/>
+            <line x1="62" y1="80" x2="88" y2="56" stroke="url(#accentGrad)" stroke-width="1.5"/>
+            <line x1="62" y1="80" x2="62" y2="108" stroke="url(#accentGrad)" stroke-width="1.5"/>
+            <line x1="38" y1="56" x2="24" y2="36" stroke="#1A6BFF" stroke-width="1.2" opacity="0.6"/>
+            <line x1="38" y1="56" x2="48" y2="34" stroke="#1A6BFF" stroke-width="1.2" opacity="0.6"/>
+            <line x1="88" y1="56" x2="78" y2="34" stroke="#00C2A8" stroke-width="1.2" opacity="0.6"/>
+            <line x1="88" y1="56" x2="100" y2="36" stroke="#00C2A8" stroke-width="1.2" opacity="0.6"/>
+            <line x1="62" y1="108" x2="46" y2="128" stroke="#1A6BFF" stroke-width="1.2" opacity="0.6"/>
+            <line x1="62" y1="108" x2="78" y2="128" stroke="#00C2A8" stroke-width="1.2" opacity="0.6"/>
+          </g>
+          <g filter="url(#glow)">
+            <circle cx="24" cy="36" r="4" fill="none" stroke="#1A6BFF" stroke-width="1.5" opacity="0.7"/>
+            <circle cx="48" cy="34" r="4" fill="none" stroke="#1A6BFF" stroke-width="1.5" opacity="0.7"/>
+            <circle cx="78" cy="34" r="4" fill="none" stroke="#00C2A8" stroke-width="1.5" opacity="0.7"/>
+            <circle cx="100" cy="36" r="4" fill="none" stroke="#00C2A8" stroke-width="1.5" opacity="0.7"/>
+            <circle cx="46" cy="128" r="4" fill="none" stroke="#1A6BFF" stroke-width="1.5" opacity="0.7"/>
+            <circle cx="78" cy="128" r="4" fill="none" stroke="#00C2A8" stroke-width="1.5" opacity="0.7"/>
+          </g>
+          <g filter="url(#glow)">
+            <circle cx="38" cy="56" r="6" fill="currentColor" stroke="#1A6BFF" stroke-width="2"/>
+            <circle cx="88" cy="56" r="6" fill="currentColor" stroke="#00C2A8" stroke-width="2"/>
+            <circle cx="62" cy="108" r="6" fill="currentColor" stroke="url(#accentGrad)" stroke-width="2"/>
+          </g>
+          <circle cx="62" cy="80" r="10" fill="url(#nodeGrad)" filter="url(#glow)"/>
+          <circle cx="62" cy="80" r="10" fill="none" stroke="white" stroke-width="1" opacity="0.3"/>
+          <text x="62" y="84.5" text-anchor="middle" font-family="Georgia, serif" font-size="10" font-weight="bold" fill="white">λ</text>
+          <text x="138" y="100" font-family="'Palatino Linotype', Palatino, Georgia, serif" font-size="58" font-weight="700" letter-spacing="-1" fill="currentColor">LEXIS</text>
+          <rect x="138" y="108" width="260" height="2.5" rx="1.25" fill="url(#accentGrad)" opacity="0.9"/>
+          <text x="138" y="130" font-family="'Courier New', Courier, monospace" font-size="11" letter-spacing="3.5" fill="#4A90D9" opacity="0.8">LOGICAL TEXT ANALYSIS</text>
+        </svg>
+      </a>
+
+      <!-- Desktop Links -->
+      <ul class="nav-menu">
+        <li><a href="features.html" class="nav-link">Словники</a></li>
+        <li><a href="logoskop.html" class="nav-link">Логоскоп</a></li>
+        <li><a href="sources.html" class="nav-link">Джерела</a></li>
+        <li><a href="blog.html" class="nav-link">Блог</a></li>
+      </ul>
+
+      <!-- Action Buttons -->
+      <div class="nav-actions">
+        <!-- Theme Toggle -->
+        <button class="theme-toggle-btn" aria-label="Перемикач теми">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="icon-moon" style="display:none;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <button class="nav-mobile-toggle" aria-label="Відкрити меню">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Dropdown -->
+    <div class="nav-mobile-menu">
+      <a href="features.html" class="nav-link">Словники</a>
+      <a href="logoskop.html" class="nav-link">Логоскоп</a>
+      <a href="sources.html" class="nav-link">Джерела</a>
+      <a href="blog.html" class="nav-link">Блог</a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <!-- Background Photo -->
+      <div class="hero-bg-photo" aria-hidden="true">
+        <img src="assets/images/images4.jpeg" alt="Історична зала" class="hero-bg-img">
+        <div class="hero-bg-overlay"></div>
+      </div>
+
+      <div class="hero-glow"></div>
+      <div class="hero-content">
+        <div class="badge">
+          <span class="pulse-dot"></span>
+          <span>Публічне бета-тестування</span>
+        </div>
+
+        <h1 class="hero-title">
+          Логіка мови —<br>
+          <span class="title-accent">шлях до правди.</span>
+        </h1>
+
+        <p class="hero-desc">
+          Логіка мови структурує думки, ведучи до правдивих висновків.
+          Застосовуючи логіку в міркуваннях, ти неминуче доходиш до істини.
+        </p>
+
+        <div class="hero-avatars">
+          <div class="avatar-stack">
+            <img src="assets/images/professional-headshot-1.png" alt="Користувач 1">
+            <img src="assets/images/professional-headshot-2.jpg" alt="Користувач 2">
+            <img src="assets/images/professional-headshot-3.png" alt="Користувач 3">
+            <img src="assets/images/professional-headshot-4.jpg" alt="Користувач 4">
+            <img src="assets/images/professional-headshot-5.jpg" alt="Користувач 5">
+          </div>
+          <p class="hero-proof-text">
+            Українську мову знають <span>40 000 000 +</span> людей у світі
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Logo Marquee -->
+    <section class="marquee-section">
+      <div class="marquee-title">Технологічний стек та особливості</div>
+      <div class="marquee-track">
+        <div class="marquee-item">
+          <span class="marquee-icon">К</span>
+          <span>Класифікація слів</span>
+        </div>
+        <div class="marquee-item">
+          <span class="marquee-icon">С</span>
+          <span>Семантичні зв'язки</span>
+        </div>
+        <div class="marquee-item">
+          <span class="marquee-icon">Г</span>
+          <span>Гіперонімія</span>
+        </div>
+        <div class="marquee-item">
+          <span class="marquee-icon">Г</span>
+          <span>Гіпонімія</span>
+        </div>
+        <div class="marquee-item">
+          <span class="marquee-icon">В</span>
+          <span>Візуалізація категорій</span>
+        </div>
+        <div class="marquee-item">
+          <span class="marquee-icon">Ш</span>
+          <span>ШІ аналіз</span>
+        </div>
+        <div class="marquee-item">
+          <span class="marquee-icon">С</span>
+          <span>Статичне ядро</span>
+        </div>
+        <div class="marquee-item">
+          <span class="marquee-icon">Л</span>
+          <span>Лексичний граф</span>
+        </div>
+
+        <!-- Duplicated for seamless loop -->
+        <div class="marquee-item">
+          <span class="marquee-icon">К</span>
+          <span>Класифікація слів</span>
+        </div>
+        <div class="marquee-item">
+          <span class="marquee-icon">С</span>
+          <span>Семантичні зв'язки</span>
+        </div>
+        <div class="marquee-item">
+          <span class="marquee-icon">Г</span>
+          <span>Гіперонімія</span>
+        </div>
+        <div class="marquee-item">
+          <span class="marquee-icon">Г</span>
+          <span>Гіпонімія</span>
+        </div>
+        <div class="marquee-item">
+          <span class="marquee-icon">В</span>
+          <span>Візуалізація категорій</span>
+        </div>
+        <div class="marquee-item">
+          <span class="marquee-icon">Ш</span>
+          <span>ШІ аналіз</span>
+        </div>
+        <div class="marquee-item">
+          <span class="marquee-icon">С</span>
+          <span>Статичне ядро</span>
+        </div>
+        <div class="marquee-item">
+          <span class="marquee-icon">Л</span>
+          <span>Лексичний граф</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bento Grid -->
+    <section class="bento-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Цікаві факти про українську мову</h2>
+          <p class="section-desc">
+            Лексичне багатство української — це не прикраса, а несуча конструкція: саме воно дозволяє мові гнутися, не ламаючись, тягнути за собою найскладнішу думку крізь умови, причини й наслідки.
+          </p>
+        </div>
+
+        <div class="bento-grid">
+          <!-- Large Card -->
+          <div class="bento-card bento-large">
+            <div class="card-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+              </svg>
+            </div>
+            <h3 class="card-title">Словник сучасної літературної мови налічує понад 256 000 слів</h3>
+            <p class="card-desc">
+              Коли майже половина словника — це іменники, мова говорить сама за себе: українська не просто описує дійсність — вона її каталогізує, класифікує й зберігає, як бібліотека, що пережила століття і не втратила жодної полиці.
+            </p>
+            <div class="stats-grid">
+              <div class="stat-item">
+                <div class="stat-val">40-45%</div>
+                <div class="stat-lbl">Іменників</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-val">15-20%</div>
+                <div class="stat-lbl">Прикметників</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-val">20-25%</div>
+                <div class="stat-lbl">Дієслів</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-val">5-8%</div>
+                <div class="stat-lbl">Прислівників</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Melodiousness -->
+          <div class="bento-card">
+            <div class="card-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 18V5l12-2v13"></path>
+                <circle cx="6" cy="18" r="3"></circle>
+                <circle cx="18" cy="16" r="3"></circle>
+              </svg>
+            </div>
+            <h3 class="card-title">Мелодійність</h3>
+            <p class="card-desc">
+              У 1934 році на Міжнародному конкурсі мов у Парижі українська посіла третє місце за красою і мелодійністю після французької та перської (фарсі).
+            </p>
+            <div class="icon-row">
+              <svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="8"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="8"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="8"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="8"/></svg>
+            </div>
+          </div>
+
+          <!-- Card 3: Borrowings -->
+          <div class="bento-card">
+            <div class="card-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+              </svg>
+            </div>
+            <h3 class="card-title">Запозичення</h3>
+            <p class="card-desc">
+              Близько 10–15% сучасної лексики — запозичення, переважно з латини, грецької, польської та тюркських мов. Слово <em>майдан</em> — тюркського походження і означає «площа».
+            </p>
+          </div>
+
+          <!-- Card 4: Age & Origin -->
+          <div class="bento-card">
+            <div class="card-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+              </svg>
+            </div>
+            <h3 class="card-title">Вік і походження</h3>
+            <p class="card-desc">
+              Українська мова почала формуватися ще в XI–XIII століттях на основі давньоруської, але як окрема мова остаточно склалася до XIV–XV століть — тобто їй понад 600 років.
+            </p>
+          </div>
+
+          <!-- Card 5: Digital Era -->
+          <div class="bento-card">
+            <div class="card-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+              </svg>
+            </div>
+            <h3 class="card-title">Цифрова епоха</h3>
+            <p class="card-desc">
+              Після 2022 року кількість запитів у Google українською мовою зросла в рази — навіть серед тих, хто раніше спілкувався переважно іншими мовами.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta-section">
+      <div class="container">
+        <div class="final-cta-box">
+          <h2 class="final-cta-title">Готові розпочати?</h2>
+          <p class="final-cta-text">
+            Ласкаво просимо до нашої платформи! Досліджуйте словники, логічні зв'язки та аналітичні матеріали української мови.
+          </p>
+          <div class="final-cta-actions">
+            <a href="docs.html" class="btn btn-primary btn-lg shimmer-btn">Читати документацію &rarr;</a>
+            <a href="blog.html" class="btn btn-outline btn-lg">Перейти до блогу</a>
+          </div>
+          <p style="margin-top: 2rem; font-size: 0.85rem; color: var(--text-muted);">
+            Безкоштовно для персонального використання.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-brand">
+            <svg viewBox="0 0 480 160" style="height: 28px; width: auto;" xmlns="http://www.w3.org/2000/svg">
+              <text x="0" y="100" font-family="'Palatino Linotype', Palatino, serif" font-size="58" font-weight="700" fill="currentColor">LEXIS</text>
+            </svg>
+          </a>
+          <p>Платформа перевірки логічної узгодженості тексту.</p>
+          <div class="badge">
+            <span class="pulse-dot"></span>
+            <span>Всі системи працюють</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Сервіс</h4>
+          <ul class="footer-links">
+            <li><a href="features.html">Словник</a></li>
+            <li><a href="logoskop.html">Логоскоп</a></li>
+            <li><a href="sources.html">Джерела</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Ресурси</h4>
+          <ul class="footer-links">
+            <li><a href="docs.html">Документація</a></li>
+            <li><a href="blog.html">Блог</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Компанія</h4>
+          <ul class="footer-links">
+            <li><a href="contact.html">Контакти</a></li>
+            <li><a href="support.html">Підтримка</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Права</h4>
+          <ul class="footer-links">
+            <li><a href="privacy.html">Конфіденційність</a></li>
+            <li><button type="button" data-open-license>Ліцензія</button></li>
+            <li><a href="cookies.html">Cookies</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Lexis, Inc. Всі права захищено.</p>
+        <div class="footer-social">
+          <a href="#">X</a>
+          <a href="https://www.instagram.com/lexisukraine/" target="_blank" rel="noopener">Instagram</a>
+          <a href="#">TikTok</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- License Modal -->
+  <div id="license-modal" class="modal-overlay">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Ліцензійна угода</h3>
+        <button class="modal-close" data-close-license>&times;</button>
+      </div>
+      <div class="modal-body">
+        <pre>
+© 2026 Lexis, Inc. Всі права захищено.
+
+Увесь вміст цього сайту, включно з, але не обмежуючись: текстами, зображеннями, графікою, дизайном, програмним кодом, базами даних, алгоритмами та структурою сайту — є власністю Lexis, Inc. і захищений законодавством України про авторське право та міжнародними угодами про інтелектуальну власність.
+
+Забороняється без письмового дозволу Lexis, Inc.:
+— копіювати, відтворювати або розповсюджувати будь-які матеріали;
+— використовувати матеріали в комерційних цілях;
+— змінювати, адаптувати або створювати похідні роботи;
+— здійснювати реверс-інжиніринг програмного забезпечення;
+— копіювати або використовувати структуру бази даних;
+— автоматично збирати дані з сайту (парсинг, скрейпінг).
+        </pre>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

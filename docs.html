@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="uk" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Документація | Lexis</title>
+  <meta name="description" content="Повний посібник із використання платформи для логічного аналізу української мови">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/theme.js"></script>
+</head>
+<body>
+  <div class="noise-overlay" aria-hidden="true"></div>
+
+  <!-- Navbar -->
+  <header class="navbar-wrapper">
+    <nav class="navbar">
+      <a href="index.html" class="nav-brand" aria-label="Lexis Головна">
+        <svg viewBox="0 0 480 160" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#1A6BFF"/>
+              <stop offset="100%" stop-color="#00C2A8"/>
+            </linearGradient>
+            <linearGradient id="nodeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#1A6BFF"/>
+              <stop offset="100%" stop-color="#00C2A8"/>
+            </linearGradient>
+            <filter id="glow">
+              <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+              <feMerge>
+                <feMergeNode in="coloredBlur"/>
+                <feMergeNode in="SourceGraphic"/>
+              </feMerge>
+            </filter>
+          </defs>
+          <g filter="url(#glow)" opacity="0.7">
+            <line x1="62" y1="80" x2="38" y2="56" stroke="url(#accentGrad)" stroke-width="1.5"/>
+            <line x1="62" y1="80" x2="88" y2="56" stroke="url(#accentGrad)" stroke-width="1.5"/>
+            <line x1="62" y1="80" x2="62" y2="108" stroke="url(#accentGrad)" stroke-width="1.5"/>
+          </g>
+          <circle cx="62" cy="80" r="10" fill="url(#nodeGrad)" filter="url(#glow)"/>
+          <text x="62" y="84.5" text-anchor="middle" font-family="Georgia, serif" font-size="10" font-weight="bold" fill="white">λ</text>
+          <text x="138" y="100" font-family="'Palatino Linotype', Palatino, Georgia, serif" font-size="58" font-weight="700" letter-spacing="-1" fill="currentColor">LEXIS</text>
+          <rect x="138" y="108" width="260" height="2.5" rx="1.25" fill="url(#accentGrad)" opacity="0.9"/>
+          <text x="138" y="130" font-family="'Courier New', Courier, monospace" font-size="11" letter-spacing="3.5" fill="#4A90D9" opacity="0.8">LOGICAL TEXT ANALYSIS</text>
+        </svg>
+      </a>
+
+      <ul class="nav-menu">
+        <li><a href="features.html" class="nav-link">Словники</a></li>
+        <li><a href="logoskop.html" class="nav-link">Логоскоп</a></li>
+        <li><a href="sources.html" class="nav-link">Джерела</a></li>
+        <li><a href="blog.html" class="nav-link">Блог</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" aria-label="Перемикач теми">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+          </svg>
+          <svg class="icon-moon" style="display:none;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+        <button class="nav-mobile-toggle" aria-label="Відкрити меню">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <div class="nav-mobile-menu">
+      <a href="features.html" class="nav-link">Словники</a>
+      <a href="logoskop.html" class="nav-link">Логоскоп</a>
+      <a href="sources.html" class="nav-link">Джерела</a>
+      <a href="blog.html" class="nav-link">Блог</a>
+    </div>
+  </header>
+
+  <main class="container-narrow" style="padding-top: 8.5rem; padding-bottom: 5rem;">
+    <div style="text-align: center; margin-bottom: 3.5rem;">
+      <h1 style="font-size: clamp(2.2rem, 4vw, 3.2rem); margin-bottom: 1rem;">Документація</h1>
+      <p style="color: var(--text-secondary); font-size: 1.1rem; max-width: 620px; margin: 0 auto;">
+        Повний посібник із використання нашої платформи для вивчення та логічного аналізу української мови.
+      </p>
+    </div>
+
+    <!-- Section 1 -->
+    <article class="bento-card" style="margin-bottom: 2rem;">
+      <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+        <span style="font-size: 1.5rem;">⚡</span>
+        <h2>Швидкий старт</h2>
+      </div>
+      <p style="color: var(--text-secondary); margin-bottom: 1rem;">
+        Наш сервіс надає доступ до потужних інструментів для роботи з лексичним складом української мови та глибокого аналізу юридичних документів. Основні кроки, щоб розпочати:
+      </p>
+      <ul style="color: var(--text-secondary); padding-left: 1.5rem; line-height: 1.8;">
+        <li>Перейдіть до розділу <strong>«Словники»</strong> для перевірки дефініцій слів та їхніх рівнів абстракції.</li>
+        <li>Перейдіть до розділу <strong>«Логоскоп»</strong> для ознайомлення з інтелектуальним аналізом процесуальних документів.</li>
+        <li>Читайте аналітичні матеріали та поради у розділі <strong>«Блог»</strong>.</li>
+      </ul>
+    </article>
+
+    <!-- Section 2 -->
+    <article class="bento-card" style="margin-bottom: 2rem;">
+      <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+        <span style="font-size: 1.5rem;">🔍</span>
+        <h2>Словник та Мовний Аналіз</h2>
+      </div>
+      <p style="color: var(--text-secondary); margin-bottom: 1rem;">
+        Використовуйте рядок пошуку для знаходження конкретних слів або частин мови. База даних містить детальну інформацію про:
+      </p>
+      <ul style="color: var(--text-secondary); padding-left: 1.5rem; margin-bottom: 1.5rem; line-height: 1.8;">
+        <li>Граматичні категорії (відмінки, роди, числа) та частоту вживання.</li>
+        <li>Морфологічні властивості слова, його синоніми (гіперніми та гіпоніми).</li>
+        <li>Етимологічне походження та запозичення.</li>
+      </ul>
+
+      <h3 style="font-size: 1.25rem; margin-bottom: 0.75rem;">Система рівнів абстракції</h3>
+      <p style="color: var(--text-secondary); margin-bottom: 1rem;">
+        Ключовою особливістю інструменту є <strong>класифікація слів за ступенем абстракції</strong> (за шкалою від 1 до 10). Ця система демонструє базовий принцип юриспруденції: <em>логічний розбір тексту напряму залежить від ступеня конкретизації понять</em>. Чим конкретніший зміст слова (нижчий рівень абстракції), тим точніше та однозначніше виражена думка в юридичному документі.
+      </p>
+
+      <h3 style="font-size: 1.25rem; margin-top: 1.5rem; margin-bottom: 0.75rem;">Алгоритм обробки:</h3>
+      <ol style="color: var(--text-secondary); padding-left: 1.5rem; line-height: 1.8;">
+        <li><strong>Локальний пошук:</strong> При введенні слова система шукає його у базі, відображаючи морфологію, зв'язки та визначений рівень абстракції.</li>
+        <li><strong>AI-Обробка:</strong> Якщо слово не має визначеного рівня, підключається інтелектуальна модель, яка аналізує його та вбудовує у шкалу абстракції.</li>
+        <li><strong>Візуалізація:</strong> Інтерфейс виводить детальну морфологічну картку та візуально розподіляє знайдені поняття.</li>
+      </ol>
+    </article>
+
+    <!-- Section 3 -->
+    <article class="bento-card" style="margin-bottom: 2rem;">
+      <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+        <span style="font-size: 1.5rem;">⚖️</span>
+        <h2>Логоскоп (AI-аналіз документів)</h2>
+      </div>
+      <p style="color: var(--text-secondary); margin-bottom: 1rem;">
+        <strong>Логоскоп</strong> — це інтелектуальний інструмент для глибокого аналізу процесуальних документів кримінального провадження (повідомлень про підозру, обвинувальних актів, вироків та ухвал суду).
+      </p>
+
+      <h3 style="font-size: 1.15rem; margin-bottom: 0.5rem;">Базовий доступ (Безкоштовно)</h3>
+      <ul style="color: var(--text-secondary); padding-left: 1.5rem; margin-bottom: 1.5rem; line-height: 1.8;">
+        <li><strong>Структурна перевірка:</strong> наявність обов'язкових реквізитів згідно з КПК України.</li>
+        <li><strong>Логічний аналіз:</strong> виявлення формальних та неформальних логічних помилок (недостатність доказів, внутрішні суперечності, підміна понять).</li>
+        <li><strong>Оцінка доказів:</strong> формування переліку доказів та виявлення фактів, не підкріплених доказами.</li>
+        <li><strong>Базова судова практика:</strong> відповідність позиціям Верховного Суду.</li>
+      </ul>
+
+      <h3 style="font-size: 1.15rem; margin-bottom: 0.5rem;">PRO-доступ</h3>
+      <ul style="color: var(--text-secondary); padding-left: 1.5rem; line-height: 1.8;">
+        <li><strong>Практика ЄСПЛ:</strong> аналіз на відповідність Конвенції про захист прав людини та прецедентам Європейського суду.</li>
+        <li><strong>Компаративне дослідження:</strong> порівняння фабули справи з аналогічними судовими справами.</li>
+        <li><strong>Оцінка ризиків:</strong> моделювання можливих контраргументів процесуального опонента.</li>
+        <li><strong>Стратегічні рекомендації:</strong> покроковий план дій та пропозиції щодо клопотань чи експертиз.</li>
+      </ul>
+    </article>
+
+    <!-- Section 4 -->
+    <article class="bento-card">
+      <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+        <span style="font-size: 1.5rem;">🛡️</span>
+        <h2>Безпека та конфіденційність</h2>
+      </div>
+      <p style="color: var(--text-secondary); line-height: 1.8;">
+        Ми дбаємо про ваші дані. Всі сесії шифруються, а завантажені файли обробляються виключно в рамках поточної сесії перевірки без збереження чутливих персональних даних третім особам відповідно до стандартів GDPR.
+      </p>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom" style="border: none; padding-top: 0;">
+        <p>&copy; 2026 Lexis, Inc. Всі права захищено.</p>
+        <div class="footer-social">
+          <a href="index.html">Головна</a>
+          <a href="features.html">Словник</a>
+          <a href="sources.html">Джерела</a>
+          <a href="blog.html">Блог</a>
+          <a href="contact.html">Контакти</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
