@@ -290,43 +290,68 @@
         .nodeId('id')
         .nodeLabel('name')
         .nodeCanvasObject((node, ctx, globalScale) => {
-          // Assign random neon color on first render
-          if (!node.neonColor) {
-            const neonColors = ['#ff0055', '#00ff41', '#00e5ff']; // Neon Red, Green, Blue
-            node.neonColor = neonColors[Math.floor(Math.random() * neonColors.length)];
+          // Cosmic color palette by group
+          if (!node.cosmicColor) {
+            const groupColors = {
+              'concepts':  ['#c084fc', '#a78bfa', '#818cf8', '#60a5fa', '#38bdf8'], // фіолетово-синій спектр
+              'entities':  ['#f0abfc', '#e879f9', '#d946ef', '#c026d3'],            // яскраво-пурпурний
+              'fallacies': ['#fb923c', '#f97316', '#ea580c'],                       // помаранчево-вогняний
+              'sources':   ['#34d399', '#10b981', '#059669'],                       // смарагдово-зелений
+            };
+            const palette = groupColors[node.group] || ['#7dd3fc', '#93c5fd', '#a5b4fc'];
+            node.cosmicColor = palette[Math.floor(Math.random() * palette.length)];
           }
-          
+
           const isActive = highlightNodes.size === 0 || highlightNodes.has(node);
-          const color = isActive ? node.neonColor : 'rgba(255,255,255,0.1)';
-          
-          // Draw Node Circle
-          ctx.beginPath();
-          ctx.arc(node.x, node.y, 6, 0, 2 * Math.PI, false);
-          
+          const isHighlighted = highlightNodes.has(node);
+          const color = isActive ? node.cosmicColor : 'rgba(255,255,255,0.08)';
+
+          const radius = isHighlighted ? 4 : 3; // Менші вузли: 3px базово, 4px при виділенні
+
+          // Outer glow
           if (isActive) {
-            ctx.shadowBlur = 20; // Neon glow effect
+            const glowRadius = radius * 3.5;
+            const grd = ctx.createRadialGradient(node.x, node.y, 0, node.x, node.y, glowRadius);
+            grd.addColorStop(0, color + 'cc');
+            grd.addColorStop(1, color + '00');
+            ctx.beginPath();
+            ctx.arc(node.x, node.y, glowRadius, 0, 2 * Math.PI, false);
+            ctx.fillStyle = grd;
+            ctx.fill();
+          }
+
+          // Core dot
+          ctx.beginPath();
+          ctx.arc(node.x, node.y, radius, 0, 2 * Math.PI, false);
+          if (isActive) {
+            ctx.shadowBlur = 12;
             ctx.shadowColor = color;
           } else {
             ctx.shadowBlur = 0;
           }
-          
-          ctx.fillStyle = color;
+          ctx.fillStyle = isActive ? '#ffffff' : 'rgba(255,255,255,0.06)';
           ctx.fill();
-          ctx.shadowBlur = 0; // Reset
-          
+          ctx.shadowBlur = 0;
+
+          // Colored ring around core
+          if (isActive) {
+            ctx.beginPath();
+            ctx.arc(node.x, node.y, radius, 0, 2 * Math.PI, false);
+            ctx.strokeStyle = color;
+            ctx.lineWidth = 1;
+            ctx.stroke();
+          }
+
           // Draw Text Label
-          // Only show labels if active or if there are no search highlights
           if (isActive) {
             const label = node.name;
-            const fontSize = Math.max(12 / globalScale, 2); // Keep font size legible but scale it with zoom
-            
-            // Only draw text if we are zoomed in enough, to avoid a massive mess of text when zoomed out
+            const fontSize = Math.max(10 / globalScale, 2);
             if (globalScale > 0.8 || highlightNodes.has(node)) {
               ctx.font = `${fontSize}px 'Inter', sans-serif`;
               ctx.textAlign = 'left';
               ctx.textBaseline = 'middle';
-              ctx.fillStyle = 'rgba(255, 255, 255, 0.8)';
-              ctx.fillText(label, node.x + 8, node.y);
+              ctx.fillStyle = 'rgba(255, 255, 255, 0.75)';
+              ctx.fillText(label, node.x + radius + 3, node.y);
             }
           }
         })
