@@ -581,5 +581,47 @@
   </div>
 
   <script src="assets/js/main.js"></script>
+  <script>
+    (function() {
+      const track = document.querySelector('.vysh-track');
+      if (!track) return;
+
+      // Snapshot the original base set (both the original + manual duplicate)
+      // We'll treat ALL current children as one base set, then clone to fill
+      const baseItems = Array.from(track.children);
+
+      function initMarquee() {
+        // Measure one base set width
+        const baseWidth = track.scrollWidth;
+
+        // How many copies do we need to fill 3× viewport?
+        const needed = Math.ceil((window.innerWidth * 3) / baseWidth) + 1;
+
+        // Clone the base set needed times
+        for (let i = 0; i < needed; i++) {
+          baseItems.forEach(item => {
+            track.appendChild(item.cloneNode(true));
+          });
+        }
+
+        // Now set a dynamic keyframe so we translateX by exactly one base-set width
+        // This ensures perfect seamless loop regardless of how many clones exist
+        const styleEl = document.createElement('style');
+        styleEl.textContent = `
+          @keyframes vyshScroll {
+            0%   { transform: translateX(0); }
+            100% { transform: translateX(-${baseWidth}px); }
+          }
+          .vysh-track {
+            animation: vyshScroll ${baseWidth / 70}s linear infinite !important;
+          }
+        `;
+        document.head.appendChild(styleEl);
+      }
+
+      // Wait for layout to settle
+      requestAnimationFrame(() => requestAnimationFrame(initMarquee));
+    })();
+  </script>
 </body>
 </html>
