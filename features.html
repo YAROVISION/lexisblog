@@ -278,17 +278,18 @@
             }
           }
         })
+        .nodeCanvasObjectMode(() => 'after')
         .linkColor(link => {
-          if (highlightNodes.size === 0) return 'rgba(255, 255, 255, 0.4)'; // Більш яскраві базові лінії
-          return highlightLinks.has(link) ? 'rgba(0, 229, 255, 1)' : 'rgba(255, 255, 255, 0.05)';
+          if (highlightNodes.size === 0) return 'rgba(180, 200, 255, 0.75)';
+          return highlightLinks.has(link) ? 'rgba(0, 229, 255, 1)' : 'rgba(255, 255, 255, 0.08)';
         })
         .linkWidth(link => {
-          if (highlightNodes.size === 0) return 1.5; // Більш товсті базові лінії
+          if (highlightNodes.size === 0) return 1.2;
           return highlightLinks.has(link) ? 3 : 0.5;
         })
-        .linkDirectionalParticles(link => highlightNodes.size === 0 ? 2 : (highlightLinks.has(link) ? 5 : 0))
+        .linkDirectionalParticles(link => highlightNodes.size === 0 ? 1 : (highlightLinks.has(link) ? 5 : 0))
         .linkDirectionalParticleWidth(2)
-        .linkDirectionalParticleSpeed(0.005)
+        .linkDirectionalParticleSpeed(0.004)
         .onNodeHover(node => {
           // Optional: hover logic
           hoverNode = node;
