@@ -3,14 +3,158 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Словники | Lexis — У стадії розробки</title>
+  <title>wiki | Lexis — База Знань</title>
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
   <link rel="stylesheet" href="assets/css/style.css">
   <script src="assets/js/theme.js"></script>
+  <!-- Force Graph Library -->
+  <script src="https://unpkg.com/force-graph"></script>
+  <!-- Marked.js for Markdown parsing -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  
+  <style>
+    /* Animated Dark Gradient Background */
+    body {
+      margin: 0;
+      overflow: hidden; /* Prevent scrolling since graph takes full screen */
+      background: linear-gradient(-45deg, #1A6BFF, #7a28cb, #00C2A8, #161b22);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Dark Overlay for better contrast */
+    .dark-overlay {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background-color: rgba(10, 14, 23, 0.85); /* Very dark, semi-transparent to let colors bleed through */
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* Glassmorphism Search Bar */
+    .search-wrapper {
+      position: absolute;
+      top: 100px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 10;
+      width: 90%;
+      max-width: 600px;
+    }
+
+    .glass-search {
+      width: 100%;
+      padding: 15px 25px;
+      font-size: 1.1rem;
+      color: #fff;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 30px;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+      outline: none;
+      transition: all 0.3s ease;
+      font-family: inherit;
+    }
+
+    .glass-search::placeholder {
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .glass-search:focus {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(0, 194, 168, 0.5);
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5), 0 0 15px rgba(0, 194, 168, 0.3);
+    }
+
+    /* Graph Container */
+    #graph-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 2; /* Below UI, above overlay */
+    }
+
+    /* Modal / Window for Node Content */
+    .node-modal-overlay {
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(5px);
+      z-index: 200;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+
+    .node-modal-overlay.active {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    .node-modal-content {
+      background: rgba(20, 24, 33, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      padding: 30px;
+      width: 90%;
+      max-width: 700px;
+      max-height: 80vh;
+      overflow-y: auto;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+      color: #fff;
+      position: relative;
+      transform: translateY(20px);
+      transition: transform 0.3s ease;
+    }
+
+    .node-modal-overlay.active .node-modal-content {
+      transform: translateY(0);
+    }
+
+    .close-modal {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      font-size: 24px;
+      color: rgba(255,255,255,0.6);
+      cursor: pointer;
+      transition: color 0.2s;
+    }
+
+    .close-modal:hover {
+      color: #fff;
+    }
+
+    .node-modal-body {
+      line-height: 1.6;
+    }
+    
+    .node-modal-body h1, .node-modal-body h2, .node-modal-body h3 {
+      color: #00C2A8;
+      margin-top: 0;
+    }
+
+    /* Ensure navbar is on top */
+    .navbar-wrapper {
+      position: relative;
+      z-index: 100;
+    }
+  </style>
 </head>
 <body>
-  <div class="noise-overlay" aria-hidden="true"></div>
-
   <!-- Navbar -->
   <header class="navbar-wrapper">
     <nav class="navbar">
@@ -47,75 +191,178 @@
       </a>
 
       <ul class="nav-menu">
-        <li><a href="features.html" class="nav-link active">Словники</a></li>
+        <li><a href="features.html" class="nav-link active">wiki</a></li>
         <li><a href="logoskop.html" class="nav-link">Логоскоп</a></li>
         <li><a href="sources.html" class="nav-link">Джерела</a></li>
         <li><a href="blog.html" class="nav-link">Блог</a></li>
       </ul>
-
-      <div class="nav-actions">
-        <button class="theme-toggle-btn" aria-label="Перемикач теми">
-          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="12" cy="12" r="5"></circle>
-            <line x1="12" y1="1" x2="12" y2="3"></line>
-            <line x1="12" y1="21" x2="12" y2="23"></line>
-          </svg>
-          <svg class="icon-moon" style="display:none;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-          </svg>
-        </button>
-        <button class="nav-mobile-toggle" aria-label="Відкрити меню">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <line x1="3" y1="12" x2="21" y2="12"></line>
-            <line x1="3" y1="6" x2="21" y2="6"></line>
-            <line x1="3" y1="18" x2="21" y2="18"></line>
-          </svg>
-        </button>
-      </div>
     </nav>
-
-    <div class="nav-mobile-menu">
-      <a href="features.html" class="nav-link active">Словники</a>
-      <a href="logoskop.html" class="nav-link">Логоскоп</a>
-      <a href="sources.html" class="nav-link">Джерела</a>
-      <a href="blog.html" class="nav-link">Блог</a>
-    </div>
   </header>
 
-  <!-- Empty under development placeholder -->
-  <main class="under-dev-container">
-    <div class="under-dev-card">
-      <div class="under-dev-icon">
-        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
-        </svg>
-      </div>
-      <div class="badge" style="margin-bottom: 1.5rem;">
-        <span class="pulse-dot"></span>
-        <span>Розділ у стадії розробки</span>
-      </div>
-      <h1>Словник та Граматичний Аналіз</h1>
-      <p>
-        Цей модуль із базою даних та серверною логікою класифікації слів наразі перебуває у стадії активної розробки та тестування.
-      </p>
-      <a href="index.html" class="btn btn-primary">Повернутися на головну</a>
-    </div>
-  </main>
+  <div class="dark-overlay"></div>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-bottom" style="border: none; padding-top: 0;">
-        <p>&copy; 2026 Lexis, Inc. Всі права захищено.</p>
-        <div class="footer-social">
-          <a href="index.html">Головна</a>
-          <a href="docs.html">Документація</a>
-          <a href="blog.html">Блог</a>
-        </div>
-      </div>
+  <!-- Search Bar -->
+  <div class="search-wrapper">
+    <input type="text" id="search-input" class="glass-search" placeholder="Пошук у базі знань..." autocomplete="off">
+  </div>
+
+  <!-- Graph -->
+  <div id="graph-container"></div>
+  
+  <!-- Node Content Modal -->
+  <div class="node-modal-overlay" id="node-modal">
+    <div class="node-modal-content">
+      <span class="close-modal" id="close-modal">&times;</span>
+      <h2 id="modal-title"></h2>
+      <div class="node-modal-body" id="modal-body"></div>
     </div>
-  </footer>
+  </div>
 
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/graph_data.js"></script>
+  
+  <!-- Graph Initialization Logic -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      let graphData = GRAPH_DATA;
+      let highlightNodes = new Set();
+      let highlightLinks = new Set();
+      let hoverNode = null;
+      
+      const searchInput = document.getElementById('search-input');
+      
+      // Initialize ForceGraph
+      const Graph = ForceGraph()
+        (document.getElementById('graph-container'))
+        .backgroundColor('rgba(0,0,0,0)') // Transparent to show gradient bg
+        .nodeId('id')
+        .nodeLabel('name')
+        .nodeCanvasObject((node, ctx, globalScale) => {
+          // Assign random neon color on first render
+          if (!node.neonColor) {
+            const neonColors = ['#ff0055', '#00ff41', '#00e5ff']; // Neon Red, Green, Blue
+            node.neonColor = neonColors[Math.floor(Math.random() * neonColors.length)];
+          }
+          
+          const isActive = highlightNodes.size === 0 || highlightNodes.has(node);
+          const color = isActive ? node.neonColor : 'rgba(255,255,255,0.1)';
+          
+          // Draw Node Circle
+          ctx.beginPath();
+          ctx.arc(node.x, node.y, 6, 0, 2 * Math.PI, false);
+          
+          if (isActive) {
+            ctx.shadowBlur = 20; // Neon glow effect
+            ctx.shadowColor = color;
+          } else {
+            ctx.shadowBlur = 0;
+          }
+          
+          ctx.fillStyle = color;
+          ctx.fill();
+          ctx.shadowBlur = 0; // Reset
+          
+          // Draw Text Label
+          // Only show labels if active or if there are no search highlights
+          if (isActive) {
+            const label = node.name;
+            const fontSize = Math.max(12 / globalScale, 2); // Keep font size legible but scale it with zoom
+            
+            // Only draw text if we are zoomed in enough, to avoid a massive mess of text when zoomed out
+            if (globalScale > 0.8 || highlightNodes.has(node)) {
+              ctx.font = `${fontSize}px 'Inter', sans-serif`;
+              ctx.textAlign = 'left';
+              ctx.textBaseline = 'middle';
+              ctx.fillStyle = 'rgba(255, 255, 255, 0.8)';
+              ctx.fillText(label, node.x + 8, node.y);
+            }
+          }
+        })
+        .linkColor(link => {
+          if (highlightNodes.size === 0) return 'rgba(255, 255, 255, 0.4)'; // Більш яскраві базові лінії
+          return highlightLinks.has(link) ? 'rgba(0, 229, 255, 1)' : 'rgba(255, 255, 255, 0.05)';
+        })
+        .linkWidth(link => {
+          if (highlightNodes.size === 0) return 1.5; // Більш товсті базові лінії
+          return highlightLinks.has(link) ? 3 : 0.5;
+        })
+        .linkDirectionalParticles(link => highlightNodes.size === 0 ? 2 : (highlightLinks.has(link) ? 5 : 0))
+        .linkDirectionalParticleWidth(2)
+        .linkDirectionalParticleSpeed(0.005)
+        .onNodeHover(node => {
+          // Optional: hover logic
+          hoverNode = node;
+        })
+        .onNodeClick(node => {
+          // Center on node when clicked
+          Graph.centerAt(node.x, node.y, 1000);
+          Graph.zoom(8, 2000);
+          
+          // Show Modal
+          const modal = document.getElementById('node-modal');
+          const modalTitle = document.getElementById('modal-title');
+          const modalBody = document.getElementById('modal-body');
+          
+          modalTitle.textContent = node.name;
+          modalBody.innerHTML = marked.parse(node.content || "*Немає вмісту*");
+          modal.classList.add('active');
+        });
+
+      // Close modal logic
+      document.getElementById('close-modal').addEventListener('click', () => {
+        document.getElementById('node-modal').classList.remove('active');
+      });
+      document.getElementById('node-modal').addEventListener('click', (e) => {
+        if (e.target === document.getElementById('node-modal')) {
+          document.getElementById('node-modal').classList.remove('active');
+        }
+      });
+
+      // Load Data
+      Graph.graphData(graphData);
+
+      // Search Logic
+      searchInput.addEventListener('input', e => {
+        const query = e.target.value.toLowerCase().trim();
+        
+        highlightNodes.clear();
+        highlightLinks.clear();
+        
+        if (query) {
+          // Find matching nodes
+          const matchedNodes = graphData.nodes.filter(node => 
+            node.name.toLowerCase().includes(query) || 
+            (node.content && node.content.toLowerCase().includes(query))
+          );
+          
+          matchedNodes.forEach(node => {
+            highlightNodes.add(node);
+            
+            // Highlight connections for matched nodes
+            graphData.links.forEach(link => {
+              if (link.source.id === node.id || link.source === node.id || 
+                  link.target.id === node.id || link.target === node.id) {
+                highlightLinks.add(link);
+                // Highlight neighbor nodes
+                const neighborId = link.source.id === node.id ? link.target.id || link.target : link.source.id || link.source;
+                const neighbor = graphData.nodes.find(n => n.id === neighborId);
+                if (neighbor) highlightNodes.add(neighbor);
+              }
+            });
+          });
+        }
+        
+        // Trigger graph redraw
+        Graph.nodeColor(Graph.nodeColor())
+             .linkColor(Graph.linkColor())
+             .linkWidth(Graph.linkWidth());
+      });
+      
+      // Handle window resize
+      window.addEventListener('resize', () => {
+        Graph.width(window.innerWidth).height(window.innerHeight);
+      });
+    });
+  </script>
 </body>
 </html>

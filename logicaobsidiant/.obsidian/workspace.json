@@ -1,0 +1,224 @@
+{
+  "main": {
+    "id": "9bffc03d4b0e0b80",
+    "type": "split",
+    "children": [
+      {
+        "id": "a11723880625c1fc",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "411da8da114df719",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Граф"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "81295d01dca5a18a",
+    "type": "split",
+    "children": [
+      {
+        "id": "d34829d6066136b4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9cffc7c0f4fa3424",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Файловий менеджер"
+            }
+          },
+          {
+            "id": "8ebf6a9895042573",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "мисленн",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Пошук"
+            }
+          },
+          {
+            "id": "0feb649fd343a6ae",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-bookmark",
+              "title": "Закладки"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "157090e2cf959cf3",
+    "type": "split",
+    "children": [
+      {
+        "id": "6f6e28169152e5ff",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "50970ff2bb2233b1",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Зворотні посилання"
+            }
+          },
+          {
+            "id": "920898744d6055c3",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Вихідні посилання"
+            }
+          },
+          {
+            "id": "6e6ab5faa92286ec",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Мітки"
+            }
+          },
+          {
+            "id": "b99bffc59e7e84ca",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "Всі властивості"
+            }
+          },
+          {
+            "id": "37c132534f312384",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Вміст"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Відкрити провідник файлів": false,
+      "graph:Граф": false,
+      "canvas:Створити нове полотно": false,
+      "daily-notes:Сьогоднішня нотатка": false,
+      "templates:Вставити шаблон": false,
+      "command-palette:Відкрити меню команд": false,
+      "bases:Створити нову базу": false
+    }
+  },
+  "active": "411da8da114df719",
+  "lastOpenFiles": [
+    "wiki/entities/Арістотель (Aristotle).md",
+    "Clippings/making_json_segments/segment_002_Foreword_by_Chief_Justice_John_G._Roberts_Jr..md",
+    "Clippings/theory_json_segments/segment_011_3.4._Application_of_the_deductive_model.md",
+    "add_backlinks.py",
+    "Clippings/making_json_segments/segment_052_46._Avoid_acronyms._Use_the_parties_names..md",
+    "Clippings/making_json_segments/segment_055_49._Cite_authorities_sparingly..md",
+    "process_aux.py",
+    "Clippings/making_json_segments/segment_053_47._Don_t_overuse_italics_don_t_use_bold_type_except_in.md",
+    "wiki/concepts/Додаткові_правила_судової_аргументації.md",
+    "process_scalia.py",
+    "wiki/concepts/Тлумачення_та_неясність_в_аргументації.md",
+    "check_unprocessed.py",
+    "Clippings/making_json_segments/segment_109_102._Listen_carefully_and_if_necessary_ask_for_clarific.md",
+    "wiki/concepts/Версія.md",
+    "wiki/concepts/Завершення_виступу_та_репутація.md",
+    "wiki/concepts/Робота_з_гіпотетичними_ситуаціями.md",
+    "wiki/concepts/Взаємодія_із_суддями.md",
+    "wiki/concepts/Помилки_спростування.md",
+    "wiki/concepts/Поведінка_в_залі_суду.md",
+    "wiki/concepts/Стратегія_усного_виступу.md",
+    "wiki/concepts/Значення_та_підготовка_до_усних_дебатів.md",
+    "wiki/concepts/Цитування_авторитетів.md",
+    "wiki/concepts/Оформлення_та_типографіка.md",
+    "wiki/concepts/Стиль_юридичного_письма.md",
+    "wiki/concepts/Підготовка_процесуальних_документів.md",
+    "wiki/concepts/Робота_з_прецедентами.md",
+    "wiki/concepts/Тлумачення_юридичних_текстів.md",
+    "wiki/concepts/Силогістичне_мислення_в_праві.md",
+    "wiki/concepts/Юридичне_мислення.md",
+    "wiki/concepts/Етика_та_поведінка_адвоката.md",
+    "wiki/syntheses",
+    "wiki/entities",
+    "wiki/concepts",
+    "wiki",
+    "Clippings/theory_json_segments",
+    "Clippings/scherbina_json_segments"
+  ]
+}
