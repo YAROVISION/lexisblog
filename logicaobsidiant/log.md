@@ -678,3 +678,10 @@
   - `[[Clippings/logica_json_segments/segment_31_Контрольні_питання_до_Розділу_5.md]]`
 - **Створено концепції**: (немає, допоміжні матеріали)
 - **Оновлено**: `[[index.md]]`
+
+
+## [2026-09-14] ingest | Повна компіляція першоджерел Clippings у wiki/concepts
+
+- **Дія**: Скомпільовано 311 розділів та сегментів із каталогу `Clippings/` у повноцінні статті `wiki/concepts/`.
+- **Джерела**: 5 бібліотек першоджерел (`attaking_json-segments`, `making_json_segments`, `logica_json_segments`, `scherbina_json_segments`, `theory_json_segments`).
+- **Результат**: Створено фронтматтери, виправлено артефакти розмітки, налаштовано зв'язки з батьківськими концептами та оновлено `index.md`.

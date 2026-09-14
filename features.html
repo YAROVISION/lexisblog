@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>wiki | Lexis — База Знань</title>
+  <title>Вікі | Lexis — База Знань</title>
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
   <link rel="stylesheet" href="assets/css/style.css">
   <script src="assets/js/theme.js"></script>
@@ -102,7 +102,7 @@
 
     .glass-search {
       width: 100%;
-      padding: 15px 25px;
+      padding: 15px 56px 15px 25px;
       font-size: 1.1rem;
       color: #fff;
       background: rgba(255, 255, 255, 0.05);
@@ -114,6 +114,7 @@
       outline: none;
       transition: all 0.3s ease;
       font-family: inherit;
+      box-sizing: border-box;
     }
 
     .glass-search::placeholder {
@@ -124,6 +125,202 @@
       background: rgba(255, 255, 255, 0.1);
       border-color: rgba(0, 194, 168, 0.5);
       box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5), 0 0 15px rgba(0, 194, 168, 0.3);
+    }
+
+    /* View Toggle Button inside Search Bar */
+    .view-toggle-btn {
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      color: rgba(255, 255, 255, 0.9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      padding: 0;
+      z-index: 2;
+    }
+
+    .view-toggle-btn:hover {
+      background: rgba(0, 194, 168, 0.25);
+      border-color: rgba(0, 194, 168, 0.7);
+      color: #00e5ff;
+      box-shadow: 0 0 18px rgba(0, 194, 168, 0.45);
+      transform: translateY(-50%) scale(1.08);
+    }
+
+    .view-toggle-btn:active {
+      transform: translateY(-50%) scale(0.94);
+    }
+
+    .view-toggle-btn svg {
+      width: 20px;
+      height: 20px;
+      transition: transform 0.2s ease;
+    }
+
+    /* List View Container */
+    .list-container {
+      position: absolute;
+      top: 175px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90%;
+      max-width: 760px;
+      height: calc(100vh - 200px);
+      overflow-y: auto;
+      z-index: 10;
+      display: none;
+      flex-direction: column;
+      gap: 10px;
+      padding-bottom: 50px;
+      box-sizing: border-box;
+      scrollbar-width: thin;
+      scrollbar-color: rgba(0, 194, 168, 0.4) transparent;
+    }
+
+    .list-container::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .list-container::-webkit-scrollbar-thumb {
+      background: rgba(0, 194, 168, 0.35);
+      border-radius: 3px;
+    }
+
+    .list-container.active {
+      display: flex;
+      animation: fadeInList 0.3s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+    }
+
+    @keyframes fadeInList {
+      from {
+        opacity: 0;
+        transform: translate(-50%, 15px);
+      }
+      to {
+        opacity: 1;
+        transform: translate(-50%, 0);
+      }
+    }
+
+    /* Node List Item (Horizontal active link in a column) */
+    .node-list-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 20px;
+      background: rgba(18, 22, 36, 0.72);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      text-decoration: none;
+      color: #fff;
+      transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.28);
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .node-list-item::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: var(--node-accent, #60a5fa);
+      opacity: 0.8;
+      transition: width 0.2s, opacity 0.2s;
+    }
+
+    .node-list-item:hover {
+      background: rgba(28, 35, 60, 0.9);
+      border-color: rgba(0, 194, 168, 0.45);
+      transform: translateX(6px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45), 0 0 16px rgba(0, 194, 168, 0.22);
+    }
+
+    .node-list-item:hover::before {
+      width: 6px;
+      opacity: 1;
+    }
+
+    .node-list-left {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex: 1;
+      min-width: 0;
+    }
+
+    .node-list-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .node-list-title {
+      font-size: 1.02rem;
+      font-weight: 500;
+      color: #f1f5f9;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .node-list-right {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-shrink: 0;
+    }
+
+    .node-list-tag {
+      font-size: 0.72rem;
+      padding: 3px 9px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      font-weight: 500;
+    }
+
+    .node-list-arrow {
+      color: rgba(255, 255, 255, 0.35);
+      transition: transform 0.2s, color 0.2s;
+      display: flex;
+      align-items: center;
+    }
+
+    .node-list-item:hover .node-list-arrow {
+      color: #00e5ff;
+      transform: translateX(3px);
+    }
+
+    .node-list-empty {
+      text-align: center;
+      padding: 40px 20px;
+      color: rgba(255, 255, 255, 0.55);
+      font-size: 1.05rem;
+      background: rgba(18, 22, 36, 0.6);
+      border-radius: 12px;
+      border: 1px dashed rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
     }
 
     /* Graph Container */
@@ -243,7 +440,7 @@
       </a>
 
       <ul class="nav-menu">
-<li><a href="features.html" class="nav-link active">wiki</a></li>
+        <li><a href="features.html" class="nav-link active">Вікі</a></li>
         <li><a href="sources.html" class="nav-link">Джерела</a></li>
         <li><a href="blog.html" class="nav-link">Блог</a></li>
         <li><a href="logoskop.html" class="nav-link">Право</a></li>
@@ -256,10 +453,30 @@
   <!-- Search Bar -->
   <div class="search-wrapper">
     <input type="text" id="search-input" class="glass-search" placeholder="Пошук у базі знань..." autocomplete="off">
+    <button id="view-toggle-btn" class="view-toggle-btn" aria-label="Перемкнути вигляд" title="Вигляд: Павутинка (натисніть для перегляду списком)">
+      <!-- Spiderweb (павутинка) icon -->
+      <svg class="icon-web" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="12" y1="2" x2="12" y2="22"/>
+        <line x1="2" y1="12" x2="22" y2="12"/>
+        <line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/>
+        <line x1="19.07" y1="4.93" x2="4.93" y2="19.07"/>
+        <path d="M12 7 L15.5 8.5 L17 12 L15.5 15.5 L12 17 L8.5 15.5 L7 12 L8.5 8.5 Z"/>
+        <path d="M12 3.5 L18 5.5 L20.5 12 L18 18.5 L12 20.5 L6 18.5 L3.5 12 L6 5.5 Z"/>
+      </svg>
+      <!-- Horizontal lines (горизонтальні рисочки) icon -->
+      <svg class="icon-lines" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
+        <line x1="4" y1="7" x2="20" y2="7"/>
+        <line x1="4" y1="12" x2="20" y2="12"/>
+        <line x1="4" y1="17" x2="20" y2="17"/>
+      </svg>
+    </button>
   </div>
 
   <!-- Graph -->
   <div id="graph-container"></div>
+
+  <!-- List View (Horizontal links in a column) -->
+  <div id="list-container" class="list-container"></div>
   
   <!-- Node Content Modal -->
   <div class="node-modal-overlay" id="node-modal">
@@ -290,6 +507,8 @@
         .nodeId('id')
         .nodeLabel('name')
         .nodeCanvasObject((node, ctx, globalScale) => {
+          if (!node || !isFinite(node.x) || !isFinite(node.y)) return;
+
           // Cosmic color palette by group
           if (!node.cosmicColor) {
             const groupColors = {
@@ -376,15 +595,19 @@
           Graph.centerAt(node.x, node.y, 1000);
           Graph.zoom(8, 2000);
           
-          // Show Modal
-          const modal = document.getElementById('node-modal');
-          const modalTitle = document.getElementById('modal-title');
-          const modalBody = document.getElementById('modal-body');
-          
-          modalTitle.textContent = node.name;
-          modalBody.innerHTML = marked.parse(node.content || "*Немає вмісту*");
-          modal.classList.add('active');
+          openNodeModal(node);
         });
+
+      // Modal Display Helper
+      function openNodeModal(node) {
+        const modal = document.getElementById('node-modal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalBody = document.getElementById('modal-body');
+        
+        modalTitle.textContent = node.name.replace(/_/g, ' ');
+        modalBody.innerHTML = marked.parse(node.content || "*Немає вмісту*");
+        modal.classList.add('active');
+      }
 
       // Close modal logic
       document.getElementById('close-modal').addEventListener('click', () => {
@@ -399,19 +622,118 @@
       // Load Data
       Graph.graphData(graphData);
 
+      // === List View & View Toggle Logic ===
+      const listContainer = document.getElementById('list-container');
+      const viewToggleBtn = document.getElementById('view-toggle-btn');
+      const iconWeb = viewToggleBtn.querySelector('.icon-web');
+      const iconLines = viewToggleBtn.querySelector('.icon-lines');
+      let currentView = 'graph'; // 'graph' (павутинка) or 'list' (горизонтальні рисочки)
+
+      const groupMeta = {
+        'concepts':  { label: 'Концепція', color: '#a78bfa' },
+        'entities':  { label: 'Сутність',  color: '#f0abfc' },
+        'fallacies': { label: 'Помилка',   color: '#fb923c' },
+        'sources':   { label: 'Джерело',   color: '#34d399' },
+        'root':      { label: 'Каталог',   color: '#38bdf8' }
+      };
+
+      function renderNodeList(nodesToRender) {
+        listContainer.innerHTML = '';
+        if (!nodesToRender || nodesToRender.length === 0) {
+          listContainer.innerHTML = '<div class="node-list-empty">Нічого не знайдено за вашим запитом</div>';
+          return;
+        }
+
+        const sortedNodes = nodesToRender.slice().sort((a, b) => a.name.localeCompare(b.name, 'uk'));
+
+        sortedNodes.forEach(node => {
+          const meta = groupMeta[node.group] || { label: 'Термін', color: '#38bdf8' };
+          const link = document.createElement('a');
+          link.href = '#';
+          link.className = 'node-list-item';
+          link.style.setProperty('--node-accent', meta.color);
+          link.dataset.nodeId = node.id;
+          
+          const displayName = node.name.replace(/_/g, ' ');
+
+          link.innerHTML = `
+            <div class="node-list-left">
+              <span class="node-list-dot" style="background:${meta.color}; box-shadow:0 0 10px ${meta.color};"></span>
+              <span class="node-list-title" title="${displayName}">${displayName}</span>
+            </div>
+            <div class="node-list-right">
+              <span class="node-list-tag" style="color:${meta.color}; border-color:${meta.color}40;">${meta.label}</span>
+              <span class="node-list-arrow">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </span>
+            </div>
+          `;
+
+          link.addEventListener('click', (e) => {
+            e.preventDefault();
+            openNodeModal(node);
+          });
+
+          listContainer.appendChild(link);
+        });
+      }
+
+      function getFilteredNodes(query) {
+        if (!query) return graphData.nodes;
+        return graphData.nodes.filter(node => 
+          node.name.toLowerCase().includes(query) || 
+          (node.content && node.content.toLowerCase().includes(query))
+        );
+      }
+
+      function updateListView() {
+        const query = searchInput.value.toLowerCase().trim();
+        const matchedNodes = getFilteredNodes(query);
+        renderNodeList(matchedNodes);
+      }
+
+      // Toggle between Graph (павутинка) and List (горизонтальні рисочки)
+      viewToggleBtn.addEventListener('click', () => {
+        if (currentView === 'graph') {
+          currentView = 'list';
+          // Button transforms into horizontal lines
+          iconWeb.style.display = 'none';
+          iconLines.style.display = 'block';
+          viewToggleBtn.setAttribute('title', 'Вигляд: Список (натисніть для перегляду павутинкою)');
+          viewToggleBtn.setAttribute('aria-label', 'Перемкнути на вигляд павутинки');
+          
+          document.getElementById('graph-container').style.display = 'none';
+          listContainer.classList.add('active');
+          updateListView();
+        } else {
+          currentView = 'graph';
+          // Button transforms back into spiderweb
+          iconWeb.style.display = 'block';
+          iconLines.style.display = 'none';
+          viewToggleBtn.setAttribute('title', 'Вигляд: Павутинка (натисніть для перегляду списком)');
+          viewToggleBtn.setAttribute('aria-label', 'Перемкнути на вигляд списком');
+          
+          listContainer.classList.remove('active');
+          document.getElementById('graph-container').style.display = 'block';
+          Graph.width(window.innerWidth).height(window.innerHeight);
+        }
+      });
+
       // Search Logic
       searchInput.addEventListener('input', e => {
         const query = e.target.value.toLowerCase().trim();
         
+        // Synchronize List View
+        updateListView();
+        
+        // Synchronize Graph View
         highlightNodes.clear();
         highlightLinks.clear();
         
         if (query) {
-          // Find matching nodes
-          const matchedNodes = graphData.nodes.filter(node => 
-            node.name.toLowerCase().includes(query) || 
-            (node.content && node.content.toLowerCase().includes(query))
-          );
+          const matchedNodes = getFilteredNodes(query);
           
           matchedNodes.forEach(node => {
             highlightNodes.add(node);

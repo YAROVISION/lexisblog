@@ -21,18 +21,26 @@ def parse_obsidian_vault(vault_path, output_json_path):
             dirs.remove('.obsidian')
             
         for file in files:
+            if file in ['log.md', 'conventions.md']:
+                continue
             if file.endswith('.md'):
                 file_path = os.path.join(root, file)
                 node_id = file[:-3] # Remove .md
                 
-                # Determine group based on the parent folder name
-                group = os.path.basename(root)
-                if group == "logicaobsidiant":
-                    group = "root"
-                
                 with open(file_path, 'r', encoding='utf-8') as f:
                     content = f.read()
-                    
+
+                # Determine group based on frontmatter or parent folder
+                m_grp = re.search(r'^group:\s*([a-zA-Z0-9_-]+)', content, re.M)
+                if m_grp:
+                    group = m_grp.group(1).strip()
+                else:
+                    group = os.path.basename(root)
+                    if group == "logicaobsidiant":
+                        group = "root"
+                    elif 'помилк' in node_id.lower() or 'fallac' in node_id.lower():
+                        group = "fallacies"
+                
                 nodes.append({
                     "id": node_id,
                     "name": node_id,
