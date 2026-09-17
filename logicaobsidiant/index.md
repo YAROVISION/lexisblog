@@ -15,6 +15,7 @@
 - [[Clippings/making_json_segments/|making_json_segments]] — Мистецтво переконування та судова аргументація (Making Your Case).
 - [[Clippings/scherbina_json_segments/|scherbina_json_segments]] — Матеріали та лекції проф. Щербини з юридичної логіки.
 - [[Clippings/theory_json_segments/|theory_json_segments]] — Теоретичні основи теорії аргументації.
+- [[Clippings/douglas_json_segments/|douglas_json_segments]] — Дуглас Волтон: Неформальна логіка (прагматичний підхід до діалогу, критичні запитання, схеми аргументації).
 
 ---
 
@@ -250,6 +251,7 @@
 - [[Арістотель (Aristotle)]] — засновник формальної логіки, автор теорії силогізмів.
 - [[Френсіс Бекон (Francis Bacon)]] — засновник індуктивного методу.
 - [[Чарльз Пірс (Charles Peirce)]] — засновник прагматизму та семіотики.
+- [[Дуглас Волтон (Douglas Walton)]] — канадський логік, теоретик неформальної логіки, автор прагматичної теорії діалогу та схем аргументації.
 
 ---
 
@@ -594,3 +596,139 @@
 - [Титул, вихідні дані та зміст (Title, Copyright & Contents)](wiki/concepts/Титул, вихідні дані та зміст (Title, Copyright & Contents).md)
 - [Тягар доведення та стандартна форма аргументу (Burden of Proof & Standard Form)](wiki/concepts/Тягар доведення та стандартна форма аргументу (Burden of Proof & Standard Form).md)
 - [Ціннісні аргументи моральні, правові та естетичні (Moral, Legal, and Aesthetic Arguments)](wiki/concepts/Ціннісні аргументи моральні, правові та естетичні (Moral, Legal, and Aesthetic Arguments).md)
+
+
+---
+## Скомпільовані матеріали: Дуглас Волтон (Informal Logic)
+
+> Автор: [[Дуглас Волтон (Douglas Walton)]] · Праця: *Informal Logic: A Pragmatic Approach (2nd Edition)*
+
+### Вступні матеріали
+
+- [Титул, вихідні дані та анотація (Дуглас Волтон)](wiki/concepts/Титул, вихідні дані та анотація (Дуглас Волтон).md)
+- [Зміст книги (Дуглас Волтон)](wiki/concepts/Зміст книги (Дуглас Волтон).md)
+- [Передмова (Дуглас Волтон)](wiki/concepts/Передмова (Дуглас Волтон).md)
+- [Подяки (Дуглас Волтон)](wiki/concepts/Подяки (Дуглас Волтон).md)
+
+### Глава 1. Аргумент як раціональний діалог
+
+- [Вступ до глави 1 Аргумент як раціональний діалог](wiki/concepts/Вступ до глави 1 Аргумент як раціональний діалог.md)
+- [1.1. Типи аргументативного діалогу](wiki/concepts/1.1. Типи аргументативного діалогу.md)
+- [1.2. Компоненти аргументативного діалогу](wiki/concepts/1.2. Компоненти аргументативного діалогу.md)
+- [1.3. Діалог переконання критична дискусія](wiki/concepts/1.3. Діалог переконання критична дискусія.md)
+- [1.4. Негативні правила діалогу переконання](wiki/concepts/1.4. Негативні правила діалогу переконання.md)
+- [1.5. Деякі основні неформальні хиби](wiki/concepts/1.5. Деякі основні неформальні хиби.md)
+- [1.6. Хиба «опудала»](wiki/concepts/1.6. Хиба «опудала».md)
+- [1.7. Аргумент від наслідків](wiki/concepts/1.7. Аргумент від наслідків.md)
+- [1.8. Критична перспектива](wiki/concepts/1.8. Критична перспектива.md)
+
+### Глава 2. Запитання та відповіді в діалозі
+
+- [Вступ до глави 2 Запитання та відповіді в діалозі](wiki/concepts/Вступ до глави 2 Запитання та відповіді в діалозі.md)
+- [2.1. Пресупозиції запитань](wiki/concepts/2.1. Пресупозиції запитань.md)
+- [2.2. Складні запитання](wiki/concepts/2.2. Складні запитання.md)
+- [2.3. «Ви перестали бити дружину»](wiki/concepts/2.3. «Ви перестали бити дружину».md)
+- [2.4. Диз'юнктивні запитання](wiki/concepts/2.4. Диз'юнктивні запитання.md)
+- [2.5. Аргументи від незнання](wiki/concepts/2.5. Аргументи від незнання.md)
+- [2.6. Відповідь запитанням на запитання](wiki/concepts/2.6. Відповідь запитанням на запитання.md)
+- [2.7. Передрішення тези](wiki/concepts/2.7. Передрішення тези.md)
+- [2.8. Запитання в опитуваннях](wiki/concepts/2.8. Запитання в опитуваннях.md)
+- [2.9. Агітаційні опитування та пуш-полінг](wiki/concepts/2.9. Агітаційні опитування та пуш-полінг.md)
+- [2.10. Правила запитань і відповідей у діалозі](wiki/concepts/2.10. Правила запитань і відповідей у діалозі.md)
+
+### Глава 3. Критика нерелевантності
+
+- [Вступ до глави 3 Критика нерелевантності](wiki/concepts/Вступ до глави 3 Критика нерелевантності.md)
+- [3.1. Звинувачення в нерелевантності (Allegations of Irrelevance)](wiki/concepts/3.1. Звинувачення в нерелевантності (Allegations of Irrelevance).md)
+- [3.2. Глобальна нерелевантність (Global Irrelevance)](wiki/concepts/3.2. Глобальна нерелевантність (Global Irrelevance).md)
+- [3.3. Релевантність запитань і відповідей (Question-Answer Relevance)](wiki/concepts/3.3. Релевантність запитань і відповідей (Question-Answer Relevance).md)
+- [3.4. Встановлення порядку денного для дискусії (Setting an Agenda for a Discussion)](wiki/concepts/3.4. Встановлення порядку денного для дискусії (Setting an Agenda for a Discussion).md)
+- [3.5. Відволікання («червоний оселедець») проти неправильного висновку (Red Herring vs. Wrong Conclusion)](wiki/concepts/3.5. Відволікання («червоний оселедець») проти неправильного висновку (Red Herring vs. Wrong Conclusion).md)
+- [3.6. Різновиди критики нерелевантності (Varieties of Criticisms of Irrelevance)](wiki/concepts/3.6. Різновиди критики нерелевантності (Varieties of Criticisms of Irrelevance).md)
+- [3.7. Підсумок (Summary)](wiki/concepts/3.7. Підсумок (Summary).md)
+
+### Глава 4. Апеляції до емоцій
+
+- [Вступ до глави 4 Апеляції до емоцій (Appeals to Emotion)](wiki/concepts/Вступ до глави 4 Апеляції до емоцій (Appeals to Emotion).md)
+- [4.1. Argumentum ad populum (Argumentum Ad Populum)](wiki/concepts/4.1. Argumentum ad populum (Argumentum Ad Populum).md)
+- [4.2. Аргумент від популярності (The Argument from Popularity)](wiki/concepts/4.2. Аргумент від популярності (The Argument from Popularity).md)
+- [4.3. Проблеми з апеляціями до популярності (Problems with Appeals to Popularity)](wiki/concepts/4.3. Проблеми з апеляціями до популярності (Problems with Appeals to Popularity).md)
+- [4.4. Залякування та апеляція до сили (Threatening Appeals to Force)](wiki/concepts/4.4. Залякування та апеляція до сили (Threatening Appeals to Force).md)
+- [4.5. Подальші проблеми ad baculum (Further Ad Baculum Problems)](wiki/concepts/4.5. Подальші проблеми ad baculum (Further Ad Baculum Problems).md)
+- [4.6. Апеляції до жалю (Appeals to Pity)](wiki/concepts/4.6. Апеляції до жалю (Appeals to Pity).md)
+- [4.7. Відкриті та візуальні апеляції до жалю (Overt, Pictorial Appeals to Pity)](wiki/concepts/4.7. Відкриті та візуальні апеляції до жалю (Overt, Pictorial Appeals to Pity).md)
+- [4.8. Підсумок (Summary)](wiki/concepts/4.8. Підсумок (Summary).md)
+
+### Глава 5. Валідні аргументи
+
+- [Вступ до глави 5 Валідні аргументи (Valid Arguments)](wiki/concepts/Вступ до глави 5 Валідні аргументи (Valid Arguments).md)
+- [5.1. Дедуктивна валідність (Deductive Validity)](wiki/concepts/5.1. Дедуктивна валідність (Deductive Validity).md)
+- [5.2. Ідентифікація аргументів (Identifying Arguments)](wiki/concepts/5.2. Ідентифікація аргументів (Identifying Arguments).md)
+- [5.3. Валідність як семантичне поняття (Validity as a Semantic Concept)](wiki/concepts/5.3. Валідність як семантичне поняття (Validity as a Semantic Concept).md)
+- [5.4. Валідні форми аргументів (Valid Forms of Argument)](wiki/concepts/5.4. Валідні форми аргументів (Valid Forms of Argument).md)
+- [5.5. Інвалідні (невалідні) аргументи (Invalid Arguments)](wiki/concepts/5.5. Інвалідні (невалідні) аргументи (Invalid Arguments).md)
+- [5.6. Несумісність та суперечливість (Inconsistency)](wiki/concepts/5.6. Несумісність та суперечливість (Inconsistency).md)
+- [5.7. Помилки композиції та поділу (Composition and Division)](wiki/concepts/5.7. Помилки композиції та поділу (Composition and Division).md)
+- [5.8. Дефезибільні (спростовні) міркування (Defeasible Reasoning)](wiki/concepts/5.8. Дефезибільні (спростовні) міркування (Defeasible Reasoning).md)
+- [5.9. Поспішний висновок (Jumping to a Conclusion)](wiki/concepts/5.9. Поспішний висновок (Jumping to a Conclusion).md)
+- [5.10. Підсумок (Summary)](wiki/concepts/5.10. Підсумок (Summary).md)
+
+### Глава 6. Особиста атака в аргументації
+
+- [Вступ до глави 6 Особиста атака в аргументації (Personal Attack in Argumentation)](wiki/concepts/Вступ до глави 6 Особиста атака в аргументації (Personal Attack in Argumentation).md)
+- [6.1. Образливий ad hominem аргумент (The Abusive Ad Hominem Argument)](wiki/concepts/6.1. Образливий ad hominem аргумент (The Abusive Ad Hominem Argument).md)
+- [6.2. Обставинний ad hominem аргумент (The Circumstantial Ad Hominem Argument)](wiki/concepts/6.2. Обставинний ad hominem аргумент (The Circumstantial Ad Hominem Argument).md)
+- [6.3. Атака на неупередженість сперечальника (The Attack on an Arguer's Impartiality)](wiki/concepts/6.3. Атака на неупередженість сперечальника (The Attack on an Arguer's Impartiality).md)
+- [6.4. Непомилкові ad hominem аргументи (Non-Fallacious Ad Hominem Arguments)](wiki/concepts/6.4. Непомилкові ad hominem аргументи (Non-Fallacious Ad Hominem Arguments).md)
+- [6.5. Відповідь на особисту атаку (Replying to a Personal Attack)](wiki/concepts/6.5. Відповідь на особисту атаку (Replying to a Personal Attack).md)
+- [6.6. Критичні запитання до ad hominem аргументу (Critical Questions for an Ad Hominem Argument)](wiki/concepts/6.6. Критичні запитання до ad hominem аргументу (Critical Questions for an Ad Hominem Argument).md)
+- [6.7. Важливі типи помилок для перевірки (Important Types of Error to Check)](wiki/concepts/6.7. Важливі типи помилок для перевірки (Important Types of Error to Check).md)
+- [6.8. Випадки для подальшого обговорення (Some Cases for Further Discussion)](wiki/concepts/6.8. Випадки для подальшого обговорення (Some Cases for Further Discussion).md)
+
+### Глава 7. Апеляції до авторитету
+
+- [Вступ до глави 7 Апеляції до авторитету (Appeals to Authority)](wiki/concepts/Вступ до глави 7 Апеляції до авторитету (Appeals to Authority).md)
+- [7.1. Раціональні апеляції до авторитету (Reasonable Appeals to Authority)](wiki/concepts/7.1. Раціональні апеляції до авторитету (Reasonable Appeals to Authority).md)
+- [7.2. Схема аргументації для апеляції до експертної думки (Argumentation Scheme for Appeal to Expert Opinion)](wiki/concepts/7.2. Схема аргументації для апеляції до експертної думки (Argumentation Scheme for Appeal to Expert Opinion).md)
+- [7.3. Критичні запитання для апеляції до експертної думки (Critical Questions for the Appeal to Expert Opinion)](wiki/concepts/7.3. Критичні запитання для апеляції до експертної думки (Critical Questions for the Appeal to Expert Opinion).md)
+- [7.4. Три поширені помилки при посиланні на експертні думки (Three Common Errors in Citing Expert Opinions)](wiki/concepts/7.4. Три поширені помилки при посиланні на експертні думки (Three Common Errors in Citing Expert Opinions).md)
+- [7.5. Оцінка апеляцій до експертної думки в письмових джерелах (Evaluating Appeals to Expert Opinion in Written Sources)](wiki/concepts/7.5. Оцінка апеляцій до експертної думки в письмових джерелах (Evaluating Appeals to Expert Opinion in Written Sources).md)
+- [7.6. Експертні свідчення в юридичній аргументації (Expert Testimony in Legal Argumentation)](wiki/concepts/7.6. Експертні свідчення в юридичній аргументації (Expert Testimony in Legal Argumentation).md)
+- [7.7. Наскільки компетентним є авторитет (How Expert Is the Authority)](wiki/concepts/7.7. Наскільки компетентним є авторитет (How Expert Is the Authority).md)
+- [7.8. Інтерпретація висловлювань експерта (Interpreting What the Expert Said)](wiki/concepts/7.8. Інтерпретація висловлювань експерта (Interpreting What the Expert Said).md)
+- [7.9. Зважений погляд на аргумент від експертної думки (A Balanced View of Argument from Expert Opinion)](wiki/concepts/7.9. Зважений погляд на аргумент від експертної думки (A Balanced View of Argument from Expert Opinion).md)
+
+### Глава 8. Індуктивні помилки, упередження та софізми
+
+- [Вступ до глави 8 Індуктивні помилки, упередження та софізми (Inductive Errors, Bias, and Fallacies)](wiki/concepts/Вступ до глави 8 Індуктивні помилки, упередження та софізми (Inductive Errors, Bias, and Fallacies).md)
+- [8.1. Беззмістовна та непізнавана статистика (Meaningless and Unknowable Statistics)](wiki/concepts/8.1. Беззмістовна та непізнавана статистика (Meaningless and Unknowable Statistics).md)
+- [8.2. Процедури вибірки (Sampling Procedures)](wiki/concepts/8.2. Процедури вибірки (Sampling Procedures).md)
+- [8.3. Недостатня та упереджена статистика (Insufficient and Biased Statistics)](wiki/concepts/8.3. Недостатня та упереджена статистика (Insufficient and Biased Statistics).md)
+- [8.4. Сумнівні запитання та дефініції (Questionable Questions and Definitions)](wiki/concepts/8.4. Сумнівні запитання та дефініції (Questionable Questions and Definitions).md)
+- [8.5. Аргумент post hoc (The Post Hoc Argument)](wiki/concepts/8.5. Аргумент post hoc (The Post Hoc Argument).md)
+- [8.6. Шість видів помилок post hoc (Six Kinds of Post Hoc Errors)](wiki/concepts/8.6. Шість видів помилок post hoc (Six Kinds of Post Hoc Errors).md)
+- [8.7. Упередження через визначення змінних (Bias Due to Defining Variables)](wiki/concepts/8.7. Упередження через визначення змінних (Bias Due to Defining Variables).md)
+- [8.8. Критика post hoc як постановка критичних запитань у розслідуванні (Post Hoc Criticisms as Raising Critical Question](wiki/concepts/8.8. Критика post hoc як постановка критичних запитань у розслідуванні (Post Hoc Criticisms as Raising Critical Question.md)
+- [8.9. Посилення причинних аргументів відповідями на критичні запитання (Strengthening Causal Arguments)](wiki/concepts/8.9. Посилення причинних аргументів відповідями на критичні запитання (Strengthening Causal Arguments).md)
+- [8.10. Приклади формулювання причинних висновків із наукових досліджень (Examples of Drawing Causal Conclusions)](wiki/concepts/8.10. Приклади формулювання причинних висновків із наукових досліджень (Examples of Drawing Causal Conclusions).md)
+- [8.11. Підсумок (Summary)](wiki/concepts/8.11. Підсумок (Summary).md)
+
+### Глава 9. Аргументація в природній мові
+
+- [Вступ до глави 9 Аргументація в природній мові (Natural Language Argumentation)](wiki/concepts/Вступ до глави 9 Аргументація в природній мові (Natural Language Argumentation).md)
+- [9.1. Неоднозначність і розмитість (Ambiguity and Vagueness)](wiki/concepts/9.1. Неоднозначність і розмитість (Ambiguity and Vagueness).md)
+- [9.2. Навантажені терміни та мова з передрішенням тези (Loaded Terms and Question-Begging Language)](wiki/concepts/9.2. Навантажені терміни та мова з передрішенням тези (Loaded Terms and Question-Begging Language).md)
+- [9.3. Еквівокація та амфіболія (Equivocation and Amphiboly)](wiki/concepts/9.3. Еквівокація та амфіболія (Equivocation and Amphiboly).md)
+- [9.4. Аргументи, засновані на аналогії (Arguments Based on Analogy)](wiki/concepts/9.4. Аргументи, засновані на аналогії (Arguments Based on Analogy).md)
+- [9.5. Аргументативне використання аналогії (Argumentative Use of Analogy)](wiki/concepts/9.5. Аргументативне використання аналогії (Argumentative Use of Analogy).md)
+- [9.6. Критика аргументів за аналогією (Criticizing Arguments from Analogy)](wiki/concepts/9.6. Критика аргументів за аналогією (Criticizing Arguments from Analogy).md)
+- [9.7. Аргументи «слизького схилу» (Slippery Slope Arguments)](wiki/concepts/9.7. Аргументи «слизького схилу» (Slippery Slope Arguments).md)
+- [9.8. Тонкі еквівокації (Subtle Equivocations)](wiki/concepts/9.8. Тонкі еквівокації (Subtle Equivocations).md)
+- [9.9. Варіативність суворості стандартів (Variability of Strictness of Standards)](wiki/concepts/9.9. Варіативність суворості стандартів (Variability of Strictness of Standards).md)
+- [9.10. Висновки (Conclusions)](wiki/concepts/9.10. Висновки (Conclusions).md)
+
+### Довідкові матеріали (Back Matter)
+
+- [Бібліографія (Bibliography)](wiki/concepts/Бібліографія (Bibliography).md)
+- [Предметний покажчик (Index)](wiki/concepts/Предметний покажчик (Index).md)
+

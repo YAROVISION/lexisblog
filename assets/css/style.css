@@ -1133,6 +1133,158 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0.5rem;
 }
 
+/* --- Judicial Logic & Article Extensions --- */
+.legal-logic-list {
+  list-style: none !important;
+  padding: 0 !important;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin: 1.75rem 0 2.5rem !important;
+}
+
+.legal-logic-list li {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  padding: 1.15rem 1.4rem;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-left: 3.5px solid var(--accent-primary);
+  border-radius: var(--border-radius-sm);
+  margin-bottom: 0 !important;
+}
+
+.legal-logic-list .bullet {
+  font-size: 1.3rem;
+  line-height: 1.2;
+  color: var(--accent-primary);
+  flex-shrink: 0;
+}
+
+.syllogism-box {
+  margin: 2rem 0 2.5rem;
+  padding: 1.75rem 1.5rem;
+  background: linear-gradient(135deg, rgba(26, 107, 255, 0.08), rgba(0, 194, 168, 0.08));
+  border: 1px solid rgba(26, 107, 255, 0.25);
+  border-radius: var(--border-radius-md);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.syllogism-flow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
+.syllogism-node {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.75rem 1.25rem;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-sm);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.syllogism-node.major {
+  border-color: #1A6BFF;
+}
+
+.syllogism-node.minor {
+  border-color: #00C2A8;
+}
+
+.syllogism-node.conclusion {
+  border-color: #F59E0B;
+  background: rgba(245, 158, 11, 0.06);
+}
+
+.syllogism-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.syllogism-value {
+  color: var(--text-primary);
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+.syllogism-op {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+.book-ref-list {
+  list-style: none !important;
+  padding: 0 !important;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 1.25rem 0 2rem !important;
+}
+
+.book-ref-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  padding: 1rem 1.25rem;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-sm);
+  margin-bottom: 0 !important;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.book-ref-item:hover {
+  border-color: var(--accent-primary);
+  transform: translateX(4px);
+}
+
+.book-ref-bullet {
+  color: var(--accent-primary);
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
+
+.book-ref-link {
+  color: var(--accent-primary);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.book-ref-link:hover {
+  text-decoration: underline;
+  color: #388bfd;
+}
+
+.book-ref-badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  background: rgba(26, 107, 255, 0.15);
+  color: #1A6BFF;
+  margin-left: 0.5rem;
+  vertical-align: middle;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  font-weight: 600;
+}
+
 /* --- Forms & Auth --- */
 .auth-page-container {
   min-height: 100vh;

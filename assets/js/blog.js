@@ -4,6 +4,164 @@
  */
 const BLOG_POSTS = [
   {
+    id: "judicial-error-formal-logic",
+    slug: "anatomiya-sudovoyi-pomylky-formalna-logika",
+    title: "Анатомія судової помилки: чому формальна логіка є головним захисником справедливості у кримінальному процесі",
+    category: "Право",
+    date: "2026-03-15",
+    readTime: "5 хв",
+    image: "assets/images/judicial-logic.jpg",
+    summary: "Судове рішення не може базуватися на інтуїції. Порушення законів формальної логіки в українському судочинстві — це прямий процесуальний дефект, який веде до безумовного скасування судового акта.",
+    content: `
+      <p class="article-lead">
+        Судове рішення в кримінальному провадженні не може базуватися на інтуїції чи суб'єктивних припущеннях. Будь-який вирок або ухвала — це передусім суворий акт раціонального мислення. Порушення законів формальної логіки в українському судочинстві є не просто абстрактною вадою викладу, а прямим процесуальним дефектом, який веде до безумовного скасування судового акта.
+      </p>
+
+      <h2>Буква закону: процесуальні вимоги до мислення</h2>
+      <p>
+        Кримінальний процесуальний кодекс України закріплює логічні стандарти як імперативні норми:
+      </p>
+
+      <ul class="legal-logic-list">
+        <li>
+          <span class="bullet">⚬</span>
+          <div>
+            <strong style="color: var(--text-primary); display: block; font-size: 1.05rem; margin-bottom: 0.25rem;">Законність, обґрунтованість і вмотивованість (ст. 370 КПК):</strong>
+            <span>Рішення визнається обґрунтованим лише за дотримання закону достатньої підстави — коли факти підтверджені доказами. Вмотивованість вимагає чіткого логічного ланцюга: від посилок (досліджених матеріалів) до кінцевого висновку (кваліфікації дій).</span>
+          </div>
+        </li>
+        <li>
+          <span class="bullet">⚬</span>
+          <div>
+            <strong style="color: var(--text-primary); display: block; font-size: 1.05rem; margin-bottom: 0.25rem;">Оцінка доказів (ст. 94 КПК):</strong>
+            <span>Оцінка кожного доказу окремо та всієї їх сукупності з точки зору достатності й взаємозв'язку є суто логічною операцією, що спирається на індукцію, дедукцію та усунення внутрішніх суперечностей.</span>
+          </div>
+        </li>
+        <li>
+          <span class="bullet">⚬</span>
+          <div>
+            <strong style="color: var(--text-primary); display: block; font-size: 1.05rem; margin-bottom: 0.25rem;">Стандарт «поза розумним сумнівом» (ст. 17 КПК):</strong>
+            <span>Будь-яка непереборна логічна суперечність у версії сторони обвинувачення (порушення закону несуперечності) автоматично руйнує конструкцію підозри та тлумачиться на користь обвинуваченого.</span>
+          </div>
+        </li>
+        <li>
+          <span class="bullet">⚬</span>
+          <div>
+            <strong style="color: var(--text-primary); display: block; font-size: 1.05rem; margin-bottom: 0.25rem;">Право на справедливий суд (ст. 6 Конвенції з прав людини):</strong>
+            <span>Практика ЄСПЛ («Серявін та інші проти України», «Проніна проти України») однозначно вказує: ігнорування судом ключових аргументів сторін або наявність висновків, які не випливають із фактів (помилка non sequitur), порушує конвенційні гарантії правосуддя.</span>
+          </div>
+        </li>
+      </ul>
+
+      <h2>Науковий вимір: силогізми, факти та ціна помилки</h2>
+      <p>
+        У теорії доказування судове рішення розглядається як класичний дедуктивний силогізм:
+      </p>
+
+      <div class="syllogism-box">
+        <div class="syllogism-flow">
+          <div class="syllogism-node major">
+            <span class="syllogism-label">Велика посилка</span>
+            <span class="syllogism-value">Норма права</span>
+          </div>
+          <span class="syllogism-op">+</span>
+          <div class="syllogism-node minor">
+            <span class="syllogism-label">Мала посилка</span>
+            <span class="syllogism-value">Встановлені факти</span>
+          </div>
+          <span class="syllogism-op">&rarr;</span>
+          <div class="syllogism-node conclusion">
+            <span class="syllogism-label">Висновок</span>
+            <span class="syllogism-value">Вирок</span>
+          </div>
+        </div>
+      </div>
+
+      <p>
+        Якщо суд підміняє факти чи некоректно тлумачить диспозицію статті, уся конструкція руйнується, що за ст. 413 КПК кваліфікується як неправильне застосування закону про кримінальну відповідальність. Побудова обвинувачення на непрямих доказах також підпорядкована логічному методу виключення (Михайло Гродзінський, Вільям Твайнінг): якщо сукупність фактів допускає хоча б одну альтернативну версію події, теза залишається недоведеною.
+      </p>
+
+      <p>
+        Чотири базові закони мислення — тотожності (незмінність предмета обвинувачення за ст. 337 КПК), несуперечності, виключеного третього та достатньої підстави (ст. 91 КПК) — слугують обов'язковими фільтрами. Їх ігнорування призводить до однобічності слідства та невідповідності висновків суду обставинам справи (ст. 409–411 КПК).
+      </p>
+
+      <h2>Бібліотека судового аналітика: що почитати для виявлення дефектів аргументації</h2>
+
+      <h3>Юридична логіка та теорія судової аргументації</h3>
+      <ul class="book-ref-list">
+        <li class="book-ref-item">
+          <span class="book-ref-bullet">⚬</span>
+          <div>
+            <a href="logica-textbook.html" class="book-ref-link">«Логіка для юристів» — Анатолій Конверський</a>
+            <span class="book-ref-badge">В інтерактивному каталозі</span>
+            <div style="margin-top: 0.25rem; color: var(--text-secondary); font-size: 0.95rem;">фундаментальний український підручник із розбором класичної логіки, проектованої на презумпції, докази та правові норми.</div>
+          </div>
+        </li>
+        <li class="book-ref-item">
+          <span class="book-ref-bullet">⚬</span>
+          <div>
+            <a href="making-your-case.html" class="book-ref-link">«Making Your Case: The Art of Persuading Judges» — Antonin Scalia, Bryan A. Garner</a>
+            <span class="book-ref-badge">В інтерактивному каталозі</span>
+            <div style="margin-top: 0.25rem; color: var(--text-secondary); font-size: 0.95rem;">практичне керівництво судді Верховного Суду США щодо побудови аргументів і пошуку логічних збоїв у судових актах.</div>
+          </div>
+        </li>
+        <li class="book-ref-item">
+          <span class="book-ref-bullet">⚬</span>
+          <div>
+            <a href="maccormick-theory.html" class="book-ref-link">«Legal Reasoning and Legal Theory» — Neil MacCormick</a>
+            <span class="book-ref-badge">В інтерактивному каталозі</span>
+            <div style="margin-top: 0.25rem; color: var(--text-secondary); font-size: 0.95rem;">фундаментальне дослідження дедуктивного обґрунтування та меж раціональності при судовому тлумаченні.</div>
+          </div>
+        </li>
+        <li class="book-ref-item">
+          <span class="book-ref-bullet">⚬</span>
+          <div>
+            <a href="scherbina-argumentation.html" class="book-ref-link">«Юридична аргументація: Логічні дослідження» — Олена Щербина</a>
+            <span class="book-ref-badge">В інтерактивному каталозі</span>
+            <div style="margin-top: 0.25rem; color: var(--text-secondary); font-size: 0.95rem;">монографія про сучасний логічний аналіз правових текстів і структуру судового діалогу.</div>
+          </div>
+        </li>
+      </ul>
+
+      <h3>Логічні помилки, софізми та критичний аналіз</h3>
+      <ul class="book-ref-list">
+        <li class="book-ref-item">
+          <span class="book-ref-bullet">⚬</span>
+          <div>
+            <a href="damer-fallacies.html" class="book-ref-link">«Attacking Faulty Reasoning» — T. Edward Damer</a>
+            <span class="book-ref-badge">В інтерактивному каталозі</span>
+            <div style="margin-top: 0.25rem; color: var(--text-secondary); font-size: 0.95rem;">вичерпний довідник неформальних логічних помилок із готовими схемами побудови контраргументів.</div>
+          </div>
+        </li>
+        <li class="book-ref-item">
+          <span class="book-ref-bullet">⚬</span>
+          <div>
+            <strong style="color: var(--text-primary);">«Informal Logic: A Pragmatic Approach» — Douglas Walton:</strong>
+            <div style="margin-top: 0.25rem; color: var(--text-secondary); font-size: 0.95rem;">робота провідного фахівця з виявлення маніпуляцій, упереджень і підміни тез у текстах.</div>
+          </div>
+        </li>
+        <li class="book-ref-item">
+          <span class="book-ref-bullet">⚬</span>
+          <div>
+            <strong style="color: var(--text-primary);">«A Rulebook for Arguments» — Anthony Weston:</strong>
+            <div style="margin-top: 0.25rem; color: var(--text-secondary); font-size: 0.95rem;">стислий посібник для перевірки причинно-наслідкових зв’язків, аналогій та узагальнень.</div>
+          </div>
+        </li>
+      </ul>
+
+      <h3>Теорія доказів та прийняття рішень</h3>
+      <ul class="book-ref-list">
+        <li class="book-ref-item">
+          <span class="book-ref-bullet">⚬</span>
+          <div>
+            <strong style="color: var(--text-primary);">«Evidence and Inference in the Law» — ред. Mike Redmayne, William Twining:</strong>
+            <div style="margin-top: 0.25rem; color: var(--text-secondary); font-size: 0.95rem;">спеціалізована праця з логіки фактів, оцінки достатності доказів та усунення суперечностей у свідченнях.</div>
+          </div>
+        </li>
+      </ul>
+    `
+  },
+  {
     id: "english-16-lessons",
     slug: "angliyska-za-16-urokiv-interaktyvnyy-format",
     title: "Англійська за 16 уроків — тепер в інтерактивному форматі українською! 🇬🇧🇺🇦",

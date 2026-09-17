@@ -685,3 +685,11 @@
 - **Дія**: Скомпільовано 311 розділів та сегментів із каталогу `Clippings/` у повноцінні статті `wiki/concepts/`.
 - **Джерела**: 5 бібліотек першоджерел (`attaking_json-segments`, `making_json_segments`, `logica_json_segments`, `scherbina_json_segments`, `theory_json_segments`).
 - **Результат**: Створено фронтматтери, виправлено артефакти розмітки, налаштовано зв'язки з батьківськими концептами та оновлено `index.md`.
+
+
+## [2026-09-17] ingest | Компіляція першоджерела Дугласа Волтона (Informal Logic) за методом Karpathy LLM Wiki
+
+- **Дія**: Скомпільовано 96 розділів та сегментів із каталогу `Clippings/douglas_json_segments` у повноцінні статті `wiki/concepts/`.
+- **Джерело**: Дуглас Волтон, *«Informal Logic: A Pragmatic Approach»* (2nd Edition, Cambridge University Press).
+- **Сутності**: Створено профіль автора `[[Дуглас Волтон (Douglas Walton)]]` у `wiki/entities/`.
+- **Результат**: Сформовано YAML-фронтматтери (теги, дати, джерела, групи), налаштовано системні зв'язки з батьківськими концептами та оновлено центральний `index.md`.

@@ -124,6 +124,66 @@ def determine_tags_and_parent(folder, section, segment):
         tags = ["право", "теорія_права", "макормік"]
         parents.append("Макормік (Neil MacCormick)")
         parents.append("Юридичний позитивізм")
+    elif folder == "douglas_json_segments":
+        tags = ["логіка", "неформальна_логіка", "теорія_аргументації", "волтон"]
+        parents.append("Дуглас Волтон (Douglas Walton)")
+        parents.append("Неформальна логіка (Informal Logic)")
+        sec_lower = section.lower()
+        seg_lower = segment.lower()
+
+        if "глава 1" in sec_lower:
+            tags.extend(["діалог", "критична_дискусія"])
+            parents.append("Типи аргументативного діалогу")
+            parents.append("Діалог переконання")
+            if "хиб" in seg_lower or "опудал" in seg_lower:
+                group = "fallacies"
+        elif "глава 2" in sec_lower:
+            tags.extend(["інтерогативна_логіка", "запитання_відповіді"])
+            parents.append("Логіка запитань і відповідей (Інтерогативна логіка)")
+            if "незнанн" in seg_lower or "передрішенн" in seg_lower or "складні запитання" in seg_lower:
+                group = "fallacies"
+                parents.append("Логічні помилки")
+        elif "глава 3" in sec_lower:
+            tags.extend(["релевантність", "критика_аргументації"])
+            parents.append("Релевантність аргументації")
+            if "оселедець" in seg_lower or "нерелевантн" in seg_lower:
+                group = "fallacies"
+                parents.append("Логічні помилки")
+        elif "глава 4" in sec_lower:
+            tags.extend(["емоційні_апеляції", "логічні_помилки"])
+            parents.append("Апеляції до емоцій")
+            parents.append("Логічні помилки")
+            group = "fallacies"
+        elif "глава 5" in sec_lower:
+            tags.extend(["валідність", "дедукція", "дефезибільні_міркування"])
+            parents.append("Валідність аргументу")
+            parents.append("Дефезибільні міркування")
+            if "невалідн" in seg_lower or "помилк" in seg_lower or "поспішний висновок" in seg_lower:
+                group = "fallacies"
+        elif "глава 6" in sec_lower:
+            tags.extend(["ad_hominem", "особиста_атака", "критичні_запитання"])
+            parents.append("Атаки на особистість (Ad Hominem)")
+            parents.append("Критичні запитання")
+            group = "fallacies"
+        elif "глава 7" in sec_lower:
+            tags.extend(["ad_verecundiam", "думка_експерта", "схеми_аргументації"])
+            parents.append("Апеляція до авторитету (Ad Verecundiam)")
+            parents.append("Схеми аргументації (Argumentation Schemes)")
+            if "помилк" in seg_lower:
+                group = "fallacies"
+        elif "глава 8" in sec_lower:
+            tags.extend(["індукція", "каузальність", "post_hoc", "статистика"])
+            parents.append("Каузальні помилки")
+            parents.append("Індуктивні міркування")
+            group = "fallacies"
+        elif "глава 9" in sec_lower:
+            tags.extend(["природна_мова", "аналогія", "слизький_схил", "еквівокація"])
+            parents.append("Аргумент за аналогією")
+            parents.append("Слизький схил")
+            if "еквівокац" in seg_lower or "амфібол" in seg_lower or "слизьк" in seg_lower:
+                group = "fallacies"
+        elif "вступні" in sec_lower:
+            tags.extend(["вступ", "методологія"])
 
     return tags, parents, group
 
@@ -150,7 +210,7 @@ def main():
     for root, dirs, files in os.walk(clippings_dir):
         folder = os.path.basename(root)
         for file in sorted(files):
-            if not file.endswith('.md'):
+            if not file.endswith('.md') or file.startswith('_'):
                 continue
 
             file_path = os.path.join(root, file)
@@ -163,6 +223,16 @@ def main():
             if not title:
                 title = clean_filename(file[:-3])
 
+            if folder == "douglas_json_segments":
+                if title == "Передмова":
+                    title = "Передмова (Дуглас Волтон)"
+                elif title == "Титул, вихідні дані та анотація":
+                    title = "Титул, вихідні дані та анотація (Дуглас Волтон)"
+                elif title == "Зміст книги":
+                    title = "Зміст книги (Дуглас Волтон)"
+                elif title == "Подяки":
+                    title = "Подяки (Дуглас Волтон)"
+
             # Check if this concept already exists in concepts_dir
             if title.lower() in existing_concepts:
                 # Already exists
@@ -174,6 +244,9 @@ def main():
             # Collect wikilinks to include in related
             all_related = list(set(meta["related"] + parents))
 
+            item_created = "2026-09-17" if folder == "douglas_json_segments" else "2026-09-14"
+            item_updated = item_created
+
             # Build YAML frontmatter
             frontmatter_lines = [
                 "---",
@@ -184,8 +257,8 @@ def main():
             for t in tags:
                 frontmatter_lines.append(f"  - {t}")
             frontmatter_lines.extend([
-                "created: 2026-09-14",
-                "updated: 2026-09-14",
+                f"created: {item_created}",
+                f"updated: {item_updated}",
                 "sources:",
                 f'  - "[[{rel_source}]]"',
                 "---",
@@ -227,35 +300,68 @@ def main():
 
     print(f"Compilation finished: {created_count} concepts created, {skipped_count} existing concepts retained.")
 
-    # Append to index.md if new concepts were created
+    # Update index.md if new concepts were created
     if new_concept_entries:
-        with open(index_path, 'a', encoding='utf-8') as idx:
-            idx.write("\n\n---\n## Скомпільовані розділи та правила з першоджерел (Clippings)\n\n")
-            # Group by folder
-            by_folder = {}
-            for entry in new_concept_entries:
-                by_folder.setdefault(entry["folder"], []).append(entry)
+        # Check raw sources in index.md
+        with open(index_path, 'r', encoding='utf-8') as idx_r:
+            idx_content = idx_r.read()
 
-            folder_titles = {
-                "making_json_segments": "Making Your Case (Правила судової аргументації Скаліа та Гарнера)",
-                "attaking_json-segments": "Attacking Faulty Reasoning (Логічні помилки та кодекс Деймера)",
-                "logica_json_segments": "Підручник логіки (В. Щербина)",
-                "scherbina_json_segments": "Юридична аргументація (О. Щербина)",
-                "theory_json_segments": "Теорія права (Н. Макормік)"
-            }
+        if "douglas_json_segments" not in idx_content:
+            idx_content = idx_content.replace(
+                "- [[Clippings/theory_json_segments/|theory_json_segments]] — Теоретичні основи теорії аргументації.\n",
+                "- [[Clippings/theory_json_segments/|theory_json_segments]] — Теоретичні основи теорії аргументації.\n- [[Clippings/douglas_json_segments/|douglas_json_segments]] — Дуглас Волтон: Неформальна логіка (прагматичний підхід до діалогу, критичні запитання, схеми аргументації).\n"
+            )
 
+        # Build index addition
+        by_folder = {}
+        for entry in new_concept_entries:
+            by_folder.setdefault(entry["folder"], []).append(entry)
+
+        folder_titles = {
+            "making_json_segments": "Making Your Case (Правила судової аргументації Скаліа та Гарнера)",
+            "attaking_json-segments": "Attacking Faulty Reasoning (Логічні помилки та кодекс Деймера)",
+            "logica_json_segments": "Підручник логіки (В. Щербина)",
+            "scherbina_json_segments": "Юридична аргументація (О. Щербина)",
+            "theory_json_segments": "Теорія права (Н. Макормік)",
+            "douglas_json_segments": "Неформальна логіка: прагматичний підхід (Дуглас Волтон)"
+        }
+
+        addition = "\n\n---\n## Скомпільовані матеріали: Дуглас Волтон (Informal Logic)\n\n"
+        addition += "> Автор: [[Дуглас Волтон (Douglas Walton)]] · Праця: *Informal Logic: A Pragmatic Approach (2nd Edition)*\n\n"
+
+        # If douglas entries exist, group by section for a beautiful structured index
+        douglas_entries = [e for e in new_concept_entries if e["folder"] == "douglas_json_segments"]
+        if douglas_entries:
+            by_sec = {}
+            for e in douglas_entries:
+                by_sec.setdefault(e["section"] or "Інше", []).append(e)
+            for sec, entries in by_sec.items():
+                addition += f"### {sec}\n\n"
+                for e in entries:
+                    addition += f"- [{e['title']}](wiki/concepts/{e['title']}.md)\n"
+                addition += "\n"
+
+        other_entries = [e for e in new_concept_entries if e["folder"] != "douglas_json_segments"]
+        if other_entries:
             for fld, entries in by_folder.items():
+                if fld == "douglas_json_segments":
+                    continue
                 sec_title = folder_titles.get(fld, fld)
-                idx.write(f"\n### {sec_title}\n\n")
+                addition += f"\n### {sec_title}\n\n"
                 for e in sorted(entries, key=lambda x: x['title']):
-                    idx.write(f"- [{e['title']}](wiki/concepts/{e['title']}.md)\n")
+                    addition += f"- [{e['title']}](wiki/concepts/{e['title']}.md)\n"
+
+        idx_content += addition
+        with open(index_path, 'w', encoding='utf-8') as idx_w:
+            idx_w.write(idx_content)
 
         # Append to log.md
         with open(log_path, 'a', encoding='utf-8') as lg:
-            lg.write(f"\n\n## [2026-09-14] ingest | Повна компіляція першоджерел Clippings у wiki/concepts\n\n")
-            lg.write(f"- **Дія**: Скомпільовано {created_count} розділів та сегментів із каталогу `Clippings/` у повноцінні статті `wiki/concepts/`.\n")
-            lg.write(f"- **Джерела**: 5 бібліотек першоджерел (`attaking_json-segments`, `making_json_segments`, `logica_json_segments`, `scherbina_json_segments`, `theory_json_segments`).\n")
-            lg.write(f"- **Результат**: Створено фронтматтери, виправлено артефакти розмітки, налаштовано зв'язки з батьківськими концептами та оновлено `index.md`.\n")
+            lg.write(f"\n\n## [2026-09-17] ingest | Компіляція першоджерела Дугласа Волтона (Informal Logic) за методом Karpathy LLM Wiki\n\n")
+            lg.write(f"- **Дія**: Скомпільовано {created_count} розділів та сегментів із каталогу `Clippings/douglas_json_segments` у повноцінні статті `wiki/concepts/`.\n")
+            lg.write(f"- **Джерело**: Дуглас Волтон, *«Informal Logic: A Pragmatic Approach»* (2nd Edition, Cambridge University Press).\n")
+            lg.write(f"- **Сутності**: Створено профіль автора `[[Дуглас Волтон (Douglas Walton)]]` у `wiki/entities/`.\n")
+            lg.write(f"- **Результат**: Сформовано YAML-фронтматтери (теги, дати, джерела, групи), налаштовано системні зв'язки з батьківськими концептами та оновлено центральний `index.md`.\n")
 
 if __name__ == "__main__":
     main()
