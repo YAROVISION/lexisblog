@@ -184,6 +184,70 @@ def determine_tags_and_parent(folder, section, segment):
                 group = "fallacies"
         elif "вступні" in sec_lower:
             tags.extend(["вступ", "методологія"])
+    elif folder == "rulebook_json_segments":
+        tags = ["логіка", "теорія_аргументації", "практична_аргументація", "вестон"]
+        parents.append("Ентоні Вестон (Anthony Weston)")
+        parents.append("Посібник з аргументації (A Rulebook for Arguments)")
+        sec_lower = section.lower()
+        seg_lower = segment.lower()
+
+        if "вступні матеріали" in sec_lower:
+            tags.extend(["вступ", "бібліографія"])
+        elif "вступ" in sec_lower:
+            tags.extend(["вступ", "сенс_аргументації", "дослідження"])
+            parents.append("Аргументація")
+        elif "розділ i." in sec_lower or "короткі аргументи" in sec_lower:
+            tags.extend(["короткі_аргументи", "засновки_висновок", "структура_аргументу"])
+            parents.append("Засновки та висновки")
+            parents.append("Структура аргументу")
+        elif "розділ ii." in sec_lower or "на прикладах" in sec_lower:
+            tags.extend(["індукція", "приклади", "репрезентативність", "контрприклади"])
+            parents.append("Аргументи на прикладах (Узагальнення)")
+            parents.append("Недедуктивні умовиводи")
+        elif "розділ iii." in sec_lower or "за аналогією" in sec_lower:
+            tags.extend(["аналогія", "подібність"])
+            parents.append("Аргумент за аналогією")
+            parents.append("Аналогія в юридичній аргументації")
+        elif "розділ iv." in sec_lower or "від авторитету" in sec_lower:
+            tags.extend(["авторитет", "джерела", "ad_verecundiam"])
+            parents.append("Апеляція до авторитету (Ad Verecundiam)")
+            parents.append("Схеми аргументації (Argumentation Schemes)")
+        elif "розділ v." in sec_lower or "про причини" in sec_lower:
+            tags.extend(["каузальність", "причинність", "кореляція"])
+            parents.append("Каузальні помилки")
+            parents.append("Причинно-наслідкові аргументи")
+        elif "розділ vi." in sec_lower or "дедуктивні аргументи" in sec_lower:
+            tags.extend(["дедукція", "силогізми", "modus_ponens", "modus_tollens", "reductio_ad_absurdum"])
+            parents.append("Дедуктивні умовиводи")
+            parents.append("Валідні аргументи")
+            parents.append("Дедуктивне виправдання")
+        elif "розділ vii." in sec_lower or "розгорнуті аргументи" in sec_lower:
+            tags.extend(["розгорнуті_аргументи", "дослідження_теми", "заперечення"])
+            parents.append("Стратегія та побудова аргументу")
+            parents.append("Побудова аргументації")
+        elif "розділ viii." in sec_lower or "аргументативні есе" in sec_lower:
+            tags.extend(["аргументативне_есе", "письмова_аргументація", "структура_есе"])
+            parents.append("Аргументативне есе")
+            parents.append("Письмова_аргументація")
+        elif "розділ ix." in sec_lower or "усні аргументи" in sec_lower:
+            tags.extend(["усні_виступи", "ораторське_мистецтво", "публічний_виступ"])
+            parents.append("Усна_аргументація")
+            parents.append("Стратегія_усного_виступу")
+        elif "розділ x." in sec_lower or "публічні дебати" in sec_lower:
+            tags.extend(["публічні_дебати", "етика_дискусії", "спільна_мова"])
+            parents.append("Кодекс інтелектуальної поведінки")
+            parents.append("Діалог переконання")
+        elif "додаток i." in sec_lower or "типові логічні помилки" in sec_lower:
+            tags.extend(["логічні_помилки", "софізми", "fallacies"])
+            parents.append("Логічні помилки")
+            group = "fallacies"
+        elif "додаток ii." in sec_lower or "визначення" in sec_lower:
+            tags.extend(["визначення", "дефініції", "семантика"])
+            parents.append("Логічні операції з поняттями")
+            parents.append("Семантична інтерпретація в праві")
+        elif "джерела" in sec_lower:
+            tags.extend(["бібліографія", "джерела"])
+            parents.append("Література")
 
     return tags, parents, group
 
@@ -233,6 +297,18 @@ def main():
                 elif title == "Подяки":
                     title = "Подяки (Дуглас Волтон)"
 
+            if folder == "rulebook_json_segments":
+                if "Титул, вихідні дані та анотація" in title:
+                    title = "Титул, вихідні дані та анотація (Ентоні Вестон - A Rulebook for Arguments)"
+                elif "Зміст книги" in title:
+                    title = "Зміст книги (Ентоні Вестон - A Rulebook for Arguments)"
+                elif "Передмова" in title:
+                    title = "Передмова (Ентоні Вестон - A Rulebook for Arguments)"
+                elif "Примітка до п'ятого видання" in title:
+                    title = "Примітка до п'ятого видання (Ентоні Вестон)"
+                elif "Джерела та література" in title:
+                    title = "Джерела та література (Ентоні Вестон - A Rulebook for Arguments)"
+
             # Check if this concept already exists in concepts_dir
             if title.lower() in existing_concepts:
                 # Already exists
@@ -244,7 +320,12 @@ def main():
             # Collect wikilinks to include in related
             all_related = list(set(meta["related"] + parents))
 
-            item_created = "2026-09-17" if folder == "douglas_json_segments" else "2026-09-14"
+            if folder == "rulebook_json_segments":
+                item_created = "2026-09-18"
+            elif folder == "douglas_json_segments":
+                item_created = "2026-09-17"
+            else:
+                item_created = "2026-09-14"
             item_updated = item_created
 
             # Build YAML frontmatter
@@ -312,6 +393,18 @@ def main():
                 "- [[Clippings/theory_json_segments/|theory_json_segments]] — Теоретичні основи теорії аргументації.\n- [[Clippings/douglas_json_segments/|douglas_json_segments]] — Дуглас Волтон: Неформальна логіка (прагматичний підхід до діалогу, критичні запитання, схеми аргументації).\n"
             )
 
+        if "rulebook_json_segments" not in idx_content:
+            idx_content = idx_content.replace(
+                "- [[Clippings/douglas_json_segments/|douglas_json_segments]] — Дуглас Волтон: Неформальна логіка (прагматичний підхід до діалогу, критичні запитання, схеми аргументації).\n",
+                "- [[Clippings/douglas_json_segments/|douglas_json_segments]] — Дуглас Волтон: Неформальна логіка (прагматичний підхід до діалогу, критичні запитання, схеми аргументації).\n- [[Clippings/rulebook_json_segments/|rulebook_json_segments]] — Ентоні Вестон: Посібник з аргументації (50 практичних правил побудови, дедукції, есе, дебатів, типових хиб та визначень).\n"
+            )
+
+        if "Ентоні Вестон (Anthony Weston)" not in idx_content:
+            idx_content = idx_content.replace(
+                "- [[Дуглас Волтон (Douglas Walton)]]\n",
+                "- [[Дуглас Волтон (Douglas Walton)]]\n- [[Ентоні Вестон (Anthony Weston)]]\n"
+            )
+
         # Build index addition
         by_folder = {}
         for entry in new_concept_entries:
@@ -323,15 +416,29 @@ def main():
             "logica_json_segments": "Підручник логіки (В. Щербина)",
             "scherbina_json_segments": "Юридична аргументація (О. Щербина)",
             "theory_json_segments": "Теорія права (Н. Макормік)",
-            "douglas_json_segments": "Неформальна логіка: прагматичний підхід (Дуглас Волтон)"
+            "douglas_json_segments": "Неформальна логіка: прагматичний підхід (Дуглас Волтон)",
+            "rulebook_json_segments": "Посібник з аргументації (Ентоні Вестон)"
         }
 
-        addition = "\n\n---\n## Скомпільовані матеріали: Дуглас Волтон (Informal Logic)\n\n"
-        addition += "> Автор: [[Дуглас Волтон (Douglas Walton)]] · Праця: *Informal Logic: A Pragmatic Approach (2nd Edition)*\n\n"
+        # Handle rulebook entries
+        rulebook_entries = [e for e in new_concept_entries if e["folder"] == "rulebook_json_segments"]
+        if rulebook_entries:
+            addition = "\n\n---\n## Скомпільовані матеріали: Ентоні Вестон (A Rulebook for Arguments)\n\n"
+            addition += "> Автор: [[Ентоні Вестон (Anthony Weston)]] · Праця: *A Rulebook for Arguments (5th Edition)*\n\n"
+            by_sec = {}
+            for e in rulebook_entries:
+                by_sec.setdefault(e["section"] or "Інше", []).append(e)
+            for sec, entries in by_sec.items():
+                addition += f"### {sec}\n\n"
+                for e in entries:
+                    addition += f"- [{e['title']}](wiki/concepts/{e['title']}.md)\n"
+                addition += "\n"
+            idx_content += addition
 
-        # If douglas entries exist, group by section for a beautiful structured index
         douglas_entries = [e for e in new_concept_entries if e["folder"] == "douglas_json_segments"]
         if douglas_entries:
+            addition = "\n\n---\n## Скомпільовані матеріали: Дуглас Волтон (Informal Logic)\n\n"
+            addition += "> Автор: [[Дуглас Волтон (Douglas Walton)]] · Праця: *Informal Logic: A Pragmatic Approach (2nd Edition)*\n\n"
             by_sec = {}
             for e in douglas_entries:
                 by_sec.setdefault(e["section"] or "Інше", []).append(e)
@@ -340,28 +447,30 @@ def main():
                 for e in entries:
                     addition += f"- [{e['title']}](wiki/concepts/{e['title']}.md)\n"
                 addition += "\n"
+            idx_content += addition
 
-        other_entries = [e for e in new_concept_entries if e["folder"] != "douglas_json_segments"]
+        other_entries = [e for e in new_concept_entries if e["folder"] not in ["douglas_json_segments", "rulebook_json_segments"]]
         if other_entries:
             for fld, entries in by_folder.items():
-                if fld == "douglas_json_segments":
+                if fld in ["douglas_json_segments", "rulebook_json_segments"]:
                     continue
                 sec_title = folder_titles.get(fld, fld)
-                addition += f"\n### {sec_title}\n\n"
+                addition = f"\n### {sec_title}\n\n"
                 for e in sorted(entries, key=lambda x: x['title']):
                     addition += f"- [{e['title']}](wiki/concepts/{e['title']}.md)\n"
+                idx_content += addition
 
-        idx_content += addition
         with open(index_path, 'w', encoding='utf-8') as idx_w:
             idx_w.write(idx_content)
 
         # Append to log.md
-        with open(log_path, 'a', encoding='utf-8') as lg:
-            lg.write(f"\n\n## [2026-09-17] ingest | Компіляція першоджерела Дугласа Волтона (Informal Logic) за методом Karpathy LLM Wiki\n\n")
-            lg.write(f"- **Дія**: Скомпільовано {created_count} розділів та сегментів із каталогу `Clippings/douglas_json_segments` у повноцінні статті `wiki/concepts/`.\n")
-            lg.write(f"- **Джерело**: Дуглас Волтон, *«Informal Logic: A Pragmatic Approach»* (2nd Edition, Cambridge University Press).\n")
-            lg.write(f"- **Сутності**: Створено профіль автора `[[Дуглас Волтон (Douglas Walton)]]` у `wiki/entities/`.\n")
-            lg.write(f"- **Результат**: Сформовано YAML-фронтматтери (теги, дати, джерела, групи), налаштовано системні зв'язки з батьківськими концептами та оновлено центральний `index.md`.\n")
+        if rulebook_entries:
+            with open(log_path, 'a', encoding='utf-8') as lg:
+                lg.write(f"\n\n## [2026-09-18] ingest | Компіляція першоджерела Ентоні Вестона (A Rulebook for Arguments) за методом Karpathy LLM Wiki\n\n")
+                lg.write(f"- **Дія**: Скомпільовано {len(rulebook_entries)} розділів та сегментів із каталогу `Clippings/rulebook_json_segments` у повноцінні статті `wiki/concepts/`.\n")
+                lg.write(f"- **Джерело**: Ентоні Вестон, *«A Rulebook for Arguments»* (5th Edition, Hackett Publishing Company).\n")
+                lg.write(f"- **Сутності**: Створено профіль автора `[[Ентоні Вестон (Anthony Weston)]]` у `wiki/entities/`.\n")
+                lg.write(f"- **Результат**: Сформовано YAML-фронтматтери (теги, дати, джерела, групи), налаштовано системні зв'язки з батьківськими концептами та оновлено центральний `index.md`.\n")
 
 if __name__ == "__main__":
     main()

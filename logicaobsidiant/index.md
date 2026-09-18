@@ -16,6 +16,7 @@
 - [[Clippings/scherbina_json_segments/|scherbina_json_segments]] — Матеріали та лекції проф. Щербини з юридичної логіки.
 - [[Clippings/theory_json_segments/|theory_json_segments]] — Теоретичні основи теорії аргументації.
 - [[Clippings/douglas_json_segments/|douglas_json_segments]] — Дуглас Волтон: Неформальна логіка (прагматичний підхід до діалогу, критичні запитання, схеми аргументації).
+- [[Clippings/rulebook_json_segments/|rulebook_json_segments]] — Ентоні Вестон: Посібник з аргументації (50 практичних правил побудови, дедукції, есе, дебатів, типових хиб та визначень).
 
 ---
 
@@ -252,6 +253,7 @@
 - [[Френсіс Бекон (Francis Bacon)]] — засновник індуктивного методу.
 - [[Чарльз Пірс (Charles Peirce)]] — засновник прагматизму та семіотики.
 - [[Дуглас Волтон (Douglas Walton)]] — канадський логік, теоретик неформальної логіки, автор прагматичної теорії діалогу та схем аргументації.
+- [[Ентоні Вестон (Anthony Weston)]] — американський філософ, професор філософії, автор класичного нормативного «Посібника з аргументації» (50 правил, аналогії, дедукція, есе, дебати, визначення).
 
 ---
 
@@ -731,4 +733,129 @@
 
 - [Бібліографія (Bibliography)](wiki/concepts/Бібліографія (Bibliography).md)
 - [Предметний покажчик (Index)](wiki/concepts/Предметний покажчик (Index).md)
+
+
+
+---
+## Скомпільовані матеріали: Ентоні Вестон (A Rulebook for Arguments)
+
+> Автор: [[Ентоні Вестон (Anthony Weston)]] · Праця: *A Rulebook for Arguments (5th Edition)*
+
+### Вступні матеріали (Front Matter)
+
+- [Титул, вихідні дані та анотація (Ентоні Вестон - A Rulebook for Arguments)](wiki/concepts/Титул, вихідні дані та анотація (Ентоні Вестон - A Rulebook for Arguments).md)
+- [Зміст книги (Ентоні Вестон - A Rulebook for Arguments)](wiki/concepts/Зміст книги (Ентоні Вестон - A Rulebook for Arguments).md)
+- [Передмова (Ентоні Вестон - A Rulebook for Arguments)](wiki/concepts/Передмова (Ентоні Вестон - A Rulebook for Arguments).md)
+- [Примітка до п'ятого видання (Ентоні Вестон)](wiki/concepts/Примітка до п'ятого видання (Ентоні Вестон).md)
+
+### Вступ (Introduction)
+
+- [Вступ У чому сенс аргументації (What’s the point of arguing)](wiki/concepts/Вступ У чому сенс аргументації (What’s the point of arguing).md)
+- [Вступ Звичка до аргументації (Argument grows on you)](wiki/concepts/Вступ Звичка до аргументації (Argument grows on you).md)
+- [Вступ Структура цієї книги (Outline of this book)](wiki/concepts/Вступ Структура цієї книги (Outline of this book).md)
+
+### Розділ I. Короткі аргументи: деякі загальні правила
+
+- [Огляд Розділ I. Короткі аргументи деякі загальні правила (Overview Chapter I Short Arguments Some General Rules)](wiki/concepts/Огляд Розділ I. Короткі аргументи деякі загальні правила (Overview Chapter I Short Arguments Some General Rules).md)
+- [Правило 1 Відокремлюйте засновки та висновок (Resolve premises and conclusion)](wiki/concepts/Правило 1 Відокремлюйте засновки та висновок (Resolve premises and conclusion).md)
+- [Правило 2 Розгортайте свої думки у природному порядку (Unfold your ideas in a natural order)](wiki/concepts/Правило 2 Розгортайте свої думки у природному порядку (Unfold your ideas in a natural order).md)
+- [Правило 3 Виходьте з надійних засновків (Start from reliable premises)](wiki/concepts/Правило 3 Виходьте з надійних засновків (Start from reliable premises).md)
+- [Правило 4 Будьте конкретними та лаконічними (Be concrete and concise)](wiki/concepts/Правило 4 Будьте конкретними та лаконічними (Be concrete and concise).md)
+- [Правило 5 Спирайтеся на суть, а не на емоційне забарвлення (Build on substance, not overtone)](wiki/concepts/Правило 5 Спирайтеся на суть, а не на емоційне забарвлення (Build on substance, not overtone).md)
+- [Правило 6 Узгоджуйте терміни (Use consistent terms)](wiki/concepts/Правило 6 Узгоджуйте терміни (Use consistent terms).md)
+
+### Розділ II. Аргументи на прикладах
+
+- [Огляд Розділ II. Аргументи на прикладах (Overview Chapter II Arguments by Example)](wiki/concepts/Огляд Розділ II. Аргументи на прикладах (Overview Chapter II Arguments by Example).md)
+- [Правило 7 Наводьте більше ніж один приклад (Use more than one example)](wiki/concepts/Правило 7 Наводьте більше ніж один приклад (Use more than one example).md)
+- [Правило 8 Використовуйте репрезентативні приклади (Use representative examples)](wiki/concepts/Правило 8 Використовуйте репрезентативні приклади (Use representative examples).md)
+- [Правило 9 Фонова статистика часто має вирішальне значення (Background rates are often crucial)](wiki/concepts/Правило 9 Фонова статистика часто має вирішальне значення (Background rates are often crucial).md)
+- [Правило 10 Статистика потребує критичного погляду (Statistics need a critical eye)](wiki/concepts/Правило 10 Статистика потребує критичного погляду (Statistics need a critical eye).md)
+- [Правило 11 Зважайте на контрприклади (Reckon with counterexamples)](wiki/concepts/Правило 11 Зважайте на контрприклади (Reckon with counterexamples).md)
+
+### Розділ III. Аргументи за аналогією
+
+- [Огляд Розділ III. Аргументи за аналогією (Overview Chapter III Arguments by Analogy)](wiki/concepts/Огляд Розділ III. Аргументи за аналогією (Overview Chapter III Arguments by Analogy).md)
+- [Правило 12 Аналогії вимагають прикладів, подібних у суттєвому відношенні (Analogies require relevantly similar examples)](wiki/concepts/Правило 12 Аналогії вимагають прикладів, подібних у суттєвому відношенні (Analogies require relevantly similar examples).md)
+
+### Розділ IV. Аргументи від авторитету
+
+- [Огляд Розділ IV. Аргументи від авторитету (Overview Chapter IV Arguments from Authority)](wiki/concepts/Огляд Розділ IV. Аргументи від авторитету (Overview Chapter IV Arguments from Authority).md)
+- [Правило 13 Посилайтеся на джерела (Cite your sources)](wiki/concepts/Правило 13 Посилайтеся на джерела (Cite your sources).md)
+- [Правило 14 Шукайте компетентні джерела (Seek informed sources)](wiki/concepts/Правило 14 Шукайте компетентні джерела (Seek informed sources).md)
+- [Правило 15 Шукайте неупереджені джерела (Seek impartial sources)](wiki/concepts/Правило 15 Шукайте неупереджені джерела (Seek impartial sources).md)
+- [Правило 16 Перевіряйте джерела між собою (Cross-check sources)](wiki/concepts/Правило 16 Перевіряйте джерела між собою (Cross-check sources).md)
+- [Правило 17 Розвивайте навички критичної оцінки інтернету (Build your Internet savvy)](wiki/concepts/Правило 17 Розвивайте навички критичної оцінки інтернету (Build your Internet savvy).md)
+
+### Розділ V. Аргументи про причини
+
+- [Огляд Розділ V. Аргументи про причини (Overview Chapter V Arguments about Causes)](wiki/concepts/Огляд Розділ V. Аргументи про причини (Overview Chapter V Arguments about Causes).md)
+- [Правило 18 Причинно-наслідкові аргументи починаються з кореляцій (Causal arguments start with correlations)](wiki/concepts/Правило 18 Причинно-наслідкові аргументи починаються з кореляцій (Causal arguments start with correlations).md)
+- [Правило 19 Кореляції можуть мати альтернативні пояснення (Correlations may have alternative explanations)](wiki/concepts/Правило 19 Кореляції можуть мати альтернативні пояснення (Correlations may have alternative explanations).md)
+- [Правило 20 Прагніть до найбільш імовірного пояснення (Work toward the most likely explanation)](wiki/concepts/Правило 20 Прагніть до найбільш імовірного пояснення (Work toward the most likely explanation).md)
+- [Правило 21 Зважайте на складність причин (Expect complexity)](wiki/concepts/Правило 21 Зважайте на складність причин (Expect complexity).md)
+
+### Розділ VI. Дедуктивні аргументи
+
+- [Огляд Розділ VI. Дедуктивні аргументи (Overview Chapter VI Deductive Arguments)](wiki/concepts/Огляд Розділ VI. Дедуктивні аргументи (Overview Chapter VI Deductive Arguments).md)
+- [Правило 22 Ствердження антецедента (Modus ponens)](wiki/concepts/Правило 22 Ствердження антецедента (Modus ponens).md)
+- [Правило 23 Заперечення консеквента (Modus tollens)](wiki/concepts/Правило 23 Заперечення консеквента (Modus tollens).md)
+- [Правило 24 Умовний силогізм (Hypothetical syllogism)](wiki/concepts/Правило 24 Умовний силогізм (Hypothetical syllogism).md)
+- [Правило 25 Розподільний силогізм (Disjunctive syllogism)](wiki/concepts/Правило 25 Розподільний силогізм (Disjunctive syllogism).md)
+- [Правило 26 Дилема (Dilemma)](wiki/concepts/Правило 26 Дилема (Dilemma).md)
+- [Правило 27 Зведення до абсурду (Reductio ad absurdum)](wiki/concepts/Правило 27 Зведення до абсурду (Reductio ad absurdum).md)
+- [Правило 28 Багатокрокові дедуктивні аргументи (Deductive arguments in multiple steps)](wiki/concepts/Правило 28 Багатокрокові дедуктивні аргументи (Deductive arguments in multiple steps).md)
+
+### Розділ VII. Розгорнуті аргументи
+
+- [Огляд Розділ VII. Розгорнуті аргументи (Overview Chapter VII Extended Arguments)](wiki/concepts/Огляд Розділ VII. Розгорнуті аргументи (Overview Chapter VII Extended Arguments).md)
+- [Правило 29 Досліджуйте проблему з усіх боків (Explore the issue)](wiki/concepts/Правило 29 Досліджуйте проблему з усіх боків (Explore the issue).md)
+- [Правило 30 Формулюйте основні ідеї у вигляді аргументів (Spell out basic ideas as arguments)](wiki/concepts/Правило 30 Формулюйте основні ідеї у вигляді аргументів (Spell out basic ideas as arguments).md)
+- [Правило 31 Захищайте базові засновки власними аргументами (Defend basic premises with arguments of their own)](wiki/concepts/Правило 31 Захищайте базові засновки власними аргументами (Defend basic premises with arguments of their own).md)
+- [Правило 32 Зважайте на заперечення (Reckon with objections)](wiki/concepts/Правило 32 Зважайте на заперечення (Reckon with objections).md)
+- [Правило 33 Досліджуйте альтернативи (Explore alternatives)](wiki/concepts/Правило 33 Досліджуйте альтернативи (Explore alternatives).md)
+
+### Розділ VIII. Аргументативні есе
+
+- [Огляд Розділ VIII. Аргументативні есе (Overview Chapter VIII Argumentative Essays)](wiki/concepts/Огляд Розділ VIII. Аргументативні есе (Overview Chapter VIII Argumentative Essays).md)
+- [Правило 34 Одразу переходьте до суті (Jump right in)](wiki/concepts/Правило 34 Одразу переходьте до суті (Jump right in).md)
+- [Правило 35 Відстоюйте чітку тезу або пропозицію (Urge a definite claim or proposal)](wiki/concepts/Правило 35 Відстоюйте чітку тезу або пропозицію (Urge a definite claim or proposal).md)
+- [Правило 36 Ваш аргумент — це ваш план (Your argument is your outline)](wiki/concepts/Правило 36 Ваш аргумент — це ваш план (Your argument is your outline).md)
+- [Правило 37 Детально розглядайте заперечення та відповідайте на них (Detail objections and meet them)](wiki/concepts/Правило 37 Детально розглядайте заперечення та відповідайте на них (Detail objections and meet them).md)
+- [Правило 38 Шукайте зворотний зв'язок і використовуйте його (Seek feedback and use it)](wiki/concepts/Правило 38 Шукайте зворотний зв'язок і використовуйте його (Seek feedback and use it).md)
+- [Правило 39 Будьте поміркованими (Modesty, please)](wiki/concepts/Правило 39 Будьте поміркованими (Modesty, please).md)
+
+### Розділ IX. Усні аргументи
+
+- [Огляд Розділ IX. Усні аргументи (Overview Chapter IX Oral Arguments)](wiki/concepts/Огляд Розділ IX. Усні аргументи (Overview Chapter IX Oral Arguments).md)
+- [Правило 40 Налаштовуйте слухачів на сприйняття (Ask for a hearing)](wiki/concepts/Правило 40 Налаштовуйте слухачів на сприйняття (Ask for a hearing).md)
+- [Правило 41 Будьте повністю присутніми в моменті (Be fully present)](wiki/concepts/Правило 41 Будьте повністю присутніми в моменті (Be fully present).md)
+- [Правило 42 Енергійно розставляйте смислові дороговкази (Signpost energetically)](wiki/concepts/Правило 42 Енергійно розставляйте смислові дороговкази (Signpost energetically).md)
+- [Правило 43 Підпорядковуйте візуальні матеріали вашому аргументу (Hew your visuals to your argument)](wiki/concepts/Правило 43 Підпорядковуйте візуальні матеріали вашому аргументу (Hew your visuals to your argument).md)
+- [Правило 44 Завершуйте виразно та зі смаком (End in style)](wiki/concepts/Правило 44 Завершуйте виразно та зі смаком (End in style).md)
+
+### Розділ X. Публічні дебати
+
+- [Огляд Розділ X. Публічні дебати (Overview Chapter X Public Debates)](wiki/concepts/Огляд Розділ X. Публічні дебати (Overview Chapter X Public Debates).md)
+- [Правило 45 Віддавайте належне культурі аргументації (Do argument proud)](wiki/concepts/Правило 45 Віддавайте належне культурі аргументації (Do argument proud).md)
+- [Правило 46 Слухайте, вчіться, знаходьте спільні точки (Listen, learn, leverage)](wiki/concepts/Правило 46 Слухайте, вчіться, знаходьте спільні точки (Listen, learn, leverage).md)
+- [Правило 47 Пропонуйте щось конструктивне (Offer something positive)](wiki/concepts/Правило 47 Пропонуйте щось конструктивне (Offer something positive).md)
+- [Правило 48 Спирайтеся на спільну основу (Work from common ground)](wiki/concepts/Правило 48 Спирайтеся на спільну основу (Work from common ground).md)
+- [Правило 49 Принаймні зберігайте ввічливість (At least be civil)](wiki/concepts/Правило 49 Принаймні зберігайте ввічливість (At least be civil).md)
+- [Правило 50 Залишайте слухачам привід для роздумів (Leave them thinking when you go)](wiki/concepts/Правило 50 Залишайте слухачам привід для роздумів (Leave them thinking when you go).md)
+
+### Додаток I. Типові логічні помилки
+
+- [Додаток I Деякі поширені логічні хиби (Appendix I Some Common Fallacies)](wiki/concepts/Додаток I Деякі поширені логічні хиби (Appendix I Some Common Fallacies).md)
+
+### Додаток II. Визначення
+
+- [Огляд Визначення у аргументації (Overview Definitions in Arguments)](wiki/concepts/Огляд Визначення у аргументації (Overview Definitions in Arguments).md)
+- [Правило D1 Коли терміни незрозумілі — конкретизуйте їх (When terms are unclear, get specific)](wiki/concepts/Правило D1 Коли терміни незрозумілі — конкретизуйте їх (When terms are unclear, get specific).md)
+- [Правило D2 Коли терміни є спірними — виходьте з безперечних випадків (When terms are contested, work from the clear case](wiki/concepts/Правило D2 Коли терміни є спірними — виходьте з безперечних випадків (When terms are contested, work from the clear case.md)
+- [Правило D3 Визначення не замінюють аргументів (Definitions don’t replace arguments)](wiki/concepts/Правило D3 Визначення не замінюють аргументів (Definitions don’t replace arguments).md)
+
+### Джерела та література (Resources)
+
+- [Рекомендовані джерела та література (Resources)](wiki/concepts/Рекомендовані джерела та література (Resources).md)
 
