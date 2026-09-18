@@ -402,7 +402,7 @@ const BLOG_POSTS = [
     category: "Технології",
     date: "2026-03-08",
     readTime: "5 хв",
-    image: "assets/images/professional-headshot-1.png",
+    image: "assets/images/ai-legal-analysis.jpg",
     summary: "Як сучасні LLM моделі та семантичні графи допомагають юристам виявляти логічні прогалини у процесуальних документах та перевіряти відповідність практиці Верховного Суду.",
     content: `
       <h2>Революція юридичного аналізу даних</h2>
