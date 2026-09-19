@@ -427,7 +427,7 @@ const BLOG_POSTS = [
     category: "Лінгвістика",
     date: "2026-03-01",
     readTime: "4 хв",
-    image: "assets/images/professional-headshot-2.jpg",
+    image: "assets/images/abstraction-ladder-logic.jpg",
     summary: "Чому розмиті категорії послаблюють доказову базу і яким чином рівень конкретизації іменників визначає однозначність судового рішення.",
     content: `
       <h2>Драбина абстракцій Хаякави</h2>
