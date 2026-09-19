@@ -491,7 +491,7 @@ const BLOG_POSTS = [
     category: "Лінгвістика",
     date: "2026-02-10",
     readTime: "4 хв",
-    image: "assets/images/professional-headshot-5.jpg",
+    image: "assets/images/hyponyms-hypernyms-language-architecture.jpg",
     summary: "Як ієрархічні відношення роду й виду формують каркас української лексики і чому це критично для автоматизованої обробки мови.",
     content: `
       <h2>Ієрархія смислів</h2>
