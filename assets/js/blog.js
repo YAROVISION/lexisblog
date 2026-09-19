@@ -447,7 +447,7 @@ const BLOG_POSTS = [
     category: "Навчання",
     date: "2026-02-24",
     readTime: "6 хв",
-    image: "assets/images/professional-headshot-3.png",
+    image: "assets/images/logical-fallacies-in-contracts.jpg",
     summary: "Підміна понять, коло в доведенні, хибна дилема та інші підводні камені, які руйнують правову позицію сторін у судовому розгляді.",
     content: `
       <h2>Логіка як фундамент судового процесу</h2>
@@ -470,7 +470,7 @@ const BLOG_POSTS = [
     category: "Новини",
     date: "2026-02-18",
     readTime: "3 хв",
-    image: "assets/images/professional-headshot-4.jpg",
+    image: "assets/images/lexis-major-update-semantic-graphs.jpg",
     summary: "Презентація оновленої системи візуалізації зв'язків між поняттями, швидкого локального пошуку та глибокої підтримки морфології.",
     content: `
       <h2>Новий етап розвитку Lexis</h2>
