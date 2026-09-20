@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="uk" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Право | Lexis — AI-аналіз процесуальних документів</title>
+  <meta name="description" content="Право — інтелектуальний інструмент для глибокого аналізу процесуальних документів кримінального провадження. Виявлення логічних помилок, перевірка практики Верховного Суду та ЄСПЛ.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/theme.js"></script>
+  <style>
+    /* ===== PRAVO PAGE SPECIFIC STYLES ===== */
+
+    .pravo-hero {
+      position: relative;
+      min-height: 72vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      padding: 10rem 1.5rem 5rem;
+    }
+
+    .pravo-hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 70% 50% at 50% 30%, rgba(26,107,255,0.12) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 60% at 80% 70%, rgba(0,194,168,0.08) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .pravo-hero-grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(126,127,131,0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(126,127,131,0.06) 1px, transparent 1px);
+      background-size: 60px 60px;
+      pointer-events: none;
+    }
+
+    .pravo-hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    .pravo-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.35rem 0.9rem;
+      background: rgba(26,107,255,0.15);
+      border: 1px solid rgba(26,107,255,0.35);
+      border-radius: 100px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #4A90D9;
+      margin-bottom: 1.75rem;
+    }
+
+    .pravo-badge-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #1A6BFF;
+      animation: pulseDot 1.8s ease-in-out infinite;
+    }
+
+    @keyframes pulseDot {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.7); }
+    }
+
+    .pravo-hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.4rem, 5.5vw, 3.8rem);
+      font-weight: 700;
+      line-height: 1.1;
+      color: var(--text-primary);
+      margin-bottom: 1.5rem;
+    }
+
+    .pravo-hero-title .accent {
+      background: linear-gradient(135deg, #1A6BFF 0%, #00C2A8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .pravo-hero-desc {
+      font-size: 1.15rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: 2.5rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .pravo-hero-actions {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .pravo-stats-bar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 3rem;
+      flex-wrap: wrap;
+      margin-top: 4rem;
+      padding-top: 3rem;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .pravo-stat {
+      text-align: center;
+    }
+
+    .pravo-stat-val {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1;
+    }
+
+    .pravo-stat-lbl {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-top: 0.4rem;
+    }
+
+    /* ===== HOW IT WORKS ===== */
+    .pravo-section {
+      padding: 5rem 1.5rem;
+    }
+
+    .pravo-section-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #1A6BFF;
+      margin-bottom: 0.75rem;
+    }
+
+    .section-title-lg {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+    .section-desc-lg {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      max-width: 580px;
+    }
+
+    /* Steps */
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    .step-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 16px;
+      padding: 2rem;
+      position: relative;
+      transition: border-color 0.25s, transform 0.25s;
+    }
+
+    .step-card:hover {
+      border-color: rgba(26,107,255,0.4);
+      transform: translateY(-4px);
+    }
+
+    .step-num {
+      font-family: var(--font-display);
+      font-size: 3.5rem;
+      font-weight: 700;
+      line-height: 1;
+      background: linear-gradient(135deg, rgba(26,107,255,0.3), rgba(0,194,168,0.15));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 1rem;
+    }
+
+    .step-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 0.6rem;
+    }
+
+    .step-desc {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    /* ===== FEATURES SPLIT ===== */
+    .features-split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    @media (max-width: 768px) {
+      .features-split {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+    }
+
+    .plan-card {
+      border-radius: 20px;
+      padding: 2rem;
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-surface);
+    }
+
+    .plan-card.plan-pro {
+      background: linear-gradient(135deg, rgba(26,107,255,0.08) 0%, rgba(0,194,168,0.05) 100%);
+      border-color: rgba(26,107,255,0.3);
+    }
+
+    .plan-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.25rem 0.75rem;
+      border-radius: 100px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 1.25rem;
+    }
+
+    .plan-badge.free {
+      background: rgba(217,197,178,0.15);
+      color: var(--text-secondary);
+      border: 1px solid var(--border-subtle);
+    }
+
+    .plan-badge.pro {
+      background: linear-gradient(135deg, rgba(26,107,255,0.2), rgba(0,194,168,0.15));
+      color: #4A90D9;
+      border: 1px solid rgba(26,107,255,0.35);
+    }
+
+    .plan-title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 0.4rem;
+    }
+
+    .plan-price {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+    }
+
+    .plan-features {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 1.75rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+
+    .plan-features li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.65rem;
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
+    .plan-features li::before {
+      content: '';
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      min-width: 18px;
+      border-radius: 50%;
+      margin-top: 0.1rem;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2300C2A8' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    /* ===== DOCUMENT TYPES ===== */
+    .doc-types-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 2.5rem;
+    }
+
+    .doc-type-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 14px;
+      padding: 1.5rem 1.25rem;
+      text-align: center;
+      transition: border-color 0.25s, transform 0.25s;
+      cursor: default;
+    }
+
+    .doc-type-card:hover {
+      border-color: rgba(26,107,255,0.4);
+      transform: translateY(-3px);
+    }
+
+    .doc-type-icon {
+      font-size: 2rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .doc-type-name {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 0.3rem;
+    }
+
+    .doc-type-desc {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* ===== ANALYSIS AREAS ===== */
+    .analysis-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
+      margin-top: 2.5rem;
+    }
+
+    .analysis-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 16px;
+      padding: 1.75rem;
+      transition: border-color 0.25s, transform 0.25s;
+    }
+
+    .analysis-card:hover {
+      border-color: rgba(26,107,255,0.35);
+      transform: translateY(-3px);
+    }
+
+    .analysis-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+    }
+
+    .analysis-icon.blue { background: rgba(26,107,255,0.15); }
+    .analysis-icon.teal { background: rgba(0,194,168,0.15); }
+    .analysis-icon.amber { background: rgba(217,197,178,0.15); }
+    .analysis-icon.purple { background: rgba(147,112,219,0.15); }
+    .analysis-icon.red { background: rgba(220,60,60,0.12); }
+    .analysis-icon.green { background: rgba(80,200,120,0.12); }
+
+    .analysis-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .analysis-desc {
+      font-size: 0.87rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    /* ===== CTA FINAL ===== */
+    .pravo-cta {
+      text-align: center;
+      padding: 5rem 1.5rem;
+      background: radial-gradient(ellipse 60% 80% at 50% 50%, rgba(26,107,255,0.08) 0%, transparent 70%);
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .pravo-cta-inner {
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    .pravo-cta h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 1rem;
+    }
+
+    .pravo-cta p {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: 2rem;
+    }
+
+    /* Divider */
+    .section-divider {
+      border: none;
+      border-top: 1px solid var(--border-subtle);
+      margin: 0;
+    }
+
+    /* Upload zone visual */
+    .upload-visual {
+      background: var(--bg-surface);
+      border: 2px dashed var(--border-subtle);
+      border-radius: 20px;
+      padding: 3rem 2rem;
+      text-align: center;
+      transition: border-color 0.25s;
+      margin-top: 2rem;
+    }
+
+    .upload-visual:hover {
+      border-color: rgba(26,107,255,0.45);
+    }
+
+    .upload-visual-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .upload-visual-title {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 0.4rem;
+    }
+
+    .upload-visual-hint {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    .upload-formats {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-top: 1.25rem;
+      flex-wrap: wrap;
+    }
+
+    .upload-format-tag {
+      padding: 0.2rem 0.6rem;
+      background: var(--tag-bg);
+      border: 1px solid var(--tag-border);
+      border-radius: 6px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--tag-text);
+      font-family: monospace;
+    }
+
+    /* Coming soon overlay badge */
+    .coming-soon-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.2rem 0.65rem;
+      background: rgba(217,197,178,0.12);
+      border: 1px solid var(--border-subtle);
+      border-radius: 100px;
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      letter-spacing: 0.04em;
+      margin-left: 0.5rem;
+      vertical-align: middle;
+    }
+
+    /* Responsive */
+    @media (max-width: 640px) {
+      .pravo-stats-bar {
+        gap: 1.5rem;
+      }
+      .pravo-hero-actions {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="noise-overlay" aria-hidden="true"></div>
+
+  <!-- Navbar -->
+  <header class="navbar-wrapper">
+    <nav class="navbar">
+      <a href="index.html" class="nav-brand" aria-label="Lexis Головна">
+        <svg viewBox="0 0 480 160" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#1A6BFF"/>
+              <stop offset="100%" stop-color="#00C2A8"/>
+            </linearGradient>
+            <linearGradient id="nodeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#1A6BFF"/>
+              <stop offset="100%" stop-color="#00C2A8"/>
+            </linearGradient>
+            <filter id="glow">
+              <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+              <feMerge>
+                <feMergeNode in="coloredBlur"/>
+                <feMergeNode in="SourceGraphic"/>
+              </feMerge>
+            </filter>
+          </defs>
+          <g filter="url(#glow)" opacity="0.7">
+            <line x1="62" y1="80" x2="38" y2="56" stroke="url(#accentGrad)" stroke-width="1.5"/>
+            <line x1="62" y1="80" x2="88" y2="56" stroke="url(#accentGrad)" stroke-width="1.5"/>
+            <line x1="62" y1="80" x2="62" y2="108" stroke="url(#accentGrad)" stroke-width="1.5"/>
+          </g>
+          <circle cx="62" cy="80" r="10" fill="url(#nodeGrad)" filter="url(#glow)"/>
+          <text x="62" y="84.5" text-anchor="middle" font-family="Georgia, serif" font-size="10" font-weight="bold" fill="white">λ</text>
+          <text x="138" y="100" font-family="'Palatino Linotype', Palatino, Georgia, serif" font-size="58" font-weight="700" letter-spacing="-1" fill="currentColor">LEXIS</text>
+          <rect x="138" y="108" width="260" height="2.5" rx="1.25" fill="url(#accentGrad)" opacity="0.9"/>
+          <text x="138" y="130" font-family="'Courier New', Courier, monospace" font-size="11" letter-spacing="3.5" fill="#4A90D9" opacity="0.8">LOGICAL TEXT ANALYSIS</text>
+        </svg>
+      </a>
+
+      <ul class="nav-menu">
+        <li><a href="features.html" class="nav-link">Вікі</a></li>
+        <li><a href="sources.html" class="nav-link">Джерела</a></li>
+        <li><a href="blog.html" class="nav-link">Блог</a></li>
+        <li><a href="pravo.html" class="nav-link active">Право</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" aria-label="Перемикач теми">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+          </svg>
+          <svg class="icon-moon" style="display:none;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+        <button class="nav-mobile-toggle" aria-label="Відкрити меню">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <div class="nav-mobile-menu">
+      <a href="features.html" class="nav-link">Вікі</a>
+      <a href="pravo.html" class="nav-link active">Право</a>
+      <a href="sources.html" class="nav-link">Джерела</a>
+      <a href="blog.html" class="nav-link">Блог</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===== HERO ===== -->
+    <section class="pravo-hero">
+      <div class="pravo-hero-bg" aria-hidden="true"></div>
+      <div class="pravo-hero-grid" aria-hidden="true"></div>
+
+      <div class="pravo-hero-content">
+        <div class="pravo-badge">
+          <span class="pravo-badge-dot"></span>
+          AI-аналіз документів
+        </div>
+
+        <h1 class="pravo-hero-title">
+          Логічний контроль<br>
+          <span class="accent">процесуальних документів</span>
+        </h1>
+
+        <p class="pravo-hero-desc">
+          Завантажте повідомлення про підозру, обвинувальний акт або вирок — система виявить логічні суперечності, перевірить відповідність КПК та практиці Верховного Суду.
+        </p>
+
+        <div class="pravo-hero-actions">
+          <a href="docs.html" id="pravo-hero-docs-btn" class="btn btn-primary shimmer-btn">
+            Читати документацію
+          </a>
+          <a href="contact.html" id="pravo-hero-contact-btn" class="btn btn-outline">
+            Зв'язатися з нами
+          </a>
+        </div>
+
+        <div class="pravo-stats-bar">
+          <div class="pravo-stat">
+            <div class="pravo-stat-val">4+</div>
+            <div class="pravo-stat-lbl">Типи документів</div>
+          </div>
+          <div class="pravo-stat">
+            <div class="pravo-stat-val">⚖️</div>
+            <div class="pravo-stat-lbl">КПК України</div>
+          </div>
+          <div class="pravo-stat">
+            <div class="pravo-stat-val">ЄСПЛ</div>
+            <div class="pravo-stat-lbl">Практика суду</div>
+          </div>
+          <div class="pravo-stat">
+            <div class="pravo-stat-val">AI</div>
+            <div class="pravo-stat-lbl">Логічний аналіз</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- ===== DOCUMENT TYPES ===== -->
+    <section class="pravo-section">
+      <div class="pravo-section-inner">
+        <p class="section-label">Підтримувані документи</p>
+        <h2 class="section-title-lg">Які документи аналізує система?</h2>
+        <p class="section-desc-lg">
+          Право спеціалізується на процесуальних документах кримінального провадження, що дозволяє застосовувати точні критерії перевірки для кожного типу.
+        </p>
+
+        <div class="doc-types-grid">
+          <div class="doc-type-card" id="doc-type-pidozra">
+            <div class="doc-type-icon">📋</div>
+            <div class="doc-type-name">Повідомлення про підозру</div>
+            <div class="doc-type-desc">Перевірка обов'язкових реквізитів, чіткості формулювання підозри</div>
+          </div>
+          <div class="doc-type-card" id="doc-type-akt">
+            <div class="doc-type-icon">📁</div>
+            <div class="doc-type-name">Обвинувальний акт</div>
+            <div class="doc-type-desc">Аналіз логічної структури, відповідності між обвинуваченням і доказами</div>
+          </div>
+          <div class="doc-type-card" id="doc-type-vyrok">
+            <div class="doc-type-icon">⚖️</div>
+            <div class="doc-type-name">Вирок суду</div>
+            <div class="doc-type-desc">Дослідження мотивувальної частини, оцінка доказів, логічні висновки</div>
+          </div>
+          <div class="doc-type-card" id="doc-type-ukhvala">
+            <div class="doc-type-icon">📜</div>
+            <div class="doc-type-name">Ухвала суду</div>
+            <div class="doc-type-desc">Перевірка підстав та обґрунтованості судового рішення</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- ===== HOW IT WORKS ===== -->
+    <section class="pravo-section" style="background: linear-gradient(180deg, transparent 0%, rgba(26,107,255,0.03) 50%, transparent 100%);">
+      <div class="pravo-section-inner">
+        <p class="section-label">Як це працює</p>
+        <h2 class="section-title-lg">Три кроки до аналізу</h2>
+        <p class="section-desc-lg">
+          Проста і зрозуміла процедура від завантаження документа до отримання структурованого висновку.
+        </p>
+
+        <div class="steps-grid">
+          <div class="step-card" id="step-1">
+            <div class="step-num">01</div>
+            <div class="step-title">Завантажте документ</div>
+            <p class="step-desc">Прикріпіть файл у форматі PDF, DOCX або вставте текст вручну. Система автоматично визначить тип процесуального документа.</p>
+          </div>
+          <div class="step-card" id="step-2">
+            <div class="step-num">02</div>
+            <div class="step-title">AI-аналіз</div>
+            <p class="step-desc">Інтелектуальна модель аналізує структуру, логіку та відповідність нормам КПК. Виявляються формальні та змістовні недоліки.</p>
+          </div>
+          <div class="step-card" id="step-3">
+            <div class="step-num">03</div>
+            <div class="step-title">Отримайте висновок</div>
+            <p class="step-desc">Система генерує структурований звіт з виявленими проблемами, посиланнями на норми права та рекомендаціями щодо усунення.</p>
+          </div>
+        </div>
+
+        <!-- Upload visual -->
+        <div class="upload-visual" id="pravo-upload-zone">
+          <div class="upload-visual-icon">📤</div>
+          <div class="upload-visual-title">Завантажте процесуальний документ</div>
+          <div class="upload-visual-hint">Підтримуються формати:</div>
+          <div class="upload-formats">
+            <span class="upload-format-tag">.pdf</span>
+            <span class="upload-format-tag">.docx</span>
+            <span class="upload-format-tag">.doc</span>
+            <span class="upload-format-tag">.txt</span>
+          </div>
+          <p style="margin-top: 1.25rem; font-size: 0.8rem; color: var(--text-muted);">
+            Функція завантаження буде доступна у найближчому оновленні
+            <span class="coming-soon-badge">🔜 Незабаром</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- ===== ANALYSIS CAPABILITIES ===== -->
+    <section class="pravo-section">
+      <div class="pravo-section-inner">
+        <p class="section-label">Напрямки аналізу</p>
+        <h2 class="section-title-lg">Що перевіряє система?</h2>
+        <p class="section-desc-lg">
+          Багаторівневий аналіз охоплює як формальні вимоги законодавства, так і змістовні логічні суперечності.
+        </p>
+
+        <div class="analysis-grid">
+          <div class="analysis-card" id="analysis-structure">
+            <div class="analysis-icon blue">📐</div>
+            <div class="analysis-title">Структурна перевірка</div>
+            <p class="analysis-desc">Наявність усіх обов'язкових реквізитів відповідно до КПК України: вступна, описово-мотивувальна та резолютивна частини.</p>
+          </div>
+          <div class="analysis-card" id="analysis-logic">
+            <div class="analysis-icon teal">🔍</div>
+            <div class="analysis-title">Логічний аналіз</div>
+            <p class="analysis-desc">Виявлення формальних та неформальних логічних помилок: недостатність доказів, внутрішні суперечності, підміна понять, необґрунтовані висновки.</p>
+          </div>
+          <div class="analysis-card" id="analysis-evidence">
+            <div class="analysis-icon amber">⚖️</div>
+            <div class="analysis-title">Оцінка доказів</div>
+            <p class="analysis-desc">Формування переліку доказів, аналіз їхньої допустимості та достатності, виявлення фактів, не підкріплених доказовою базою.</p>
+          </div>
+          <div class="analysis-card" id="analysis-court">
+            <div class="analysis-icon purple">🏛️</div>
+            <div class="analysis-title">Судова практика</div>
+            <p class="analysis-desc">Перевірка відповідності позиціям Верховного Суду України та усталеним правовим висновкам у подібних категоріях справ.</p>
+          </div>
+          <div class="analysis-card" id="analysis-echr">
+            <div class="analysis-icon red">🌍</div>
+            <div class="analysis-title">Практика ЄСПЛ <span class="coming-soon-badge">PRO</span></div>
+            <p class="analysis-desc">Аналіз відповідності Конвенції про захист прав людини та прецедентам Європейського суду з прав людини.</p>
+          </div>
+          <div class="analysis-card" id="analysis-strategy">
+            <div class="analysis-icon green">🎯</div>
+            <div class="analysis-title">Стратегія захисту <span class="coming-soon-badge">PRO</span></div>
+            <p class="analysis-desc">Моделювання контраргументів, оцінка ризиків та покроковий план дій з пропозиціями щодо клопотань і запитів на експертизи.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- ===== PLANS ===== -->
+    <section class="pravo-section" style="background: linear-gradient(180deg, transparent 0%, rgba(26,107,255,0.03) 50%, transparent 100%);">
+      <div class="pravo-section-inner">
+        <p class="section-label">Рівні доступу</p>
+        <h2 class="section-title-lg">Базовий і PRO-доступ</h2>
+        <p class="section-desc-lg" style="margin-bottom: 2.5rem;">
+          Розпочніть безкоштовно з основним аналізом або отримайте розширений доступ для глибокої правової аналітики.
+        </p>
+
+        <div class="features-split">
+          <!-- Free -->
+          <div class="plan-card" id="plan-free">
+            <span class="plan-badge free">Безкоштовно</span>
+            <div class="plan-title">Базовий доступ</div>
+            <div class="plan-price">Без реєстрації</div>
+            <ul class="plan-features">
+              <li><strong>Структурна перевірка</strong> — наявність обов'язкових реквізитів згідно з КПК України</li>
+              <li><strong>Логічний аналіз</strong> — виявлення формальних та неформальних логічних помилок (недостатність доказів, внутрішні суперечності, підміна понять)</li>
+              <li><strong>Оцінка доказів</strong> — формування переліку доказів та виявлення непідкріплених фактів</li>
+              <li><strong>Базова судова практика</strong> — відповідність позиціям Верховного Суду</li>
+            </ul>
+            <a href="contact.html" id="plan-free-cta" class="btn btn-outline" style="width: 100%; justify-content: center;">Зв'язатися з нами</a>
+          </div>
+
+          <!-- PRO -->
+          <div class="plan-card plan-pro" id="plan-pro">
+            <span class="plan-badge pro">✦ PRO-доступ</span>
+            <div class="plan-title">Розширений аналіз</div>
+            <div class="plan-price">За запитом</div>
+            <ul class="plan-features">
+              <li><strong>Практика ЄСПЛ</strong> — аналіз відповідності Конвенції та прецедентам Європейського суду з прав людини</li>
+              <li><strong>Компаративне дослідження</strong> — порівняння фабули справи з аналогічними судовими справами</li>
+              <li><strong>Оцінка ризиків</strong> — моделювання можливих контраргументів процесуального опонента</li>
+              <li><strong>Стратегічні рекомендації</strong> — покроковий план дій та пропозиції щодо клопотань чи призначення експертиз</li>
+              <li><strong>Пріоритетна підтримка</strong> — доступ до команди юридичних аналітиків</li>
+            </ul>
+            <a href="contact.html" id="plan-pro-cta" class="btn btn-primary shimmer-btn" style="width: 100%; justify-content: center;">Отримати PRO-доступ</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="pravo-cta">
+      <div class="pravo-cta-inner">
+        <h2>Хочете дізнатися більше?</h2>
+        <p>
+          Читайте повну документацію про можливості платформи, або зв'яжіться з нами для консультації щодо конкретного документа.
+        </p>
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+          <a href="docs.html" id="pravo-cta-docs-btn" class="btn btn-primary shimmer-btn">Читати документацію &rarr;</a>
+          <a href="contact.html" id="pravo-cta-contact-btn" class="btn btn-outline">Зв'язатися</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom" style="border: none; padding-top: 0;">
+        <p>&copy; 2026 Lexis, Inc. Всі права захищено.</p>
+        <div class="footer-social">
+          <a href="index.html">Головна</a>
+          <a href="features.html">Словник</a>
+          <a href="sources.html">Джерела</a>
+          <a href="blog.html">Блог</a>
+          <a href="contact.html">Контакти</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
