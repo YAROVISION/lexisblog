@@ -245,8 +245,8 @@
       opacity: 0;
       pointer-events: none;
       visibility: hidden;
-      background: #0d0c0b;
-      transition: opacity 0.25s ease;
+      background: #14110f;
+      transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.4s ease;
     }
 
     .deep-graph-container.active {
@@ -831,6 +831,7 @@
       const deepGraphContainer = document.getElementById('deep-graph-container');
       const deepGraphFrame = document.getElementById('deep-graph-frame');
       let currentMode = 'light'; // 'light' or 'deep'
+      let deepModeLoadedOnce = false;
 
       function setMode(mode) {
         if (mode === currentMode) return;
@@ -847,10 +848,17 @@
           listContainer.classList.remove('active');
           viewToggleBtn.style.display = 'none';
 
+          const isFirstLoad = !deepModeLoadedOnce;
+          deepModeLoadedOnce = true;
+
           // Post activation & search sync to deep graph frame
           try {
             if (deepGraphFrame.contentWindow) {
-              deepGraphFrame.contentWindow.postMessage({ type: 'ACTIVATE', query: searchInput.value }, '*');
+              deepGraphFrame.contentWindow.postMessage({
+                type: 'ACTIVATE',
+                isFirstLoad: isFirstLoad,
+                query: searchInput.value
+              }, '*');
             }
           } catch (e) {}
           syncDeepSearch();
@@ -896,6 +904,18 @@
 
       modeLightBtn.addEventListener('click', () => setMode('light'));
       modeDeepBtn.addEventListener('click', () => setMode('deep'));
+
+      deepGraphFrame.addEventListener('load', () => {
+        if (currentMode === 'deep' && deepGraphFrame.contentWindow) {
+          try {
+            deepGraphFrame.contentWindow.postMessage({
+              type: 'ACTIVATE',
+              isFirstLoad: true,
+              query: searchInput.value
+            }, '*');
+          } catch (e) {}
+        }
+      });
 
       // Toggle between Graph (павутинка) and List (горизонтальні рисочки)
       viewToggleBtn.addEventListener('click', () => {
@@ -972,6 +992,12 @@
           Graph.width(window.innerWidth).height(window.innerHeight);
         }
       });
+
+      // Direct entry to Deep mode via URL query (?mode=deep) or hash (#deep)
+      const urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.get('mode') === 'deep' || window.location.hash === '#deep') {
+        setMode('deep');
+      }
     });
   </script>
 </body>

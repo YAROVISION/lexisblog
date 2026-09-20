@@ -74,6 +74,179 @@
       }
     }
 
+    /* Futuristic Hologram Loader Overlay */
+    .loader-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: radial-gradient(ellipse 85% 85% at 50% 50%, rgba(20, 17, 15, 0.94) 0%, rgba(8, 6, 5, 0.98) 100%);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 100;
+      opacity: 1;
+      visibility: visible;
+      transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1), filter 0.7s ease, visibility 0.7s ease;
+      pointer-events: all;
+    }
+    .loader-overlay.hidden {
+      opacity: 0;
+      visibility: hidden;
+      transform: scale(1.05);
+      filter: blur(10px);
+      pointer-events: none;
+    }
+    .loader-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      width: 90%;
+      max-width: 420px;
+      padding: 34px 28px;
+      background: rgba(36, 33, 30, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 20px;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.8), 0 0 50px rgba(26, 107, 255, 0.18);
+      position: relative;
+      overflow: hidden;
+    }
+    .loader-card::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(0, 194, 168, 0.14) 0%, transparent 60%);
+      animation: ambientGlow 7s ease-in-out infinite alternate;
+      pointer-events: none;
+    }
+    @keyframes ambientGlow {
+      0% { transform: translate(0, 0) scale(1); }
+      100% { transform: translate(8%, 8%) scale(1.25); }
+    }
+    .loader-scanner {
+      position: relative;
+      width: 90px;
+      height: 90px;
+      margin-bottom: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .loader-ring {
+      position: absolute;
+      border-radius: 50%;
+      border: 2px solid transparent;
+    }
+    .loader-ring-1 {
+      width: 90px;
+      height: 90px;
+      border-top-color: #00C2A8;
+      border-bottom-color: rgba(0, 194, 168, 0.2);
+      animation: spinRing 2.6s linear infinite;
+    }
+    .loader-ring-2 {
+      width: 70px;
+      height: 70px;
+      border-left-color: #1A6BFF;
+      border-right-color: rgba(26, 107, 255, 0.2);
+      animation: spinRingRev 2.0s linear infinite;
+    }
+    .loader-ring-3 {
+      width: 52px;
+      height: 52px;
+      border-top-color: #EFD146;
+      border-left-color: rgba(239, 209, 70, 0.25);
+      animation: spinRing 1.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    }
+    .loader-core-icon {
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      filter: drop-shadow(0 0 10px rgba(26, 107, 255, 0.8));
+      animation: pulseCore 2.2s ease-in-out infinite;
+    }
+    .loader-core-icon svg {
+      width: 100%;
+      height: 100%;
+    }
+    @keyframes spinRing {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    @keyframes spinRingRev {
+      from { transform: rotate(360deg); }
+      to { transform: rotate(0deg); }
+    }
+    @keyframes pulseCore {
+      0%, 100% { transform: scale(1); opacity: 0.9; }
+      50% { transform: scale(1.18); opacity: 1; }
+    }
+    .loader-title {
+      font-size: 1.35rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      background: linear-gradient(135deg, #ffffff 0%, #e2ded9 50%, #00C2A8 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 4px;
+    }
+    .loader-subtitle {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #1A6BFF;
+      margin-bottom: 16px;
+    }
+    .loader-status-text {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      min-height: 22px;
+      margin-bottom: 14px;
+      transition: opacity 0.2s ease;
+    }
+    .loader-progress-track {
+      width: 100%;
+      height: 6px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 999px;
+      overflow: hidden;
+      margin-bottom: 18px;
+      position: relative;
+    }
+    .loader-progress-bar {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #1A6BFF, #00C2A8, #EFD146);
+      border-radius: 999px;
+      box-shadow: 0 0 12px rgba(0, 194, 168, 0.85);
+      transition: width 0.12s ease-out;
+    }
+    .loader-meta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      color: rgba(255, 255, 255, 0.5);
+    }
+    .loader-meta span.highlight {
+      color: #00C2A8;
+    }
+
     /* Top Left Control Panel */
     .panel {
       position: absolute;
@@ -413,6 +586,40 @@
 </head>
 <body>
 
+  <!-- Hologram Cosmic Loader Overlay -->
+  <div id="loader-overlay" class="loader-overlay">
+    <div class="loader-card">
+      <div class="loader-scanner">
+        <div class="loader-ring loader-ring-1"></div>
+        <div class="loader-ring loader-ring-2"></div>
+        <div class="loader-ring loader-ring-3"></div>
+        <div class="loader-core-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <circle cx="12" cy="12" r="3.5" stroke="#fff" fill="rgba(26,107,255,0.3)"/>
+            <path d="M12 2v3M12 19v3M2 12h3M19 12h3" stroke="currentColor" stroke-linecap="round"/>
+            <circle cx="12" cy="2" r="1.5" fill="#00C2A8" stroke="none"/>
+            <circle cx="22" cy="12" r="1.5" fill="#1A6BFF" stroke="none"/>
+            <circle cx="12" cy="22" r="1.5" fill="#EFD146" stroke="none"/>
+            <circle cx="2" cy="12" r="1.5" fill="#FF5A5F" stroke="none"/>
+          </svg>
+        </div>
+      </div>
+      <div class="loader-title">Lexis Graphify</div>
+      <div class="loader-subtitle">ГЛИБОКИЙ ГРАФ ЗНАНЬ</div>
+      <div class="loader-status-text" id="loader-status-text">Ініціалізація нейромережі знань...</div>
+      <div class="loader-progress-track">
+        <div class="loader-progress-bar" id="loader-progress-bar"></div>
+      </div>
+      <div class="loader-meta">
+        <span class="highlight">490</span> ВУЗЛІВ
+        <span>•</span>
+        <span class="highlight">833</span> ЗВ'ЯЗКІВ
+        <span>•</span>
+        <span class="highlight">4</span> КЛАСТЕРИ
+      </div>
+    </div>
+  </div>
+
   <!-- Control Panel -->
   <div class="panel">
     <div class="panel-header">
@@ -498,6 +705,12 @@
       const nodesCountDisplay = document.getElementById('nodes-count');
       const edgesCountDisplay = document.getElementById('edges-count');
 
+      // Animation & Shockwaves State
+      let shockwaves = [];
+      let animStartTime = performance.now();
+      let isIntroAnimating = false;
+      let hasStartedIntro = false;
+
       let width = window.innerWidth || document.documentElement.clientWidth || 1920;
       let height = window.innerHeight || document.documentElement.clientHeight || 873;
       canvas.width = width * window.devicePixelRatio;
@@ -534,6 +747,9 @@
         if (!e.data) return;
         if (e.data.type === 'ACTIVATE' || e.data.type === 'RESIZE') {
           handleResize();
+          if (e.data.isFirstLoad || !hasStartedIntro) {
+            startIntroAnimation();
+          }
           if (e.data.query !== undefined && searchInput) {
             searchInput.value = e.data.query;
             searchTerm = (e.data.query || '').toLowerCase().trim();
@@ -706,9 +922,6 @@
         tickPhysics();
       }
 
-      let animStartTime = performance.now();
-      let isIntroAnimating = true;
-
       // Normalize all node positions so that at 100% zoom (1.0) the entire database fits on screen
       function normalizeToScreen(paddingX = 100, paddingY = 70) {
         if (!nodes.length) return;
@@ -780,8 +993,96 @@
         requestAnimationFrame(step);
       }
 
-      animateCounter(nodesCountDisplay, 0, nodes.length, 1200);
-      animateCounter(edgesCountDisplay, 0, links.length, 1400);
+      function startIntroAnimation(showOverlay = true) {
+        hasStartedIntro = true;
+        isIntroAnimating = true;
+        animStartTime = performance.now();
+
+        // Position nodes initially near center singularity with tiny initial spread
+        for (let i = 0; i < nodes.length; i++) {
+          const n = nodes[i];
+          n.x = (n.targetX || 0) * 0.03;
+          n.y = (n.targetY || 0) * 0.03;
+          n.animProgress = 0;
+        }
+
+        const loaderOverlay = document.getElementById('loader-overlay');
+        const progressBar = document.getElementById('loader-progress-bar');
+        const statusText = document.getElementById('loader-status-text');
+
+        if (loaderOverlay) {
+          if (showOverlay) {
+            loaderOverlay.classList.remove('hidden');
+          } else {
+            loaderOverlay.classList.add('hidden');
+          }
+        }
+
+        // Animate stats counter
+        animateCounter(nodesCountDisplay, 0, nodes.length, 1200);
+        animateCounter(edgesCountDisplay, 0, links.length, 1400);
+
+        // Reset and trigger cosmic shockwaves
+        shockwaves = [
+          {
+            startTime: performance.now(),
+            duration: 1600,
+            maxRadius: Math.hypot(width, height) * 0.75,
+            color: '#00C2A8',
+            opacity: 0.85
+          },
+          {
+            startTime: performance.now() + 180,
+            duration: 1800,
+            maxRadius: Math.hypot(width, height) * 0.65,
+            color: '#1A6BFF',
+            opacity: 0.65
+          }
+        ];
+
+        // Animated loader progress bar
+        const startTime = performance.now();
+        const totalDuration = 750;
+
+        // Fallback timer to guarantee overlay disappears
+        setTimeout(() => {
+          if (loaderOverlay) {
+            loaderOverlay.classList.add('hidden');
+          }
+        }, totalDuration + 200);
+
+        function updateLoader(now) {
+          const elapsed = now - startTime;
+          const p = Math.min(1.0, elapsed / totalDuration);
+          const ease = 1 - Math.pow(1 - p, 3);
+          const percent = Math.round(ease * 100);
+
+          if (progressBar) {
+            progressBar.style.width = percent + '%';
+          }
+
+          if (statusText) {
+            if (percent < 28) {
+              statusText.textContent = "Ініціалізація нейромережі знань...";
+            } else if (percent < 60) {
+              statusText.textContent = "Завантаження " + nodes.length + " концептів та правил...";
+            } else if (percent < 88) {
+              statusText.textContent = "Побудова " + links.length + " семантичних зв’язків...";
+            } else {
+              statusText.textContent = "Синхронізація просторового графа...";
+            }
+          }
+
+          if (p < 1.0) {
+            requestAnimationFrame(updateLoader);
+          } else {
+            if (loaderOverlay) {
+              loaderOverlay.classList.add('hidden');
+            }
+          }
+        }
+        requestAnimationFrame(updateLoader);
+      }
 
       // Helper to draw rounded rectangle
       function drawRoundRect(ctx, x, y, width, height, radius) {
@@ -812,18 +1113,18 @@
           for (let i = 0; i < nodes.length; i++) {
             const n = nodes[i];
             const distRatio = Math.hypot(n.targetX, n.targetY) / maxDist;
-            const nodeDelay = distRatio * 280;
-            const t = Math.max(0, Math.min(1.0, (elapsed - nodeDelay) / 850));
+            const nodeDelay = distRatio * 320;
+            const t = Math.max(0, Math.min(1.0, (elapsed - nodeDelay) / 950));
             
             if (t < 1.0) allDone = false;
             
-            const ease = t === 1.0 ? 1.0 : 1 - Math.pow(1 - t, 3.5);
+            const ease = t === 1.0 ? 1.0 : 1 - Math.pow(1 - t, 4);
             n.x = n.targetX * ease;
             n.y = n.targetY * ease;
             n.animProgress = ease;
           }
 
-          if (elapsed > 1400 && allDone) {
+          if (elapsed > 1600 && allDone) {
             isIntroAnimating = false;
             for (let i = 0; i < nodes.length; i++) {
               const n = nodes[i];
@@ -839,6 +1140,30 @@
         ctx.save();
         ctx.translate(camera.x, camera.y);
         ctx.scale(camera.zoom, camera.zoom);
+
+        // Draw Shockwaves
+        for (let s = 0; s < shockwaves.length; s++) {
+          const sw = shockwaves[s];
+          const now = performance.now();
+          const elapsed = now - sw.startTime;
+          if (elapsed > 0 && elapsed < sw.duration) {
+            const p = elapsed / sw.duration;
+            const easeP = 1 - Math.pow(1 - p, 3);
+            const r = sw.maxRadius * easeP;
+            const alpha = sw.opacity * (1 - p);
+            
+            ctx.save();
+            ctx.beginPath();
+            ctx.arc(0, 0, r, 0, Math.PI * 2);
+            ctx.strokeStyle = sw.color;
+            ctx.globalAlpha = alpha * 0.45;
+            ctx.lineWidth = Math.max(1, 3.5 * (1 - p));
+            ctx.shadowColor = sw.color;
+            ctx.shadowBlur = 18 * (1 - p);
+            ctx.stroke();
+            ctx.restore();
+          }
+        }
 
         function isNodeVisible(n) {
           const matchType = currentFilter === 'all' || n.type === currentFilter;
@@ -1279,6 +1604,9 @@
         infoPanel.style.display = 'none';
         updateHoverTooltip(null);
       };
+
+      // Initialize entrance animation on load
+      startIntroAnimation(true);
     })();
   </script>
 </body>
