@@ -1,0 +1,87 @@
+---
+title: Дайджест Oglyad_KGS_vidshkod_zbutku_posadova_osoba_2
+category: sources
+digest_slug: Oglyad_KGS_vidshkod_zbutku_posadova_osoba_2
+segments_count: 68
+last_updated: 2026-09-24
+---
+
+# 📂 Дайджест: Oglyad_KGS_vidshkod_zbutku_posadova_osoba_2
+
+- **Нейромозок:** [[00_Нейромозок|🧠 Головне ядро]] • [[sources/index|Каталог джерел]]
+- **Суд / Інституція:** [[VP_VS]]
+- **Тематичні категорії:** [[protsesualni_pytannya]]
+- **Кількість сегментів:** 68
+
+---
+
+## 📑 Перелік правових позицій та сегментів (68)
+- [[segments/Oglyad_KGS_vidshkod_zbutku_posadova_osoba_2/00_Preamble|5.1. Протиправна поведінка посадової особи та обов’язок доказування ............ 32]]
+- [[segments/Oglyad_KGS_vidshkod_zbutku_posadova_osoba_2/01.01_segment|1.1. Спори між господарським товариством та його посадовою особою про]]
+- [[segments/Oglyad_KGS_vidshkod_zbutku_posadova_osoba_2/01.10.2023_segment|01.10.2023.]]
+- [[segments/Oglyad_KGS_vidshkod_zbutku_posadova_osoba_2/01.2_segment|1.2. Наявність трудових відносин між учасником і посадовою особою не]]
+- [[segments/Oglyad_KGS_vidshkod_zbutku_posadova_osoba_2/01.3_segment|1.3. Спір між юридичною особою та її посадовою особою (у тому числі]]
+- [[segments/Oglyad_KGS_vidshkod_zbutku_posadova_osoba_2/01.4_segment|1.4. Спір за позовом КП до колишнього головного інженера про]]
+- [[segments/Oglyad_KGS_vidshkod_zbutku_posadova_osoba_2/01.5_segment|1.5. Головний бухгалтер інституту не є членом виконавчого органу, не мала]]
+- [[segments/Oglyad_KGS_vidshkod_zbutku_posadova_osoba_2/02.02_segment|2.2. Якщо одна особа одночасно є й учасником товариства, і його керівником,]]
+- [[segments/Oglyad_KGS_vidshkod_zbutku_posadova_osoba_2/02.1_segment|2.1. Правове регулювання ст. 54 ГПК України поширюється на випадки]]
+- [[segments/Oglyad_KGS_vidshkod_zbutku_posadova_osoba_2/02.3_segment|2.3. Власник (учасник, акціонер) є законним представником юридичної особи]]
+- [[segments/Oglyad_KGS_vidshkod_zbutku_posadova_osoba_2/02.4_segment|2.4. Учасник ТОВ має право на звернення до суду в інтересах ТОВ з позовом]]
+- [[segments/Oglyad_KGS_vidshkod_zbutku_posadova_osoba_2/03.1_segment|3.1. Правовий статус членів виконавчого органу юридичної особи,]]
+- [[segments/Oglyad_KGS_vidshkod_zbutku_posadova_osoba_2/03.2_segment|3.2. До спадкоємців переходить обов'язок відшкодувати майнову шкоду]]
+- [[segments/Oglyad_KGS_vidshkod_zbutku_posadova_osoba_2/04.01.2021_segment|04.01.2021 № 01-04-01 до кінця строку його дії.]]
+- [[segments/Oglyad_KGS_vidshkod_zbutku_posadova_osoba_2/04.04_segment|4.4. До функціональних напрямів, за які відповідає генеральний директор як]]
+- [[segments/Oglyad_KGS_vidshkod_zbutku_posadova_osoba_2/04.06.2024_segment|04.06.2024 у справі № 906/1361/23 [https://reyestr.court.gov.ua/Review/119649559]]
+- [[segments/Oglyad_KGS_vidshkod_zbutku_posadova_osoba_2/04.1_segment|4.1. Згідно з вимогами ст. 92 ЦК України особи, які виступають від імені]]
+- [[segments/Oglyad_KGS_vidshkod_zbutku_posadova_osoba_2/04.2_segment|4.2. Директор товариства має фідуціарні обов'язки дбайливого ставлення]]
+- [[segments/Oglyad_KGS_vidshkod_zbutku_posadova_osoba_2/04.3_segment|4.3. Обов'язок керівника проявляти належне піклування про справи компанії]]
+- [[segments/Oglyad_KGS_vidshkod_zbutku_posadova_osoba_2/05.05.1_segment|5.5.1. Директор товариства, який перевищив свої повноваження та діяв не]]
+- [[segments/Oglyad_KGS_vidshkod_zbutku_posadova_osoba_2/05.05.2_segment|5.5.2. Причинно-наслідковий зв'язок між діями колишнього директора]]
+- [[segments/Oglyad_KGS_vidshkod_zbutku_posadova_osoba_2/05.05.3_segment|5.5.3. Наявність причинно-наслідкового зв'язку між протиправними діями]]
+- [[segments/Oglyad_KGS_vidshkod_zbutku_posadova_osoba_2/05.05_segment|5.5. Причинно-наслідковий зв'язок між протиправними діями посадової особи]]
+- [[segments/Oglyad_KGS_vidshkod_zbutku_posadova_osoba_2/05.1.05_segment|5.1.5. Самовільне нарахування та виплата заробітної плати головою]]
+- [[segments/Oglyad_KGS_vidshkod_zbutku_posadova_osoba_2/05.1.1_segment|5.1.1. Протиправна поведінка посадової особи може виражатися не лише]]
+- [[segments/Oglyad_KGS_vidshkod_zbutku_posadova_osoba_2/05.1.2_segment|5.1.2. Протиправна поведінка посадової особи може виражатися не лише]]
+- [[segments/Oglyad_KGS_vidshkod_zbutku_posadova_osoba_2/05.1.3_segment|5.1.3. Сама протиправна поведінка відповідача полягає у здійсненні дій]]
+- [[segments/Oglyad_KGS_vidshkod_zbutku_posadova_osoba_2/05.1.4_segment|5.1.4. Директор товариства несе відповідальність за збитки, завдані]]
+- [[segments/Oglyad_KGS_vidshkod_zbutku_posadova_osoba_2/05.1.6_segment|5.1.6. Перевищення посадовою особою своїх повноважень при укладенні]]
+- [[segments/Oglyad_KGS_vidshkod_zbutku_posadova_osoba_2/05.1.7_segment|5.1.7. Директор товариства несе відповідальність за збитки, завдані]]
+- [[segments/Oglyad_KGS_vidshkod_zbutku_posadova_osoba_2/05.1.8_segment|5.1.8. Директор комунального підприємства несе відповідальність за збитки,]]
+- [[segments/Oglyad_KGS_vidshkod_zbutku_posadova_osoba_2/05.1.9_segment|5.1.9. Керівник (т. в. о. голови правління) несе відповідальність за збитки,]]
+- [[segments/Oglyad_KGS_vidshkod_zbutku_posadova_osoba_2/05.1_segment|5.1. Протиправна поведінка посадової особи та обов’язок доказування]]
+- [[segments/Oglyad_KGS_vidshkod_zbutku_posadova_osoba_2/05.2.1_segment|5.2.1. Для стягнення збитків з посадової особи товариства необхідно довести]]
+- [[segments/Oglyad_KGS_vidshkod_zbutku_posadova_osoba_2/05.2.2_segment|5.2.2. Для притягнення посадової особи товариства до відповідальності]]
+- [[segments/Oglyad_KGS_vidshkod_zbutku_posadova_osoba_2/05.2_segment|5.2. Відсутність протиправної поведінки в діях посадової особи]]
+- [[segments/Oglyad_KGS_vidshkod_zbutku_posadova_osoba_2/05.3.05_segment|5.3.5. Штатний розпис, затверджений єдиним учасником товариства, є]]
+- [[segments/Oglyad_KGS_vidshkod_zbutku_posadova_osoba_2/05.3.1_segment|5.3.1. Суми сплачених штрафів, виконавчих зборів і витрат виконавчого]]
+- [[segments/Oglyad_KGS_vidshkod_zbutku_posadova_osoba_2/05.3.2_segment|5.3.2. Відповідач під час укладення договорів діяв з перевищенням наданих]]
+- [[segments/Oglyad_KGS_vidshkod_zbutku_posadova_osoba_2/05.3.3_segment|5.3.3. Виплата заробітної плати працівнику за час вимушеного прогулу є]]
+- [[segments/Oglyad_KGS_vidshkod_zbutku_posadova_osoba_2/05.3.4_segment|5.3.4. Збитки акціонерного товариства полягають у незаконному вибутті його]]
+- [[segments/Oglyad_KGS_vidshkod_zbutku_posadova_osoba_2/05.3.6_segment|5.3.6. Спеціальний дозвіл на користування надрами є майновим правом,]]
+- [[segments/Oglyad_KGS_vidshkod_zbutku_posadova_osoba_2/05.3_segment|5.3. Наявність доведених збитків, завданих посадовою особою]]
+- [[segments/Oglyad_KGS_vidshkod_zbutku_posadova_osoba_2/05.4.05_segment|5.4.5. Сама по собі відсутність звітів про використання коштів, знятих]]
+- [[segments/Oglyad_KGS_vidshkod_zbutku_posadova_osoba_2/05.4.1_segment|5.4.1. Витрати, які мусить зробити ТОВ для сплати податків, не є збитками,]]
+- [[segments/Oglyad_KGS_vidshkod_zbutku_posadova_osoba_2/05.4.2_segment|5.4.2. Для стягнення збитків у формі упущеної вигоди з посадової особи]]
+- [[segments/Oglyad_KGS_vidshkod_zbutku_posadova_osoba_2/05.4.3_segment|5.4.3. Самого факту вчинення директором правочину, що може створити для]]
+- [[segments/Oglyad_KGS_vidshkod_zbutku_posadova_osoba_2/05.4.4_segment|5.4.4. Передача майна боржником кредитору за мировою угодою]]
+- [[segments/Oglyad_KGS_vidshkod_zbutku_posadova_osoba_2/05.4.6_segment|5.4.6. Несплачені податкові зобов'язання, донараховані за результатами]]
+- [[segments/Oglyad_KGS_vidshkod_zbutku_posadova_osoba_2/05.4.7_segment|5.4.7. Фінансова звітність товариства самостійно не є достатнім доказом]]
+- [[segments/Oglyad_KGS_vidshkod_zbutku_posadova_osoba_2/05.4.8_segment|5.4.8. Для задоволення позову про відшкодування збитків необхідно довести]]
+- [[segments/Oglyad_KGS_vidshkod_zbutku_posadova_osoba_2/05.4.9_segment|5.4.9. Курсова різниця при виплаті заробітної плати, встановленої в іноземній]]
+- [[segments/Oglyad_KGS_vidshkod_zbutku_posadova_osoba_2/05.4_segment|5.4. Відсутність доведених збитків, завданих посадовою особою]]
+- [[segments/Oglyad_KGS_vidshkod_zbutku_posadova_osoba_2/05.6.05_segment|5.6.5. Вина т. в. о. голови правління АТ проявляється у вигляді умислу]]
+- [[segments/Oglyad_KGS_vidshkod_zbutku_posadova_osoba_2/05.6.1_segment|5.6.1. Суд, вирішуючи спір щодо притягнення особи до відповідальності]]
+- [[segments/Oglyad_KGS_vidshkod_zbutku_posadova_osoba_2/05.6.2_segment|5.6.2. Стаття 1193 ЦК України передбачає можливість зменшення розміру]]
+- [[segments/Oglyad_KGS_vidshkod_zbutku_posadova_osoba_2/05.6.3_segment|5.6.3. Посадова особа товариства, яка при укладенні договорів діяла]]
+- [[segments/Oglyad_KGS_vidshkod_zbutku_posadova_osoba_2/05.6.4_segment|5.6.4. Вина посадової особи виражена перевищенням повноважень,]]
+- [[segments/Oglyad_KGS_vidshkod_zbutku_posadova_osoba_2/05.6.6_segment|5.6.6. Відсутність попереднього погодження із загальними зборами учасників]]
+- [[segments/Oglyad_KGS_vidshkod_zbutku_posadova_osoba_2/05.6_segment|5.6. Наявність вини, яка не спростована посадовою особою]]
+- [[segments/Oglyad_KGS_vidshkod_zbutku_posadova_osoba_2/05.7.1_segment|5.7.1. Якщо певні обов'язки не віднесені до компетенції посадової особи відповід]]
+- [[segments/Oglyad_KGS_vidshkod_zbutku_posadova_osoba_2/05.7_segment|5.7. Відсутність вини посадової особи]]
+- [[segments/Oglyad_KGS_vidshkod_zbutku_posadova_osoba_2/06.1_segment|6.1. Початок перебігу позовної давності для стягнення збитків, заподіяних]]
+- [[segments/Oglyad_KGS_vidshkod_zbutku_posadova_osoba_2/14.04.2020_segment|14.04.2020 у справі № 910/12217/19, постанову КГС ВС від 23.10.2024 у справі]]
+- [[segments/Oglyad_KGS_vidshkod_zbutku_posadova_osoba_2/18.12.2018_segment|18.12.2018 у справі № 910/20363/17 http://reyestr.court.gov.ua/Review/78749992;]]
+- [[segments/Oglyad_KGS_vidshkod_zbutku_posadova_osoba_2/22.10.2019_segment|22.10.2019 у справі № Б15/101-08, від 11.12.2019 у справі № 638/15118/16-ц, від]]
+- [[segments/Oglyad_KGS_vidshkod_zbutku_posadova_osoba_2/23.10.2024_segment|23.10.2024 у cправі № 910/2301/24 http://reyestr.court.gov.ua/Review/122569176.]]
+- [[segments/Oglyad_KGS_vidshkod_zbutku_posadova_osoba_2/99_Appendix|Застереження: видання містить короткий огляд деяких судових рішень. У кожному з]]
+

@@ -1,0 +1,86 @@
+---
+title: Дайджест Oglyad_zastosyvanna_strokiv_admin
+category: sources
+digest_slug: Oglyad_zastosyvanna_strokiv_admin
+segments_count: 67
+last_updated: 2026-09-24
+---
+
+# 📂 Дайджест: Oglyad_zastosyvanna_strokiv_admin
+
+- **Нейромозок:** [[00_Нейромозок|🧠 Головне ядро]] • [[sources/index|Каталог джерел]]
+- **Суд / Інституція:** [[VP_VS]]
+- **Тематичні категорії:** [[protsesualni_pytannya]]
+- **Кількість сегментів:** 67
+
+---
+
+## 📑 Перелік правових позицій та сегментів (67)
+- [[segments/Oglyad_zastosyvanna_strokiv_admin/00_Preamble|ЗМІСТ]]
+- [[segments/Oglyad_zastosyvanna_strokiv_admin/01.01_segment|1.1. Про процесуальні строки в адміністративному судочинстві]]
+- [[segments/Oglyad_zastosyvanna_strokiv_admin/01.10_segment|1.10. Про встановлення підстав для пред’явлення позову суб’єктом владних]]
+- [[segments/Oglyad_zastosyvanna_strokiv_admin/01.11_segment|1.11. Про розмежування підстав для повернення позовної заяви і залишення]]
+- [[segments/Oglyad_zastosyvanna_strokiv_admin/01.12_segment|1.12. Про наслідки звернення до адміністративного суду з позовом після]]
+- [[segments/Oglyad_zastosyvanna_strokiv_admin/01.2_segment|1.2. Про дотримання процесуальних строків як гарантію права на судовий]]
+- [[segments/Oglyad_zastosyvanna_strokiv_admin/01.3_segment|1.3. Про відмінності між процесуальними строками, встановленими судом,]]
+- [[segments/Oglyad_zastosyvanna_strokiv_admin/01.4_segment|1.4. Про право особи обирати спосіб направлення процесуальних документів]]
+- [[segments/Oglyad_zastosyvanna_strokiv_admin/01.5_segment|1.5. Про визначення дня вручення судового рішення в разі направлення його]]
+- [[segments/Oglyad_zastosyvanna_strokiv_admin/01.6_segment|1.6. Про забезпечення реалізації права на перегляд судового рішення]]
+- [[segments/Oglyad_zastosyvanna_strokiv_admin/01.7_segment|1.7. Про вплив пасивної поведінки позивача на реалізацію права на судовий]]
+- [[segments/Oglyad_zastosyvanna_strokiv_admin/01.8_segment|1.8. Про вирішення судом питання про поновлення пропущеного]]
+- [[segments/Oglyad_zastosyvanna_strokiv_admin/01.9_segment|1.9. Про неможливість поновлення строку без доказів об’єктивної поважної]]
+- [[segments/Oglyad_zastosyvanna_strokiv_admin/02.02.02_segment|2.2.2. Про можливість продовження судом строку на усунення недоліків]]
+- [[segments/Oglyad_zastosyvanna_strokiv_admin/02.02.10_segment|2.2.10. Про обчислення строку на апеляційне оскарження судового рішення]]
+- [[segments/Oglyad_zastosyvanna_strokiv_admin/02.02.11_segment|2.2.11. Про обґрунтування поважності причин пропуску строку на апеляційне]]
+- [[segments/Oglyad_zastosyvanna_strokiv_admin/02.02.12_segment|2.2.12. Про граничний процесуальний строк для оскарження прокурором,]]
+- [[segments/Oglyad_zastosyvanna_strokiv_admin/02.02.13_segment|2.2.13. Про граничні строки апеляційного оскарження для суб’єктів владних]]
+- [[segments/Oglyad_zastosyvanna_strokiv_admin/02.02.14_segment|2.2.14. Про умови та докази, необхідні для поновлення пропущеного строку]]
+- [[segments/Oglyad_zastosyvanna_strokiv_admin/02.02.1_segment|2.2.1. Про необхідність встановлення судом достатнього і розумного строку]]
+- [[segments/Oglyad_zastosyvanna_strokiv_admin/02.02.3_segment|2.2.3. Про особливості встановлення апеляційним судом дати отримання]]
+- [[segments/Oglyad_zastosyvanna_strokiv_admin/02.02.4_segment|2.2.4. Про визначення поважних причин пропуску строку апеляційного]]
+- [[segments/Oglyad_zastosyvanna_strokiv_admin/02.02.5_segment|2.2.5. Про врахування обставин і дій особи при визначенні поважності причин]]
+- [[segments/Oglyad_zastosyvanna_strokiv_admin/02.02.6_segment|2.2.6. Про умови поновлення строку на апеляційне оскарження в разі]]
+- [[segments/Oglyad_zastosyvanna_strokiv_admin/02.02.7_segment|2.2.7. Про обчислення строку на апеляційне оскарження в разі відсутності]]
+- [[segments/Oglyad_zastosyvanna_strokiv_admin/02.02.8_segment|2.2.8. Про початок перебігу строку на апеляційне оскарження в разі]]
+- [[segments/Oglyad_zastosyvanna_strokiv_admin/02.02.9_segment|2.2.9. Про початок перебігу строку апеляційного оскарження для осіб,]]
+- [[segments/Oglyad_zastosyvanna_strokiv_admin/02.02_segment|2.2. Обчислення, поновлення та продовження строків звернення до судів апеляційної]]
+- [[segments/Oglyad_zastosyvanna_strokiv_admin/02.1.02_segment|2.1.2. Про правове значення поважних причин для поновлення процесуальних]]
+- [[segments/Oglyad_zastosyvanna_strokiv_admin/02.1.10_segment|2.1.10. Про поновлення строку звернення до суду для осіб, мобілізованих]]
+- [[segments/Oglyad_zastosyvanna_strokiv_admin/02.1.11_segment|2.1.11. Про мобілізацію як поважну причину для поновлення процесуальних]]
+- [[segments/Oglyad_zastosyvanna_strokiv_admin/02.1.12_segment|2.1.12. Про мету продовження процесуального строку, встановленого судом]]
+- [[segments/Oglyad_zastosyvanna_strokiv_admin/02.1.13_segment|2.1.13. Про дотримання принципу рівності сторін та порядку продовження]]
+- [[segments/Oglyad_zastosyvanna_strokiv_admin/02.1.1_segment|2.1.1. Про момент початку перебігу строку звернення до суду та умови його]]
+- [[segments/Oglyad_zastosyvanna_strokiv_admin/02.1.3_segment|2.1.3. Про критерії поновлення строку звернення до суду: об’єктивні]]
+- [[segments/Oglyad_zastosyvanna_strokiv_admin/02.1.4_segment|2.1.4. Про відсутність підстав для поновлення строку звернення до суду в разі]]
+- [[segments/Oglyad_zastosyvanna_strokiv_admin/02.1.5_segment|2.1.5. Про поважність причин пропуску строку позовної давності прокурором]]
+- [[segments/Oglyad_zastosyvanna_strokiv_admin/02.1.6_segment|2.1.6. Про безпідставність обґрунтування прокурором пропуску строку]]
+- [[segments/Oglyad_zastosyvanna_strokiv_admin/02.1.7_segment|2.1.7. Про особливості обчислення строку звернення до адміністративного суду]]
+- [[segments/Oglyad_zastosyvanna_strokiv_admin/02.1.8_segment|2.1.8. Про вирішення питання про поновлення процесуальних строків у період]]
+- [[segments/Oglyad_zastosyvanna_strokiv_admin/02.1.9_segment|2.1.9. Про умови визнання запровадження воєнного стану в Україні поважною]]
+- [[segments/Oglyad_zastosyvanna_strokiv_admin/02.1_segment|2.1. Обчислення, поновлення та продовження строків звернення до суду першої]]
+- [[segments/Oglyad_zastosyvanna_strokiv_admin/03.03.03_segment|3.3.3. Про строк звернення до суду з позовом щодо скасування надбавок]]
+- [[segments/Oglyad_zastosyvanna_strokiv_admin/03.03.1_segment|3.3.1. Про обчислення строків звернення до суду при вирішенні спорів]]
+- [[segments/Oglyad_zastosyvanna_strokiv_admin/03.03.2_segment|3.3.2. Про строки звернення до суду у спорах щодо стягнення середнього]]
+- [[segments/Oglyad_zastosyvanna_strokiv_admin/03.03.4_segment|3.3.4. Про момент, з якого починається обрахунок строку звернення до суду]]
+- [[segments/Oglyad_zastosyvanna_strokiv_admin/03.03.5_segment|3.3.5. Про строк звернення до суду у спорах щодо виплати додаткової]]
+- [[segments/Oglyad_zastosyvanna_strokiv_admin/03.03.6_segment|3.3.6. Про початок перебігу строку звернення до суду у справі]]
+- [[segments/Oglyad_zastosyvanna_strokiv_admin/03.03_segment|3.3. Справи щодо обчислення строків звернення до суду у сфері публічної служби]]
+- [[segments/Oglyad_zastosyvanna_strokiv_admin/03.1.03_segment|3.1.3. Про строк звернення до суду з позовом щодо скасування вимоги]]
+- [[segments/Oglyad_zastosyvanna_strokiv_admin/03.1.1_segment|3.1.1. Про строки звернення до адміністративного суду після досудового]]
+- [[segments/Oglyad_zastosyvanna_strokiv_admin/03.1.2_segment|3.1.2. Про строк звернення до суду з позовом про скасування податкового]]
+- [[segments/Oglyad_zastosyvanna_strokiv_admin/03.1.4_segment|3.1.4. Про тривалість строку звернення до суду з позовом про скасування]]
+- [[segments/Oglyad_zastosyvanna_strokiv_admin/03.1.5_segment|3.1.5. Про строк звернення до суду з позовом про скасування податкового]]
+- [[segments/Oglyad_zastosyvanna_strokiv_admin/03.1.6_segment|3.1.6. Про строк звернення до суду з позовом про оскарження рішень]]
+- [[segments/Oglyad_zastosyvanna_strokiv_admin/03.1.7_segment|3.1.7. Про строк звернення контролюючого органу до суду щодо обмеження]]
+- [[segments/Oglyad_zastosyvanna_strokiv_admin/03.1_segment|3.1. Справи щодо обчислення строків звернення до суду у сфері публічних фінансів]]
+- [[segments/Oglyad_zastosyvanna_strokiv_admin/03.2.03_segment|3.2.3. Про строк звернення до суду в пенсійних спорах, пов’язаних із визнанням]]
+- [[segments/Oglyad_zastosyvanna_strokiv_admin/03.2.1_segment|3.2.1. Про застосування строку звернення до суду в пенсійних спорах]]
+- [[segments/Oglyad_zastosyvanna_strokiv_admin/03.2.2_segment|3.2.2. Про початок перебігу строку звернення до суду в пенсійних спорах]]
+- [[segments/Oglyad_zastosyvanna_strokiv_admin/03.2.4_segment|3.2.4. Про порядок обчислення строків для реалізації права на соціальний]]
+- [[segments/Oglyad_zastosyvanna_strokiv_admin/03.2.5_segment|3.2.5. Про строк звернення до суду з позовом про оскарження дій]]
+- [[segments/Oglyad_zastosyvanna_strokiv_admin/03.2.6_segment|3.2.6. Про початок перебігу строку на звернення до суду з позовом]]
+- [[segments/Oglyad_zastosyvanna_strokiv_admin/03.2.7_segment|3.2.7. Про строк звернення до суду Державної служби України з питань]]
+- [[segments/Oglyad_zastosyvanna_strokiv_admin/03.2.8_segment|3.2.8. Про строк оскарження містобудівних умов та обмежень]]
+- [[segments/Oglyad_zastosyvanna_strokiv_admin/03.2_segment|3.2. Справи щодо обчислення строків звернення до суду у сфері захисту соціальних]]
+- [[segments/Oglyad_zastosyvanna_strokiv_admin/99_Appendix|���������������������]]
+
